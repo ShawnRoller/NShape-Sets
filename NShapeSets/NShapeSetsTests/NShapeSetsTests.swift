@@ -2,8 +2,8 @@
 //  NShapeSetsTests.swift
 //  NShapeSetsTests
 //
-//  Created by Shawn Roller on 11/18/19.
-//  Copyright © 2019 Offensively-Bad. All rights reserved.
+//  Created by Shawn Roller on 11/30/19.
+//  Copyright © 2019 offensively-bad. All rights reserved.
 //
 
 import XCTest
