@@ -13,7 +13,11 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             BackgroundView()
-            Text("Hello, World!")
+            VStack {
+                Text("Hello, World!")
+                Text("Hello, World!")
+                    .defaultFont()
+            }
         }
     }
 }

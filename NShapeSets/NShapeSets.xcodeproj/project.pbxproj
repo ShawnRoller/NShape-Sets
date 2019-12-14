@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2911C2AF23A59AB500405306 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypeExtensions.swift */; };
+		2911C2B023A59AB500405306 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypeExtensions.swift */; };
+		2911C2B123A59AB500405306 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypeExtensions.swift */; };
+		2911C2B223A59AB500405306 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypeExtensions.swift */; };
 		29201EE623988F5F0016DF8C /* WatchNShapeSets WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 29201EE523988F5F0016DF8C /* WatchNShapeSets WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		29201EEC23988F5F0016DF8C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29201EEA23988F5F0016DF8C /* Interface.storyboard */; };
 		29201EEE23988F600016DF8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29201EED23988F600016DF8C /* Assets.xcassets */; };
@@ -178,6 +182,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2911C2AE23A59AB500405306 /* TypeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeExtensions.swift; sourceTree = "<group>"; };
 		29201EE223988F5F0016DF8C /* WatchNShapeSets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchNShapeSets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29201EE523988F5F0016DF8C /* WatchNShapeSets WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchNShapeSets WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29201EEB23988F5F0016DF8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -264,6 +269,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2911C2AD23A59A9200405306 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2911C2AE23A59AB500405306 /* TypeExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		29201EE923988F5F0016DF8C /* WatchNShapeSets WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +388,7 @@
 		29C9561B2393042500373031 /* NShapeSets */ = {
 			isa = PBXGroup;
 			children = (
+				2911C2AD23A59A9200405306 /* Extensions */,
 				294BBBEF23A44C850022AC8C /* Helpers */,
 				294BBB8E23A44C380022AC8C /* Fonts */,
 				295AFFBF239C2520003E24C6 /* Theming */,
@@ -736,6 +750,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29201EFC23988F600016DF8C /* HostingController.swift in Sources */,
+				2911C2B223A59AB500405306 /* TypeExtensions.swift in Sources */,
 				29201EFA23988F600016DF8C /* ContentView.swift in Sources */,
 				29201F0023988F600016DF8C /* NotificationController.swift in Sources */,
 				29201EFE23988F600016DF8C /* ExtensionDelegate.swift in Sources */,
@@ -757,6 +772,7 @@
 				29C956212393042500373031 /* ContentView.swift in Sources */,
 				295AFFC2239C2552003E24C6 /* Palette.swift in Sources */,
 				294BBBF223A44CA00022AC8C /* Constants.swift in Sources */,
+				2911C2AF23A59AB500405306 /* TypeExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,6 +781,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29FDE4842395B2EB0061EF5E /* HostingController.swift in Sources */,
+				2911C2B023A59AB500405306 /* TypeExtensions.swift in Sources */,
 				29C956342393042800373031 /* NShapeSetsTests.swift in Sources */,
 				294BBBF323A44CA00022AC8C /* Constants.swift in Sources */,
 			);
@@ -779,6 +796,7 @@
 				29FDE4852395B2EB0061EF5E /* HostingController.swift in Sources */,
 				29C9563F2393042800373031 /* NShapeSetsUITests.swift in Sources */,
 				295AFFC3239C2552003E24C6 /* Palette.swift in Sources */,
+				2911C2B123A59AB500405306 /* TypeExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
