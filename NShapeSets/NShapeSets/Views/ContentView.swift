@@ -17,6 +17,7 @@ struct ContentView: View {
                 Text("Hello, World!")
                 Text("Hello, World!")
                     .defaultFont()
+                    .foregroundColor(Palette.inputColor)
             }
         }
     }

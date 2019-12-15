@@ -5,6 +5,18 @@
   },
   "colors" : [
     {
+      "idiom" : "universal",
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "red" : "0.259",
+          "alpha" : "1.000",
+          "blue" : "0.651",
+          "green" : "0.227"
+        }
+      }
+    },
+    {
       "idiom" : "watch",
       "color" : {
         "color-space" : "srgb",
