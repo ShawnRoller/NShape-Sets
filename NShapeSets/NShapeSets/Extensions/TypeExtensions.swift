@@ -26,17 +26,13 @@ extension View {
     func scaledFont(name: String, size: CGFloat) -> some View {
         return self.modifier(ScaledFont(name: name, size: size))
     }
-    func defaultFont() -> some View {
-        return self.modifier(DefaultFont())
+    func inputFont() -> some View {
+        return self.modifier(ScaledFont(name: "Gotham-Book", size:36))
     }
-}
-
-@available(iOS 13, macCatalyst 13, tvOS 13, watchOS 6, *)
-struct DefaultFont: ViewModifier {
-    @Environment(\.sizeCategory) var sizeCategory
-    
-    func body(content: Content) -> some View {
-        let scaledSize = UIFontMetrics.default.scaledValue(for: 26)
-        return content.font(.custom("Gotham-Book", size: scaledSize))
+    func header1Font() -> some View {
+        return self.modifier(ScaledFont(name: "Gotham-Book", size:60))
+    }
+    func header2Font() -> some View {
+        return self.modifier(ScaledFont(name: "Gotham-Book", size:45))
     }
 }

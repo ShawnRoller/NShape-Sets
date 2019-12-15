@@ -15,9 +15,8 @@ struct ContentView: View {
             BackgroundView()
             VStack {
                 Text("Hello, World!")
-                Text("Hello, World!")
-                    .defaultFont()
-                    .foregroundColor(Palette.inputColor)
+                    .header1Font()
+                    .foregroundColor(Palette.header1Color)
             }
         }
     }
@@ -30,7 +29,7 @@ struct ContentView_Previews: PreviewProvider {
                 .environment(\.colorScheme, .light)
             
             ContentView()
-            .environment(\.colorScheme, .dark)
+                .environment(\.colorScheme, .dark)
         }
     }
 }
