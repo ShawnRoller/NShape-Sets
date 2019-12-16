@@ -119,6 +119,10 @@
 		29C956292393042800373031 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C956272393042800373031 /* LaunchScreen.storyboard */; };
 		29C956342393042800373031 /* NShapeSetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C956332393042800373031 /* NShapeSetsTests.swift */; };
 		29C9563F2393042800373031 /* NShapeSetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C9563E2393042800373031 /* NShapeSetsUITests.swift */; };
+		29D43BE923A8394400C7981B /* StateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D43BE823A8394400C7981B /* StateModels.swift */; };
+		29D43BEA23A8394400C7981B /* StateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D43BE823A8394400C7981B /* StateModels.swift */; };
+		29D43BEB23A8394400C7981B /* StateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D43BE823A8394400C7981B /* StateModels.swift */; };
+		29D43BEC23A8394400C7981B /* StateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D43BE823A8394400C7981B /* StateModels.swift */; };
 		29FDE47D2395B28B0061EF5E /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FDE47C2395B28B0061EF5E /* SetupView.swift */; };
 		29FDE4832395B2EB0061EF5E /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FDE4822395B2EB0061EF5E /* HostingController.swift */; };
 		29FDE4842395B2EB0061EF5E /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FDE4822395B2EB0061EF5E /* HostingController.swift */; };
@@ -233,6 +237,7 @@
 		29C9563A2393042800373031 /* NShapeSetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NShapeSetsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C9563E2393042800373031 /* NShapeSetsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NShapeSetsUITests.swift; sourceTree = "<group>"; };
 		29C956402393042800373031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29D43BE823A8394400C7981B /* StateModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateModels.swift; sourceTree = "<group>"; };
 		29FDE47C2395B28B0061EF5E /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		29FDE4822395B2EB0061EF5E /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -388,6 +393,7 @@
 		29C9561B2393042500373031 /* NShapeSets */ = {
 			isa = PBXGroup;
 			children = (
+				29D43BE723A8392E00C7981B /* Models */,
 				2911C2AD23A59A9200405306 /* Extensions */,
 				294BBBEF23A44C850022AC8C /* Helpers */,
 				294BBB8E23A44C380022AC8C /* Fonts */,
@@ -429,6 +435,14 @@
 				29C956402393042800373031 /* Info.plist */,
 			);
 			path = NShapeSetsUITests;
+			sourceTree = "<group>";
+		};
+		29D43BE723A8392E00C7981B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				29D43BE823A8394400C7981B /* StateModels.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		29FDE4802395B2910061EF5E /* Views */ = {
@@ -756,6 +770,7 @@
 				29201EFE23988F600016DF8C /* ExtensionDelegate.swift in Sources */,
 				294BBBF523A44CA00022AC8C /* Constants.swift in Sources */,
 				29201F0223988F600016DF8C /* NotificationView.swift in Sources */,
+				29D43BEC23A8394400C7981B /* StateModels.swift in Sources */,
 				29201F0423988F600016DF8C /* ComplicationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -767,6 +782,7 @@
 				295AFFBD239C21F8003E24C6 /* BackgroundView.swift in Sources */,
 				29FDE4832395B2EB0061EF5E /* HostingController.swift in Sources */,
 				29C9561D2393042500373031 /* AppDelegate.swift in Sources */,
+				29D43BE923A8394400C7981B /* StateModels.swift in Sources */,
 				29C9561F2393042500373031 /* SceneDelegate.swift in Sources */,
 				29FDE47D2395B28B0061EF5E /* SetupView.swift in Sources */,
 				29C956212393042500373031 /* ContentView.swift in Sources */,
@@ -783,6 +799,7 @@
 				29FDE4842395B2EB0061EF5E /* HostingController.swift in Sources */,
 				2911C2B023A59AB500405306 /* TypeExtensions.swift in Sources */,
 				29C956342393042800373031 /* NShapeSetsTests.swift in Sources */,
+				29D43BEA23A8394400C7981B /* StateModels.swift in Sources */,
 				294BBBF323A44CA00022AC8C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -797,6 +814,7 @@
 				29C9563F2393042800373031 /* NShapeSetsUITests.swift in Sources */,
 				295AFFC3239C2552003E24C6 /* Palette.swift in Sources */,
 				2911C2B123A59AB500405306 /* TypeExtensions.swift in Sources */,
+				29D43BEB23A8394400C7981B /* StateModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,25 +10,25 @@ import SwiftUI
 
 struct ContentView: View {
     
+    var step: State
+    
     var body: some View {
         ZStack {
             BackgroundView()
-            VStack {
-                Text("Hello, World!")
-                    .header1Font()
-                    .foregroundColor(Palette.header1Color)
-            }
+            SetupView()
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+    static var state = State.setup
+    
     static var previews: some View {
         Group {
-            ContentView()
+            ContentView(step: state)
                 .environment(\.colorScheme, .light)
             
-            ContentView()
+            ContentView(step: state)
                 .environment(\.colorScheme, .dark)
         }
     }
