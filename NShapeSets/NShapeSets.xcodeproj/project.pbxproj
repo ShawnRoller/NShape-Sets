@@ -23,6 +23,14 @@
 		29201F0423988F600016DF8C /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29201F0323988F600016DF8C /* ComplicationController.swift */; };
 		29201F0623988F610016DF8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29201F0523988F610016DF8C /* Assets.xcassets */; };
 		29201F0923988F610016DF8C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29201F0823988F610016DF8C /* Preview Assets.xcassets */; };
+		294B33A923D642D600D6BF14 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294B33A823D642D600D6BF14 /* BannerView.swift */; };
+		294B33AA23D642D600D6BF14 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294B33A823D642D600D6BF14 /* BannerView.swift */; };
+		294B33AC23D6436000D6BF14 /* SelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294B33AB23D6436000D6BF14 /* SelectorView.swift */; };
+		294B33AD23D6436000D6BF14 /* SelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294B33AB23D6436000D6BF14 /* SelectorView.swift */; };
+		294B33AF23D64A2C00D6BF14 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294B33AE23D64A2C00D6BF14 /* CustomSlider.swift */; };
+		294B33B023D64A2C00D6BF14 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294B33AE23D64A2C00D6BF14 /* CustomSlider.swift */; };
+		294B33B523D6500E00D6BF14 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294B33B423D6500E00D6BF14 /* TextFieldView.swift */; };
+		294B33B623D6500E00D6BF14 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294B33B423D6500E00D6BF14 /* TextFieldView.swift */; };
 		294BBB9F23A44C6E0022AC8C /* Gotham-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB8F23A44C6D0022AC8C /* Gotham-Thin.otf */; };
 		294BBBA023A44C6E0022AC8C /* Gotham-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB8F23A44C6D0022AC8C /* Gotham-Thin.otf */; };
 		294BBBA123A44C6E0022AC8C /* Gotham-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB8F23A44C6D0022AC8C /* Gotham-Thin.otf */; };
@@ -203,6 +211,10 @@
 		29201F0823988F610016DF8C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		29201F0A23988F610016DF8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29201F0B23988F610016DF8C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		294B33A823D642D600D6BF14 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		294B33AB23D6436000D6BF14 /* SelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorView.swift; sourceTree = "<group>"; };
+		294B33AE23D64A2C00D6BF14 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		294B33B423D6500E00D6BF14 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		294BBB8F23A44C6D0022AC8C /* Gotham-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Thin.otf"; sourceTree = "<group>"; };
 		294BBB9023A44C6D0022AC8C /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Bold.otf"; sourceTree = "<group>"; };
 		294BBB9123A44C6D0022AC8C /* Gotham-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Book.otf"; sourceTree = "<group>"; };
@@ -353,6 +365,10 @@
 			isa = PBXGroup;
 			children = (
 				295AFFBC239C21F8003E24C6 /* BackgroundView.swift */,
+				294B33A823D642D600D6BF14 /* BannerView.swift */,
+				294B33AB23D6436000D6BF14 /* SelectorView.swift */,
+				294B33AE23D64A2C00D6BF14 /* CustomSlider.swift */,
+				294B33B423D6500E00D6BF14 /* TextFieldView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -784,9 +800,13 @@
 				29C9561D2393042500373031 /* AppDelegate.swift in Sources */,
 				29D43BE923A8394400C7981B /* StateModels.swift in Sources */,
 				29C9561F2393042500373031 /* SceneDelegate.swift in Sources */,
+				294B33AC23D6436000D6BF14 /* SelectorView.swift in Sources */,
 				29FDE47D2395B28B0061EF5E /* SetupView.swift in Sources */,
 				29C956212393042500373031 /* ContentView.swift in Sources */,
+				294B33B523D6500E00D6BF14 /* TextFieldView.swift in Sources */,
 				295AFFC2239C2552003E24C6 /* Palette.swift in Sources */,
+				294B33A923D642D600D6BF14 /* BannerView.swift in Sources */,
+				294B33AF23D64A2C00D6BF14 /* CustomSlider.swift in Sources */,
 				294BBBF223A44CA00022AC8C /* Constants.swift in Sources */,
 				2911C2AF23A59AB500405306 /* TypeExtensions.swift in Sources */,
 			);
@@ -809,9 +829,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				294BBBF423A44CA00022AC8C /* Constants.swift in Sources */,
+				294B33B023D64A2C00D6BF14 /* CustomSlider.swift in Sources */,
 				295AFFBE239C21F8003E24C6 /* BackgroundView.swift in Sources */,
+				294B33B623D6500E00D6BF14 /* TextFieldView.swift in Sources */,
+				294B33AD23D6436000D6BF14 /* SelectorView.swift in Sources */,
 				29FDE4852395B2EB0061EF5E /* HostingController.swift in Sources */,
 				29C9563F2393042800373031 /* NShapeSetsUITests.swift in Sources */,
+				294B33AA23D642D600D6BF14 /* BannerView.swift in Sources */,
 				295AFFC3239C2552003E24C6 /* Palette.swift in Sources */,
 				2911C2B123A59AB500405306 /* TypeExtensions.swift in Sources */,
 				29D43BEB23A8394400C7981B /* StateModels.swift in Sources */,

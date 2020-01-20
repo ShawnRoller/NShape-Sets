@@ -17,5 +17,7 @@ struct Palette {
     static let header1Color = Color("Header1TypeColor")
     static let header2Color = Color("Header2TypeColor")
     static let inputColor = Color("InputColor")
+    static let accentColor1 = Color("AccentColor1")
+    static let accentColor2 = Color("AccentColor2")
     
 }

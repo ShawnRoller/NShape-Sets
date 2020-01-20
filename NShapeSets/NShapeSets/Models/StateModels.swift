@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum State {
+enum ScreenState {
     case setup
     case active
     case rest

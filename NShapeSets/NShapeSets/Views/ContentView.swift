@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var step: State
+    var step: ScreenState
     
     var body: some View {
         ZStack {
@@ -21,7 +21,7 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var state = State.setup
+    static var state = ScreenState.setup
     
     static var previews: some View {
         Group {

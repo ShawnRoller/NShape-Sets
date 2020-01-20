@@ -12,6 +12,8 @@ struct SetupView: View {
     
     var body: some View {
         VStack {
+            BannerView()
+            Spacer()
             Text("Hello, World!")
                 .header1Font()
                 .foregroundColor(Palette.header1Color)
