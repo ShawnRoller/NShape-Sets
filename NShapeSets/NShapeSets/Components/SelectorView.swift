@@ -14,12 +14,17 @@ struct SelectorView: View {
     
     var range: ClosedRange<Double> = 1...100
     var step: Double = 1
+    var image: String?
     
     var body: some View {
-        HStack {
+        HStack(alignment: .top) {
             CustomSlider(range: range, step: step, value: $value)
-            // TODO: make the textfield accept a number
-            TextFieldView(text: .constant("15"))
+            VStack {
+                TextFieldView(title: title, text: $value.stringValue)
+                if image != nil {
+                    Image(image!)
+                }
+            }
         }
     }
 }
@@ -30,7 +35,8 @@ struct SelectorView_Previews: PreviewProvider {
             BackgroundView()
             SelectorView(
                 value: .constant(15.0),
-                title: .constant("Sets")
+                title: .constant("Sets"),
+                image: "Title-Sets"
             )
         }
     }

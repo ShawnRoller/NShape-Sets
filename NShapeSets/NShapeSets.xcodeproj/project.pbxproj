@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2911C2AF23A59AB500405306 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypeExtensions.swift */; };
-		2911C2B023A59AB500405306 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypeExtensions.swift */; };
-		2911C2B123A59AB500405306 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypeExtensions.swift */; };
-		2911C2B223A59AB500405306 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypeExtensions.swift */; };
+		2911C2AF23A59AB500405306 /* TypefaceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypefaceExtensions.swift */; };
+		2911C2B023A59AB500405306 /* TypefaceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypefaceExtensions.swift */; };
+		2911C2B123A59AB500405306 /* TypefaceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypefaceExtensions.swift */; };
+		2911C2B223A59AB500405306 /* TypefaceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypefaceExtensions.swift */; };
 		29201EE623988F5F0016DF8C /* WatchNShapeSets WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 29201EE523988F5F0016DF8C /* WatchNShapeSets WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		29201EEC23988F5F0016DF8C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29201EEA23988F5F0016DF8C /* Interface.storyboard */; };
 		29201EEE23988F600016DF8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29201EED23988F600016DF8C /* Assets.xcassets */; };
@@ -119,6 +119,9 @@
 		295AFFBE239C21F8003E24C6 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AFFBC239C21F8003E24C6 /* BackgroundView.swift */; };
 		295AFFC2239C2552003E24C6 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AFFC1239C2552003E24C6 /* Palette.swift */; };
 		295AFFC3239C2552003E24C6 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AFFC1239C2552003E24C6 /* Palette.swift */; };
+		29B10F9223D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
+		29B10F9323D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
+		29B10F9423D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
 		29C9561D2393042500373031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C9561C2393042500373031 /* AppDelegate.swift */; };
 		29C9561F2393042500373031 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C9561E2393042500373031 /* SceneDelegate.swift */; };
 		29C956212393042500373031 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C956202393042500373031 /* ContentView.swift */; };
@@ -194,7 +197,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2911C2AE23A59AB500405306 /* TypeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeExtensions.swift; sourceTree = "<group>"; };
+		2911C2AE23A59AB500405306 /* TypefaceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypefaceExtensions.swift; sourceTree = "<group>"; };
 		29201EE223988F5F0016DF8C /* WatchNShapeSets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchNShapeSets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29201EE523988F5F0016DF8C /* WatchNShapeSets WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchNShapeSets WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29201EEB23988F5F0016DF8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -235,6 +238,7 @@
 		294BBBF123A44CA00022AC8C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		295AFFBC239C21F8003E24C6 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		295AFFC1239C2552003E24C6 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		29B10F9123D8F57500BD9700 /* TypeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeExtensions.swift; sourceTree = "<group>"; };
 		29C956192393042500373031 /* NShapeSets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NShapeSets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C9561C2393042500373031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29C9561E2393042500373031 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -289,7 +293,8 @@
 		2911C2AD23A59A9200405306 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2911C2AE23A59AB500405306 /* TypeExtensions.swift */,
+				2911C2AE23A59AB500405306 /* TypefaceExtensions.swift */,
+				29B10F9123D8F57500BD9700 /* TypeExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -780,7 +785,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29201EFC23988F600016DF8C /* HostingController.swift in Sources */,
-				2911C2B223A59AB500405306 /* TypeExtensions.swift in Sources */,
+				2911C2B223A59AB500405306 /* TypefaceExtensions.swift in Sources */,
 				29201EFA23988F600016DF8C /* ContentView.swift in Sources */,
 				29201F0023988F600016DF8C /* NotificationController.swift in Sources */,
 				29201EFE23988F600016DF8C /* ExtensionDelegate.swift in Sources */,
@@ -808,7 +813,8 @@
 				294B33A923D642D600D6BF14 /* BannerView.swift in Sources */,
 				294B33AF23D64A2C00D6BF14 /* CustomSlider.swift in Sources */,
 				294BBBF223A44CA00022AC8C /* Constants.swift in Sources */,
-				2911C2AF23A59AB500405306 /* TypeExtensions.swift in Sources */,
+				2911C2AF23A59AB500405306 /* TypefaceExtensions.swift in Sources */,
+				29B10F9223D8F57500BD9700 /* TypeExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -817,10 +823,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				29FDE4842395B2EB0061EF5E /* HostingController.swift in Sources */,
-				2911C2B023A59AB500405306 /* TypeExtensions.swift in Sources */,
+				2911C2B023A59AB500405306 /* TypefaceExtensions.swift in Sources */,
 				29C956342393042800373031 /* NShapeSetsTests.swift in Sources */,
 				29D43BEA23A8394400C7981B /* StateModels.swift in Sources */,
 				294BBBF323A44CA00022AC8C /* Constants.swift in Sources */,
+				29B10F9323D8F57500BD9700 /* TypeExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -833,11 +840,12 @@
 				295AFFBE239C21F8003E24C6 /* BackgroundView.swift in Sources */,
 				294B33B623D6500E00D6BF14 /* TextFieldView.swift in Sources */,
 				294B33AD23D6436000D6BF14 /* SelectorView.swift in Sources */,
+				29B10F9423D8F57500BD9700 /* TypeExtensions.swift in Sources */,
 				29FDE4852395B2EB0061EF5E /* HostingController.swift in Sources */,
 				29C9563F2393042800373031 /* NShapeSetsUITests.swift in Sources */,
 				294B33AA23D642D600D6BF14 /* BannerView.swift in Sources */,
 				295AFFC3239C2552003E24C6 /* Palette.swift in Sources */,
-				2911C2B123A59AB500405306 /* TypeExtensions.swift in Sources */,
+				2911C2B123A59AB500405306 /* TypefaceExtensions.swift in Sources */,
 				29D43BEB23A8394400C7981B /* StateModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,11 +9,13 @@
 import SwiftUI
 
 struct TextFieldView: View {
+    var title: String
     @Binding var text: String
+    
     var accentColor: Color = Palette.accentColor1
     
     var body: some View {
-        TextField("", text: $text)
+        TextField(title, text: $text)
             .overlay(
                 RoundedRectangle(cornerRadius: 2)
                     .stroke(accentColor, lineWidth: 1)
@@ -30,7 +32,7 @@ struct TextFieldView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             BackgroundView()
-            TextFieldView(text: .constant("15"))
+            TextFieldView(title: "Sets", text: .constant("15"))
         }
     }
 }
