@@ -10,7 +10,7 @@ import SwiftUI
 
 extension Double {
     var stringValue: String {
-        get { "\(self)" }
+        get { "\(Int(self))" }
         set { self = Double(newValue) ?? 0.0 }
     }
 }

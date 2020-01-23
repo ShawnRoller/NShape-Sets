@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SelectorView: View {
     @Binding var value: Double
-    @Binding var title: String
+    var title: String
     
     var range: ClosedRange<Double> = 1...100
     var step: Double = 1
@@ -19,13 +19,16 @@ struct SelectorView: View {
     var body: some View {
         HStack(alignment: .top) {
             CustomSlider(range: range, step: step, value: $value)
+                .padding(.top, 8)
             VStack {
                 TextFieldView(title: title, text: $value.stringValue)
                 if image != nil {
                     Image(image!)
                 }
             }
+            .frame(minWidth: 50, maxWidth: 100, minHeight: 50, maxHeight: 80)
         }
+        .padding()
     }
 }
 
@@ -35,7 +38,7 @@ struct SelectorView_Previews: PreviewProvider {
             BackgroundView()
             SelectorView(
                 value: .constant(15.0),
-                title: .constant("Sets"),
+                title: "Sets",
                 image: "Title-Sets"
             )
         }

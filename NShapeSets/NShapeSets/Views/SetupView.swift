@@ -10,13 +10,19 @@ import SwiftUI
 
 struct SetupView: View {
     
+    @State private var sets = 15.0
+    @State private var rest = 25.0
+    
     var body: some View {
         VStack {
             BannerView()
             Spacer()
-            Text("Hello, World!")
-                .header1Font()
-                .foregroundColor(Palette.header1Color)
+            SelectorView(value: $sets, title: "Sets", range: 0.0...100.0, step: 1.0, image: "Title-Sets")
+            Spacer()
+            SelectorView(value: $rest, title: "Rest", range: 0.0...100.0, step: 1.0, image: "Title-Rest")
+            Spacer()
+            Image("Button-Start")
+            Spacer()
         }
     }
 }
