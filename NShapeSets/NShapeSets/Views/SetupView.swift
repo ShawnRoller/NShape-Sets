@@ -17,11 +17,14 @@ struct SetupView: View {
         VStack {
             BannerView()
             Spacer()
-            SelectorView(value: $sets, title: "Sets", range: 0.0...100.0, step: 1.0, image: "Title-Sets")
+            SelectorView(value: $sets, title: "Sets", range: 1.0...100.0, step: 1.0, image: "Title-Sets")
             Spacer()
-            SelectorView(value: $rest, title: "Rest", range: 0.0...100.0, step: 1.0, image: "Title-Rest")
+            SelectorView(value: $rest, title: "Rest", range: 1.0...100.0, step: 1.0, image: "Title-Rest")
             Spacer()
             Image("Button-Start")
+                .onTapGesture {
+                    // TODO: validate the entries and move to the start screen
+                }
             Spacer()
         }
     }

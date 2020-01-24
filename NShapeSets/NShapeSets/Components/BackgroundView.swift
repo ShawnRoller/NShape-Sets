@@ -27,7 +27,7 @@ struct BackgroundView_Previews: PreviewProvider {
                 .environment(\.colorScheme, .light)
             
             BackgroundView()
-            .environment(\.colorScheme, .dark)
+                .environment(\.colorScheme, .dark)
         }
     }
 }

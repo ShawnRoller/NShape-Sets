@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct SelectorView: View {
+struct SelectorView: View, SelectorProtocol {
     @Binding var value: Double
     var title: String
     
