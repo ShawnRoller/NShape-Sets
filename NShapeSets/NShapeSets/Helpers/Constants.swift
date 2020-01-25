@@ -20,3 +20,18 @@ struct Theme {
     static let wHeader2Font = UIFont.systemFont(ofSize: 20, weight: .regular)
     static let wHeader3Font = UIFont.systemFont(ofSize: 17, weight: .regular)
 }
+
+struct ImageAsset {
+    static let banner = "Banner-NShapeSets"
+    static let buttonRest = "Button-Rest"
+    static let buttonSkip = "Button-Skip"
+    static let buttonStart = "Button-Start"
+    static let inputBox = "InputBox-Rectangle"
+    static let logo = "NShapeSets-Logo"
+    static let currentSet = "Title-CurrentSet"
+    static let nextSet = "Title-NextSet"
+    static let remainingSets = "Title-RemainingSets"
+    static let rest = "Title-Rest"
+    static let restTime = "Title-RestTime"
+    static let sets = "Title-Sets"
+}
