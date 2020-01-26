@@ -39,7 +39,7 @@ struct SelectorView_Previews: PreviewProvider {
             SelectorView(
                 value: .constant(15.0),
                 title: "Sets",
-                image: "Title-Sets"
+                image: ImageAsset.sets
             )
         }
     }

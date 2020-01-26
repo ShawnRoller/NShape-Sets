@@ -11,7 +11,7 @@ import SwiftUI
 struct BannerView: View {
     
     var body: some View {
-        Image("Banner-NShapeSets")
+        Image(ImageAsset.banner)
             .resizable()
             .aspectRatio(contentMode: .fit)
             .padding()

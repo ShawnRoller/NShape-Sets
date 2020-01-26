@@ -38,12 +38,12 @@ struct ActiveWorkoutView: View {
     
     var body: some View {
         VStack {
-            BannerView()
-            Spacer()
-            InfoView(imageString: topImage, text: "10")
-            Spacer()
-            InfoView(imageString: middleImage, text: "10")
-            Spacer()
+//            BannerView()
+//            Spacer()
+//            InfoView(imageString: topImage, text: "10")
+//            Spacer()
+//            InfoView(imageString: middleImage, text: "10")
+//            Spacer()
             bottomImage
                 .onTapGesture {
                     // TODO: skip to next set or skip rest
@@ -56,7 +56,7 @@ struct ActiveWorkoutView: View {
 struct ActiveWorkoutView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            BackgroundView()
+//            BackgroundView()
             ActiveWorkoutView(workout: Workout.example)
         }
     }
