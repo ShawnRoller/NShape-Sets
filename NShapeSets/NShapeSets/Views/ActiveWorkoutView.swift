@@ -37,18 +37,21 @@ struct ActiveWorkoutView: View {
     }
     
     var body: some View {
-        VStack {
-//            BannerView()
-//            Spacer()
-//            InfoView(imageString: topImage, text: "10")
-//            Spacer()
-//            InfoView(imageString: middleImage, text: "10")
-//            Spacer()
-            bottomImage
-                .onTapGesture {
-                    // TODO: skip to next set or skip rest
-                }
-            Spacer()
+        ZStack {
+            BackgroundView()
+            VStack {
+                BannerView()
+                Spacer()
+                InfoView(imageString: topImage, text: "10")
+                Spacer()
+                InfoView(imageString: middleImage, text: "10")
+                Spacer()
+                bottomImage
+                    .onTapGesture {
+                        // TODO: skip to next set or skip rest
+                    }
+                Spacer()
+            }
         }
     }
 }

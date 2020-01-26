@@ -12,6 +12,7 @@ struct SetupView: View {
     
     @State private var sets = 15.0
     @State private var rest = 25.0
+    @State private var isWorkoutActive = false
     
     var body: some View {
         VStack {
@@ -23,9 +24,12 @@ struct SetupView: View {
             Spacer()
             Image(ImageAsset.buttonStart)
                 .onTapGesture {
-                    // TODO: validate the entries and move to the start screen
+                    self.isWorkoutActive.toggle()
                 }
             Spacer()
+        }
+        .sheet(isPresented: $isWorkoutActive) {
+            ActiveWorkoutView(workout: Workout.example)
         }
     }
 }
