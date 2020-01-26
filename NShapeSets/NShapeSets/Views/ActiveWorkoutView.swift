@@ -48,7 +48,7 @@ struct ActiveWorkoutView: View {
                 Spacer()
                 bottomImage
                     .onTapGesture {
-                        // TODO: skip to next set or skip rest
+                        self.workoutState = self.workoutState == .active ? .rest : .active
                     }
                 Spacer()
             }
