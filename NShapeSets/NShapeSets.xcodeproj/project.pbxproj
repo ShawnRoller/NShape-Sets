@@ -119,6 +119,12 @@
 		295AFFBE239C21F8003E24C6 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AFFBC239C21F8003E24C6 /* BackgroundView.swift */; };
 		295AFFC2239C2552003E24C6 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AFFC1239C2552003E24C6 /* Palette.swift */; };
 		295AFFC3239C2552003E24C6 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AFFC1239C2552003E24C6 /* Palette.swift */; };
+		296528F823DF7C2100C203F8 /* ActiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296528F723DF7C2100C203F8 /* ActiveView.swift */; };
+		296528F923DF7C2100C203F8 /* ActiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296528F723DF7C2100C203F8 /* ActiveView.swift */; };
+		296528FA23DF7C2100C203F8 /* ActiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296528F723DF7C2100C203F8 /* ActiveView.swift */; };
+		296528FC23DF7F6B00C203F8 /* RestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296528FB23DF7F6B00C203F8 /* RestView.swift */; };
+		296528FD23DF7F6B00C203F8 /* RestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296528FB23DF7F6B00C203F8 /* RestView.swift */; };
+		296528FE23DF7F6B00C203F8 /* RestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296528FB23DF7F6B00C203F8 /* RestView.swift */; };
 		29B10F9223D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
 		29B10F9323D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
 		29B10F9423D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
@@ -250,6 +256,8 @@
 		294BBBF123A44CA00022AC8C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		295AFFBC239C21F8003E24C6 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		295AFFC1239C2552003E24C6 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		296528F723DF7C2100C203F8 /* ActiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveView.swift; sourceTree = "<group>"; };
+		296528FB23DF7F6B00C203F8 /* RestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestView.swift; sourceTree = "<group>"; };
 		29B10F9123D8F57500BD9700 /* TypeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeExtensions.swift; sourceTree = "<group>"; };
 		29C956192393042500373031 /* NShapeSets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NShapeSets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C9561C2393042500373031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -391,6 +399,8 @@
 				294B33AE23D64A2C00D6BF14 /* CustomSlider.swift */,
 				294B33B423D6500E00D6BF14 /* TextFieldView.swift */,
 				29CDDC2F23DCCD86008BB4B8 /* InfoView.swift */,
+				296528F723DF7C2100C203F8 /* ActiveView.swift */,
+				296528FB23DF7F6B00C203F8 /* RestView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -830,6 +840,7 @@
 			files = (
 				295AFFBD239C21F8003E24C6 /* BackgroundView.swift in Sources */,
 				29FDE4832395B2EB0061EF5E /* HostingController.swift in Sources */,
+				296528F823DF7C2100C203F8 /* ActiveView.swift in Sources */,
 				29CDDC2823DCC6D3008BB4B8 /* ActiveWorkoutView.swift in Sources */,
 				29C9561D2393042500373031 /* AppDelegate.swift in Sources */,
 				29D43BE923A8394400C7981B /* StateModels.swift in Sources */,
@@ -843,6 +854,7 @@
 				294B33A923D642D600D6BF14 /* BannerView.swift in Sources */,
 				294B33AF23D64A2C00D6BF14 /* CustomSlider.swift in Sources */,
 				294BBBF223A44CA00022AC8C /* Constants.swift in Sources */,
+				296528FC23DF7F6B00C203F8 /* RestView.swift in Sources */,
 				2911C2AF23A59AB500405306 /* TypefaceExtensions.swift in Sources */,
 				29CDDC1E23DB2340008BB4B8 /* ViewProtocols.swift in Sources */,
 				29CDDC2423DCC504008BB4B8 /* Workout.swift in Sources */,
@@ -862,7 +874,9 @@
 				29D43BEA23A8394400C7981B /* StateModels.swift in Sources */,
 				294BBBF323A44CA00022AC8C /* Constants.swift in Sources */,
 				29B10F9323D8F57500BD9700 /* TypeExtensions.swift in Sources */,
+				296528F923DF7C2100C203F8 /* ActiveView.swift in Sources */,
 				29CDDC3123DCCD86008BB4B8 /* InfoView.swift in Sources */,
+				296528FD23DF7F6B00C203F8 /* RestView.swift in Sources */,
 				29CDDC1F23DB2340008BB4B8 /* ViewProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -881,11 +895,13 @@
 				29B10F9423D8F57500BD9700 /* TypeExtensions.swift in Sources */,
 				29FDE4852395B2EB0061EF5E /* HostingController.swift in Sources */,
 				29CDDC2A23DCC6D4008BB4B8 /* ActiveWorkoutView.swift in Sources */,
+				296528FA23DF7C2100C203F8 /* ActiveView.swift in Sources */,
 				29C9563F2393042800373031 /* NShapeSetsUITests.swift in Sources */,
 				29CDDC2623DCC504008BB4B8 /* Workout.swift in Sources */,
 				294B33AA23D642D600D6BF14 /* BannerView.swift in Sources */,
 				295AFFC3239C2552003E24C6 /* Palette.swift in Sources */,
 				2911C2B123A59AB500405306 /* TypefaceExtensions.swift in Sources */,
+				296528FE23DF7F6B00C203F8 /* RestView.swift in Sources */,
 				29D43BEB23A8394400C7981B /* StateModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

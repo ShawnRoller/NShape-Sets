@@ -12,55 +12,44 @@ struct ActiveWorkoutView: View {
     @State private var workoutState: ScreenState = .active
     var workout: Workout
     
-    var topImage: String {
-        var imageString = ImageAsset.currentSet
-        if workoutState == .rest {
-            imageString = ImageAsset.restTime
-        }
-        return imageString
-    }
-    
-    var middleImage: String {
-        var imageString = ImageAsset.remainingSets
-        if workoutState == .rest {
-            imageString = ImageAsset.nextSet
-        }
-        return imageString
-    }
-    
-    var bottomImage: Image {
-        var imageString = ImageAsset.buttonRest
-        if workoutState == .rest {
-            imageString = ImageAsset.buttonSkip
-        }
-        return Image(imageString)
-    }
-    
     var body: some View {
         ZStack {
             BackgroundView()
             VStack {
                 BannerView()
                 Spacer()
-                InfoView(imageString: topImage, text: "10")
-                Spacer()
-                InfoView(imageString: middleImage, text: "10")
-                Spacer()
-                bottomImage
-                    .onTapGesture {
-                        self.workoutState = self.workoutState == .active ? .rest : .active
-                    }
+                getViewForState(workoutState)
                 Spacer()
             }
         }
+    }
+    
+    func getViewForState(_ state: ScreenState) -> some View {
+        return Group {
+            if workoutState == .rest {
+                RestView(workout: workout) {
+                    self.onRest()
+                }
+            }
+            else {
+                ActiveView(workout: workout) {
+                    self.onSkip()
+                }
+            }
+        }
+    }
+    
+    func onRest() {
+        workoutState = workoutState == .active ? .rest : .active
+    }
+    
+    func onSkip() {
+        workoutState = workoutState == .active ? .rest : .active
     }
 }
 
 struct ActiveWorkoutView_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-//            BackgroundView()
-            ActiveWorkoutView(workout: Workout.example)
-        }
+        ActiveWorkoutView(workout: Workout.example)
     }
 }

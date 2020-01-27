@@ -15,3 +15,7 @@ protocol SelectorProtocol: View {
     var step: Double { get set }
     var image: String? { get set }
 }
+
+protocol ActiveWorkoutContent: View {
+    var workout: Workout { get set }
+}
