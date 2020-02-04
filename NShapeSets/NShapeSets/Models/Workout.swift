@@ -8,12 +8,30 @@
 
 import Foundation
 
-struct Workout {
+class Workout: ObservableObject {
     var sets: Double
     var rest: Double
     var currentSet: Double
+    var currentRest: Double
     var remainingSets: Double {
         return sets - currentSet
+    }
+    
+    init(sets: Double, rest: Double, currentSet: Double) {
+        self.sets = sets
+        self.rest = rest
+        self.currentRest = rest
+        self.currentSet = currentSet
+    }
+    
+    func nextSet() {
+        currentSet += 1
+        currentRest = rest
+    }
+    
+    func restart() {
+        currentSet = 1
+        currentRest = rest
     }
 
     #if DEBUG
