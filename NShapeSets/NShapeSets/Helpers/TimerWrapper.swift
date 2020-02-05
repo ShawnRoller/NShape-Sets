@@ -15,10 +15,11 @@ class TimerWrapper: ObservableObject {
     @Published var remainingRest = 0
     @Published var currentRound = 1
     
-    init(rest: Int, rounds: Int) {
+    init(rest: Int, rounds: Int, currentRound: Int) {
         self.rest = rest
         self.rounds = rounds
         self.remainingRest = rest
+        self.currentRound = currentRound
     }
     
     func start() {

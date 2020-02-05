@@ -29,8 +29,13 @@ struct SetupView: View {
             Spacer()
         }
         .sheet(isPresented: $isWorkoutActive) {
-            ActiveWorkoutView(workout: self.getWorkoutWith(sets: self.sets, rest: self.rest))
+            self.getWorkoutView()
         }
+    }
+    
+    func getWorkoutView() -> some View {
+        let workout = self.getWorkoutWith(sets: self.sets, rest: self.rest)
+        return ActiveWorkoutView(workout: workout)
     }
     
     func getWorkoutWith(sets: Double, rest: Double) -> Workout {

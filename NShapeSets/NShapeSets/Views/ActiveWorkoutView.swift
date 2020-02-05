@@ -49,6 +49,7 @@ struct ActiveWorkoutView: View {
 }
 
 struct ActiveWorkoutView_Previews: PreviewProvider {
+    
     static var previews: some View {
         ActiveWorkoutView(workout: Workout.example)
     }
