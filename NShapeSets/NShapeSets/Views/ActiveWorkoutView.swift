@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ActiveWorkoutView: View {
     @State private var workoutState: ScreenState = .active
+    @ObservedObject var timer: TimerWrapper
     var workout: Workout
     
     var body: some View {
@@ -27,13 +28,13 @@ struct ActiveWorkoutView: View {
     func getViewForState(_ state: ScreenState) -> some View {
         return Group {
             if workoutState == .rest {
-                RestView(workout: workout) {
-                    self.onRest()
+                RestView(workout: workout, timer: timer) {
+                    self.onSkip()
                 }
             }
             else {
-                ActiveView(workout: workout) {
-                    self.onSkip()
+                ActiveView(workout: workout, timer: timer) {
+                    self.onRest()
                 }
             }
         }
@@ -41,16 +42,19 @@ struct ActiveWorkoutView: View {
     
     func onRest() {
         workoutState = workoutState == .active ? .rest : .active
+        timer.start()
     }
     
     func onSkip() {
         workoutState = workoutState == .active ? .rest : .active
+        timer.restComplete()
     }
 }
 
 struct ActiveWorkoutView_Previews: PreviewProvider {
+    static let timer = TimerWrapper(rest: 3, rounds: 4, currentRound: 1)
     
     static var previews: some View {
-        ActiveWorkoutView(workout: Workout.example)
+        ActiveWorkoutView(timer: timer, workout: Workout.example)
     }
 }

@@ -15,7 +15,7 @@ struct InfoView: View {
     var body: some View {
         VStack {
             Image(imageString)
-            Text("10")
+            Text(text)
                 .foregroundColor(.white)
                 .header2Font()
         }

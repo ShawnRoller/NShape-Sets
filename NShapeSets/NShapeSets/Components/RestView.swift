@@ -10,13 +10,14 @@ import SwiftUI
 
 struct RestView: View, ActiveWorkoutContent {
     var workout: Workout
+    @ObservedObject var timer: TimerWrapper
     var onButtonTap: () -> Void
     
     var body: some View {
         VStack {
-            InfoView(imageString: ImageAsset.restTime, text: "10")
+            InfoView(imageString: ImageAsset.restTime, text: "\(timer.remainingRest)")
             Spacer()
-            InfoView(imageString: ImageAsset.nextSet, text: "10")
+            InfoView(imageString: ImageAsset.nextSet, text: "\(timer.currentRound + 1)")
             Spacer()
             Image(ImageAsset.buttonSkip)
                 .onTapGesture {
@@ -27,7 +28,8 @@ struct RestView: View, ActiveWorkoutContent {
 }
 
 struct RestView_Previews: PreviewProvider {
+    static var timer = TimerWrapper(rest: 3, rounds: 4, currentRound: 1)
     static var previews: some View {
-        RestView(workout: Workout.example, onButtonTap: {})
+        RestView(workout: Workout.example, timer: timer, onButtonTap: {})
     }
 }
