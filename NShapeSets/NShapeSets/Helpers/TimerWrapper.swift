@@ -14,12 +14,14 @@ class TimerWrapper: ObservableObject {
     var rounds: Int = 0
     @Published var remainingRest = 0
     @Published var currentRound = 1
+    var onRestComplete: ()
     
-    init(rest: Int, rounds: Int, currentRound: Int) {
+    init(rest: Int, rounds: Int, currentRound: Int, onRestComplete: ()) {
         self.rest = rest
         self.rounds = rounds
         self.remainingRest = rest
         self.currentRound = currentRound
+        self.onRestComplete = onRestComplete
     }
     
     func start() {
