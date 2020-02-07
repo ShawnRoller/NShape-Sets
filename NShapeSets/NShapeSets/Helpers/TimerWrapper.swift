@@ -14,6 +14,9 @@ class TimerWrapper: ObservableObject {
     var rounds: Int = 0
     @Published var remainingRest = 0
     @Published var currentRound = 1
+    var isActive: Bool {
+        return timer != nil ? timer.isValid : false
+    }
     
     init(rest: Int, rounds: Int, currentRound: Int) {
         self.rest = rest

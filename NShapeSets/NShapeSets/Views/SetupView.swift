@@ -10,8 +10,8 @@ import SwiftUI
 
 struct SetupView: View {
     
-    @State private var sets = 15.0
-    @State private var rest = 25.0
+    @State private var sets = 8.0
+    @State private var rest = 5.0
     @State private var isWorkoutActive = false
     
     var body: some View {

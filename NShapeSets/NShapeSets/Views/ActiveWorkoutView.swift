@@ -27,7 +27,7 @@ struct ActiveWorkoutView: View {
     
     func getViewForState(_ state: ScreenState) -> some View {
         return Group {
-            if workoutState == .rest {
+            if timer.isActive {
                 RestView(workout: workout, timer: timer) {
                     self.onSkip()
                 }
