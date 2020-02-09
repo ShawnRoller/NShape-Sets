@@ -15,6 +15,9 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             BackgroundView()
+                .onTapGesture {
+                    UIApplication.shared.endEditing()
+                }
             SetupView()
         }
     }

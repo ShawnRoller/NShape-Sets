@@ -24,6 +24,7 @@ struct TextFieldView: View {
             .foregroundColor(.white)
             .background(Color.white.opacity(0.2))
             .multilineTextAlignment(.center)
+            .keyboardType(.numberPad)
             .inputFont()
     }
 }
