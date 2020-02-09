@@ -128,6 +128,9 @@
 		2965290023E9A32E00C203F8 /* TimerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296528FF23E9A32E00C203F8 /* TimerWrapper.swift */; };
 		2965290123E9A32E00C203F8 /* TimerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296528FF23E9A32E00C203F8 /* TimerWrapper.swift */; };
 		2965290223E9A32E00C203F8 /* TimerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296528FF23E9A32E00C203F8 /* TimerWrapper.swift */; };
+		2965290623F09E1B00C203F8 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965290523F09E1B00C203F8 /* AppExtensions.swift */; };
+		2965290723F09E1B00C203F8 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965290523F09E1B00C203F8 /* AppExtensions.swift */; };
+		2965290823F09E1B00C203F8 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965290523F09E1B00C203F8 /* AppExtensions.swift */; };
 		29B10F9223D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
 		29B10F9323D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
 		29B10F9423D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
@@ -262,6 +265,7 @@
 		296528F723DF7C2100C203F8 /* ActiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveView.swift; sourceTree = "<group>"; };
 		296528FB23DF7F6B00C203F8 /* RestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestView.swift; sourceTree = "<group>"; };
 		296528FF23E9A32E00C203F8 /* TimerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerWrapper.swift; sourceTree = "<group>"; };
+		2965290523F09E1B00C203F8 /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
 		29B10F9123D8F57500BD9700 /* TypeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeExtensions.swift; sourceTree = "<group>"; };
 		29C956192393042500373031 /* NShapeSets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NShapeSets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C9561C2393042500373031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -323,6 +327,7 @@
 			children = (
 				2911C2AE23A59AB500405306 /* TypefaceExtensions.swift */,
 				29B10F9123D8F57500BD9700 /* TypeExtensions.swift */,
+				2965290523F09E1B00C203F8 /* AppExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -861,6 +866,7 @@
 				294BBBF223A44CA00022AC8C /* Constants.swift in Sources */,
 				296528FC23DF7F6B00C203F8 /* RestView.swift in Sources */,
 				2965290023E9A32E00C203F8 /* TimerWrapper.swift in Sources */,
+				2965290623F09E1B00C203F8 /* AppExtensions.swift in Sources */,
 				2911C2AF23A59AB500405306 /* TypefaceExtensions.swift in Sources */,
 				29CDDC1E23DB2340008BB4B8 /* ViewProtocols.swift in Sources */,
 				29CDDC2423DCC504008BB4B8 /* Workout.swift in Sources */,
@@ -885,6 +891,7 @@
 				29CDDC3123DCCD86008BB4B8 /* InfoView.swift in Sources */,
 				296528FD23DF7F6B00C203F8 /* RestView.swift in Sources */,
 				29CDDC1F23DB2340008BB4B8 /* ViewProtocols.swift in Sources */,
+				2965290723F09E1B00C203F8 /* AppExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -907,6 +914,7 @@
 				29CDDC2623DCC504008BB4B8 /* Workout.swift in Sources */,
 				294B33AA23D642D600D6BF14 /* BannerView.swift in Sources */,
 				2965290223E9A32E00C203F8 /* TimerWrapper.swift in Sources */,
+				2965290823F09E1B00C203F8 /* AppExtensions.swift in Sources */,
 				295AFFC3239C2552003E24C6 /* Palette.swift in Sources */,
 				2911C2B123A59AB500405306 /* TypefaceExtensions.swift in Sources */,
 				296528FE23DF7F6B00C203F8 /* RestView.swift in Sources */,
