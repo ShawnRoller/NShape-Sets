@@ -13,13 +13,16 @@ struct ContentView: View {
     var step: ScreenState
     
     var body: some View {
-        ZStack {
-            BackgroundView()
-                .onTapGesture {
-                    UIApplication.shared.endEditing()
-                }
-            SetupView()
+        NavigationView {
+            ZStack {
+                BackgroundView()
+                    .onTapGesture {
+                        UIApplication.shared.endEditing()
+                    }
+                SetupView()
+            }
         }
+        .navigationBarTitle("", displayMode: .inline)
     }
 }
 

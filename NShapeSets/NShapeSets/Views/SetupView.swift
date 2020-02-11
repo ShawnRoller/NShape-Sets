@@ -15,6 +15,8 @@ struct SetupView: View {
     @State private var isWorkoutActive = false
     @State private var bannerHeight: CGFloat = 300
     
+    private var useModal = false
+    
     var body: some View {
         VStack {
             BannerView()
@@ -24,19 +26,36 @@ struct SetupView: View {
             getSpacer()
             SelectorView(value: $rest, title: "Rest", range: 1.0...100.0, step: 1.0, image: ImageAsset.rest)
             getSpacer()
-            Image(ImageAsset.buttonStart)
-                .onTapGesture {
-                    self.isWorkoutActive.toggle()
-                }
+            renderStartButton(useModal: useModal)
             Spacer()
         }
         .animation(.spring())
         .sheet(isPresented: $isWorkoutActive) {
-            self.getWorkoutView()
+            if self.useModal {
+                self.getWorkoutView()
+            }
         }
         .onAppear {
             self.handleKeyboardNotifications()
         }
+    }
+    
+    func renderStartButton(useModal: Bool) -> some View {
+        return Group {
+            if useModal {
+                Image(ImageAsset.buttonStart)
+                    .onTapGesture {
+                        self.isWorkoutActive.toggle()
+                    }
+            }
+            else {
+                NavigationLink(destination: getWorkoutView()) {
+                    Image(ImageAsset.buttonStart)
+                }
+                .buttonStyle(PlainButtonStyle())
+            }
+        }
+        
     }
     
     func handleKeyboardNotifications() {
