@@ -21,8 +21,8 @@ struct ContentView: View {
                     }
                 SetupView()
             }
+            .navigationBarHidden(true)
         }
-        .navigationBarTitle("", displayMode: .inline)
     }
 }
 
