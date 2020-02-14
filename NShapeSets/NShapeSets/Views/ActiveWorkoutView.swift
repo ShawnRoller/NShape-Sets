@@ -9,13 +9,14 @@
 import SwiftUI
 
 struct ActiveWorkoutView: View {
-    @State private var workoutState: ScreenState = .active
-    @State private var showingAlert = false
-    @ObservedObject var timer: TimerWrapper
-    
     @Environment(\.presentationMode) var presentationMode
     
+    @State private var workoutState: ScreenState = .active
+    @State private var showingAlert = false
+    
+    @ObservedObject var timer: TimerWrapper
     var workout: Workout
+    @Binding var isPresented: Bool
     
     var body: some View {
         ZStack {
@@ -35,7 +36,12 @@ struct ActiveWorkoutView: View {
     }
     
     func goBack() {
-        presentationMode.wrappedValue.dismiss()
+        if isPresented {
+            isPresented = false
+        }
+        else {
+            presentationMode.wrappedValue.dismiss()
+        }
     }
     
     func getViewForState(_ state: ScreenState) -> some View {
@@ -73,6 +79,6 @@ struct ActiveWorkoutView_Previews: PreviewProvider {
     static let timer = TimerWrapper(rest: 3, rounds: 4, currentRound: 1)
     
     static var previews: some View {
-        ActiveWorkoutView(timer: timer, workout: Workout.example)
+        ActiveWorkoutView(timer: timer, workout: Workout.example, isPresented: .constant(false))
     }
 }
