@@ -9,9 +9,14 @@
 import SwiftUI
 
 struct ActiveWorkoutView: View {
+    @Environment(\.presentationMode) var presentationMode
+    
     @State private var workoutState: ScreenState = .active
+    @State private var showingAlert = false
+    
     @ObservedObject var timer: TimerWrapper
     var workout: Workout
+    @Binding var isPresented: Bool
     
     var body: some View {
         ZStack {
@@ -22,6 +27,20 @@ struct ActiveWorkoutView: View {
                 getViewForState(workoutState)
                 Spacer()
             }
+            .alert(isPresented: $showingAlert) {
+                Alert(title: Text("Workout complete!"), message: Text("You completed all sets!"), dismissButton: .default(Text("OK"), action: {
+                    self.goBack()
+                }))
+            }
+        }
+    }
+    
+    func goBack() {
+        if isPresented {
+            isPresented = false
+        }
+        else {
+            presentationMode.wrappedValue.dismiss()
         }
     }
     
@@ -41,8 +60,13 @@ struct ActiveWorkoutView: View {
     }
     
     func onRest() {
-        workoutState = workoutState == .active ? .rest : .active
-        timer.start()
+        if timer.currentRound == timer.rounds {
+            showingAlert = true
+        }
+        else {
+            workoutState = workoutState == .active ? .rest : .active
+            timer.start()
+        }
     }
     
     func onSkip() {
@@ -55,6 +79,6 @@ struct ActiveWorkoutView_Previews: PreviewProvider {
     static let timer = TimerWrapper(rest: 3, rounds: 4, currentRound: 1)
     
     static var previews: some View {
-        ActiveWorkoutView(timer: timer, workout: Workout.example)
+        ActiveWorkoutView(timer: timer, workout: Workout.example, isPresented: .constant(false))
     }
 }
