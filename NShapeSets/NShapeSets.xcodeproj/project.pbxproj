@@ -158,6 +158,9 @@
 		29D43BEA23A8394400C7981B /* StateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D43BE823A8394400C7981B /* StateModels.swift */; };
 		29D43BEB23A8394400C7981B /* StateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D43BE823A8394400C7981B /* StateModels.swift */; };
 		29D43BEC23A8394400C7981B /* StateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D43BE823A8394400C7981B /* StateModels.swift */; };
+		29F51C9A23F88F12002E8498 /* AudioUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F51C9923F88F12002E8498 /* AudioUtil.swift */; };
+		29F51C9B23F88F12002E8498 /* AudioUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F51C9923F88F12002E8498 /* AudioUtil.swift */; };
+		29F51C9C23F88F12002E8498 /* AudioUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F51C9923F88F12002E8498 /* AudioUtil.swift */; };
 		29FDE47D2395B28B0061EF5E /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FDE47C2395B28B0061EF5E /* SetupView.swift */; };
 		29FDE4832395B2EB0061EF5E /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FDE4822395B2EB0061EF5E /* HostingController.swift */; };
 		29FDE4842395B2EB0061EF5E /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FDE4822395B2EB0061EF5E /* HostingController.swift */; };
@@ -286,6 +289,7 @@
 		29CDDC2723DCC6D3008BB4B8 /* ActiveWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveWorkoutView.swift; sourceTree = "<group>"; };
 		29CDDC2F23DCCD86008BB4B8 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		29D43BE823A8394400C7981B /* StateModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateModels.swift; sourceTree = "<group>"; };
+		29F51C9923F88F12002E8498 /* AudioUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUtil.swift; sourceTree = "<group>"; };
 		29FDE47C2395B28B0061EF5E /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		29FDE4822395B2EB0061EF5E /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -396,6 +400,7 @@
 				294BBBF123A44CA00022AC8C /* Constants.swift */,
 				294BBBF023A44CA00022AC8C /* WatchNShapeSets-Bridging-Header.h */,
 				296528FF23E9A32E00C203F8 /* TimerWrapper.swift */,
+				29F51C9923F88F12002E8498 /* AudioUtil.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -866,6 +871,7 @@
 				294BBBF223A44CA00022AC8C /* Constants.swift in Sources */,
 				296528FC23DF7F6B00C203F8 /* RestView.swift in Sources */,
 				2965290023E9A32E00C203F8 /* TimerWrapper.swift in Sources */,
+				29F51C9A23F88F12002E8498 /* AudioUtil.swift in Sources */,
 				2965290623F09E1B00C203F8 /* AppExtensions.swift in Sources */,
 				2911C2AF23A59AB500405306 /* TypefaceExtensions.swift in Sources */,
 				29CDDC1E23DB2340008BB4B8 /* ViewProtocols.swift in Sources */,
@@ -887,6 +893,7 @@
 				2965290123E9A32E00C203F8 /* TimerWrapper.swift in Sources */,
 				294BBBF323A44CA00022AC8C /* Constants.swift in Sources */,
 				29B10F9323D8F57500BD9700 /* TypeExtensions.swift in Sources */,
+				29F51C9B23F88F12002E8498 /* AudioUtil.swift in Sources */,
 				296528F923DF7C2100C203F8 /* ActiveView.swift in Sources */,
 				29CDDC3123DCCD86008BB4B8 /* InfoView.swift in Sources */,
 				296528FD23DF7F6B00C203F8 /* RestView.swift in Sources */,
@@ -899,6 +906,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29F51C9C23F88F12002E8498 /* AudioUtil.swift in Sources */,
 				29CDDC3223DCCD86008BB4B8 /* InfoView.swift in Sources */,
 				294BBBF423A44CA00022AC8C /* Constants.swift in Sources */,
 				294B33B023D64A2C00D6BF14 /* CustomSlider.swift in Sources */,
