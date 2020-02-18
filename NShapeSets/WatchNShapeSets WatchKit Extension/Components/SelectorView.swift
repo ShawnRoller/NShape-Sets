@@ -15,16 +15,19 @@ struct SelectorView: View {
     var range: ClosedRange<Double> = 1...100
     
     var body: some View {
-        HStack(spacing: 3) {
+        HStack(spacing: 15) {
             Text(title)
                 .watchTitle1Font()
-                .padding([.trailing], 0)
-            ButtonView(value: $value, iconName: "minus.square.fill") {
-                self.onDecrement()
-            }
-            TextFieldView(title: title, text: $value.stringValue)
-            ButtonView(value: $value, iconName: "plus.square.fill") {
-                self.onIncrement()
+                .foregroundColor(Palette.accentColor1)
+            HStack(spacing: 0){
+                ButtonView(value: $value, iconName: "minus.square.fill") {
+                    self.onDecrement()
+                }
+                TextFieldView(title: title, text: $value.stringValue)
+                    .frame(minWidth: 45, maxWidth: 50, minHeight: 30, maxHeight: 40)
+                ButtonView(value: $value, iconName: "plus.square.fill") {
+                    self.onIncrement()
+                }
             }
         }
     }
