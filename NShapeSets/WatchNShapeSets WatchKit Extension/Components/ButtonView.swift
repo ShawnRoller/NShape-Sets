@@ -15,7 +15,7 @@ struct ButtonView: View {
     
     var body: some View {
         Button(action: {
-            self.value -= 1
+            self.onButtonTap()
         }, label: {
             Image(systemName: iconName)
                 .foregroundColor(Palette.button1Color)

@@ -15,11 +15,12 @@ struct TextFieldView: View {
     var accentColor: Color = Palette.accentColor2
     
     var body: some View {
-        TextField(title, text: $text)
-            .overlay(
-                RoundedRectangle(cornerRadius: 2)
-                    .stroke(accentColor, lineWidth: 1)
-            )
+        Text(text)
+            .padding()
+//            .overlay(
+//                RoundedRectangle(cornerRadius: 2)
+//                    .stroke(accentColor, lineWidth: 1)
+//            )
             .multilineTextAlignment(.center)
             .watchInputFont()
     }

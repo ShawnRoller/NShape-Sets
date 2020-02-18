@@ -142,6 +142,8 @@
 		2965290623F09E1B00C203F8 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965290523F09E1B00C203F8 /* AppExtensions.swift */; };
 		2965290723F09E1B00C203F8 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965290523F09E1B00C203F8 /* AppExtensions.swift */; };
 		2965290823F09E1B00C203F8 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965290523F09E1B00C203F8 /* AppExtensions.swift */; };
+		297FDD1723FB896200D9E56E /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297FDD1623FB896200D9E56E /* SetupView.swift */; };
+		297FDD1923FB8EA000D9E56E /* PrimaryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297FDD1823FB8EA000D9E56E /* PrimaryButtonView.swift */; };
 		29B10F9223D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
 		29B10F9323D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
 		29B10F9423D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
@@ -283,6 +285,8 @@
 		296528FB23DF7F6B00C203F8 /* RestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestView.swift; sourceTree = "<group>"; };
 		296528FF23E9A32E00C203F8 /* TimerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerWrapper.swift; sourceTree = "<group>"; };
 		2965290523F09E1B00C203F8 /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
+		297FDD1623FB896200D9E56E /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		297FDD1823FB8EA000D9E56E /* PrimaryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonView.swift; sourceTree = "<group>"; };
 		29B10F9123D8F57500BD9700 /* TypeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeExtensions.swift; sourceTree = "<group>"; };
 		29C956192393042500373031 /* NShapeSets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NShapeSets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C9561C2393042500373031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -390,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				29201EF923988F600016DF8C /* ContentView.swift */,
+				297FDD1623FB896200D9E56E /* SetupView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -408,6 +413,7 @@
 				292DD4E823F9F291007166E0 /* TextFieldView.swift */,
 				292DD4DF23F9EEE3007166E0 /* SelectorView.swift */,
 				292DD4ED23F9F7B9007166E0 /* ButtonView.swift */,
+				297FDD1823FB8EA000D9E56E /* PrimaryButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -896,6 +902,8 @@
 				294BBBF523A44CA00022AC8C /* Constants.swift in Sources */,
 				29201F0223988F600016DF8C /* NotificationView.swift in Sources */,
 				29D43BEC23A8394400C7981B /* StateModels.swift in Sources */,
+				297FDD1923FB8EA000D9E56E /* PrimaryButtonView.swift in Sources */,
+				297FDD1723FB896200D9E56E /* SetupView.swift in Sources */,
 				29201F0423988F600016DF8C /* ComplicationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
