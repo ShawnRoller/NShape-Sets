@@ -56,4 +56,8 @@ class TimerWrapper: ObservableObject {
     func pause() {
         self.timer?.invalidate()
     }
+    
+    #if DEBUG
+    static let example = TimerWrapper(rest: 3, rounds: 4, currentRound: 1)
+    #endif
 }

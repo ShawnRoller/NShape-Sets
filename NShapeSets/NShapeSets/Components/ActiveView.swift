@@ -28,8 +28,7 @@ struct ActiveView: View, ActiveWorkoutContent {
 }
 
 struct ActiveView_Previews: PreviewProvider {
-    static var timer = TimerWrapper(rest: 3, rounds: 4, currentRound: 1)
     static var previews: some View {
-        ActiveView(workout: Workout.example, timer: timer, onButtonTap: {})
+        ActiveView(workout: Workout.example, timer: TimerWrapper.example, onButtonTap: {})
     }
 }

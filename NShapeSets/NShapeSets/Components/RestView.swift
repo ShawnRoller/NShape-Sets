@@ -28,8 +28,7 @@ struct RestView: View, ActiveWorkoutContent {
 }
 
 struct RestView_Previews: PreviewProvider {
-    static var timer = TimerWrapper(rest: 3, rounds: 4, currentRound: 1)
     static var previews: some View {
-        RestView(workout: Workout.example, timer: timer, onButtonTap: {})
+        RestView(workout: Workout.example, timer: TimerWrapper.example, onButtonTap: {})
     }
 }

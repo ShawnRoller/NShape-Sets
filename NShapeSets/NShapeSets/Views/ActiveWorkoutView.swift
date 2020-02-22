@@ -76,9 +76,7 @@ struct ActiveWorkoutView: View {
 }
 
 struct ActiveWorkoutView_Previews: PreviewProvider {
-    static let timer = TimerWrapper(rest: 3, rounds: 4, currentRound: 1)
-    
     static var previews: some View {
-        ActiveWorkoutView(timer: timer, workout: Workout.example, isPresented: .constant(false))
+        ActiveWorkoutView(timer: TimerWrapper.example, workout: Workout.example, isPresented: .constant(false))
     }
 }

@@ -17,7 +17,9 @@ struct SetupView: View {
             SelectorView(value: $sets, title: "Sets")
             SelectorView(value: $rest, title: "Rest")
             Spacer()
-            PrimaryButtonView(title: "Start", onButtonTap: {})
+            PrimaryButtonView(title: "Start", onButtonTap: {
+                
+            })
             Spacer()
                 .frame(height:0)
         }
