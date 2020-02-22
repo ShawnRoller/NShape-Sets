@@ -47,6 +47,6 @@ struct ActiveWorkoutView: View {
 
 struct ActiveWorkoutView_Previews: PreviewProvider {
     static var previews: some View {
-        ActiveWorkoutView(timer: Timer.example, workout: Workout.example)
+        ActiveWorkoutView(timer: TimerWrapper.example, workout: Workout.example)
     }
 }
