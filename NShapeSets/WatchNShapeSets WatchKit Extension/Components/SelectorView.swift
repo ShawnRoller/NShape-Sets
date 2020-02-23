@@ -17,7 +17,7 @@ struct SelectorView: View {
     var body: some View {
         HStack(spacing: 15) {
             Text(title)
-                .watchTitle1Font()
+                .watchTitleFont()
                 .foregroundColor(Palette.accentColor1)
             HStack(spacing: 0){
                 ButtonView(value: $value, iconName: "minus.square.fill") {
