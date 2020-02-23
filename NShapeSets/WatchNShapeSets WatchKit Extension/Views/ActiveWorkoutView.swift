@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct ActiveWorkoutView: View {
-    @State private var buttonTitle = "Rest"
     @State private var workoutState: ScreenState = .active
     @State private var showingAlert = false
     @ObservedObject var timer: TimerWrapper
@@ -18,10 +17,6 @@ struct ActiveWorkoutView: View {
     var body: some View {
         VStack {
             getViewForState(workoutState)
-            Spacer()
-            PrimaryButtonView(title: buttonTitle) {
-                
-            }
         }
         .alert(isPresented: $showingAlert) {
             Alert(title: Text("Workout complete!"), message: Text("You completed all sets!"), dismissButton: .default(Text("OK"), action: {
@@ -33,15 +28,31 @@ struct ActiveWorkoutView: View {
     func getViewForState(_ state: ScreenState) -> some View {
         return Group {
             if timer.isActive {
-                // TODO: return the rest view
-//                RestView(workout: workout, timer: timer) {
-//                    self.onSkip()
-//                }
+                RestView(workout: workout, timer: timer) {
+                    self.onSkip()
+                }
             }
             else {
-                // TODO: return the active view
+                ActiveView(workout: workout, timer: timer) {
+                    self.onRest()
+                }
             }
         }
+    }
+    
+    func onRest() {
+        if timer.currentRound == timer.rounds {
+            showingAlert = true
+        }
+        else {
+            workoutState = workoutState == .active ? .rest : .active
+            timer.start()
+        }
+    }
+    
+    func onSkip() {
+        workoutState = workoutState == .active ? .rest : .active
+        timer.restComplete()
     }
 }
 

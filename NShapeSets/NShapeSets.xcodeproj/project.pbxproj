@@ -171,6 +171,10 @@
 		29D43BEA23A8394400C7981B /* StateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D43BE823A8394400C7981B /* StateModels.swift */; };
 		29D43BEB23A8394400C7981B /* StateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D43BE823A8394400C7981B /* StateModels.swift */; };
 		29D43BEC23A8394400C7981B /* StateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D43BE823A8394400C7981B /* StateModels.swift */; };
+		29DE9EA6240319AF00C6FE68 /* InstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE9EA5240319AF00C6FE68 /* InstructionView.swift */; };
+		29DE9EA824031A2000C6FE68 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE9EA724031A2000C6FE68 /* DetailView.swift */; };
+		29DE9EAA24031C7E00C6FE68 /* ActiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE9EA924031C7E00C6FE68 /* ActiveView.swift */; };
+		29DE9EAC24031C8900C6FE68 /* RestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE9EAB24031C8900C6FE68 /* RestView.swift */; };
 		29F51C9A23F88F12002E8498 /* AudioUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F51C9923F88F12002E8498 /* AudioUtil.swift */; };
 		29F51C9B23F88F12002E8498 /* AudioUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F51C9923F88F12002E8498 /* AudioUtil.swift */; };
 		29F51C9C23F88F12002E8498 /* AudioUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F51C9923F88F12002E8498 /* AudioUtil.swift */; };
@@ -310,6 +314,10 @@
 		29CDDC2723DCC6D3008BB4B8 /* ActiveWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveWorkoutView.swift; sourceTree = "<group>"; };
 		29CDDC2F23DCCD86008BB4B8 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		29D43BE823A8394400C7981B /* StateModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateModels.swift; sourceTree = "<group>"; };
+		29DE9EA5240319AF00C6FE68 /* InstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionView.swift; sourceTree = "<group>"; };
+		29DE9EA724031A2000C6FE68 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		29DE9EA924031C7E00C6FE68 /* ActiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveView.swift; sourceTree = "<group>"; };
+		29DE9EAB24031C8900C6FE68 /* RestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestView.swift; sourceTree = "<group>"; };
 		29F51C9923F88F12002E8498 /* AudioUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUtil.swift; sourceTree = "<group>"; };
 		29F51C9D240195FC002E8498 /* ActiveWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveWorkoutView.swift; sourceTree = "<group>"; };
 		29FDE47C2395B28B0061EF5E /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
@@ -419,6 +427,10 @@
 				292DD4DF23F9EEE3007166E0 /* SelectorView.swift */,
 				292DD4ED23F9F7B9007166E0 /* ButtonView.swift */,
 				297FDD1823FB8EA000D9E56E /* PrimaryButtonView.swift */,
+				29DE9EA5240319AF00C6FE68 /* InstructionView.swift */,
+				29DE9EA724031A2000C6FE68 /* DetailView.swift */,
+				29DE9EA924031C7E00C6FE68 /* ActiveView.swift */,
+				29DE9EAB24031C8900C6FE68 /* RestView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -902,7 +914,11 @@
 				29F51C9F24019704002E8498 /* Workout.swift in Sources */,
 				292DD4EA23F9F4CF007166E0 /* SelectorView.swift in Sources */,
 				292DD4EE23F9F7B9007166E0 /* ButtonView.swift in Sources */,
+				29DE9EAA24031C7E00C6FE68 /* ActiveView.swift in Sources */,
 				292DD4EC23F9F518007166E0 /* TypeExtensions.swift in Sources */,
+				29DE9EA6240319AF00C6FE68 /* InstructionView.swift in Sources */,
+				29DE9EA824031A2000C6FE68 /* DetailView.swift in Sources */,
+				29DE9EAC24031C8900C6FE68 /* RestView.swift in Sources */,
 				29201F0023988F600016DF8C /* NotificationController.swift in Sources */,
 				29201EFE23988F600016DF8C /* ExtensionDelegate.swift in Sources */,
 				294BBBF523A44CA00022AC8C /* Constants.swift in Sources */,

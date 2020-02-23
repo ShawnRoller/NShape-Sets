@@ -10,21 +10,20 @@ import SwiftUI
 
 struct PrimaryButtonView: View {
     var title: String
-    var onButtonTap: () -> Void
+    var destination: ActiveWorkoutView
     
     var body: some View {
-        Button(action: {
-            self.onButtonTap()
-        }, label: {
-            Text(self.title)
-            .watchTitle1Font()
-        })
-            .accentColor(Palette.accentColor1)
+        NavigationLink(destination: destination) {
+            Text(title)
+                .watchTitleFont()
+                .accentColor(Palette.accentColor1)
+        }
+        
     }
 }
 
 struct PrimaryButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        PrimaryButtonView(title: "Start", onButtonTap:{})
+        PrimaryButtonView(title: "Start", destination: ActiveWorkoutView(timer: TimerWrapper.example, workout: Workout.example))
     }
 }
