@@ -19,9 +19,9 @@ struct RestView: View {
             Spacer()
             DetailView(title: "Next set:", value: "\(timer.currentRound + 1)")
             Spacer()
-//            PrimaryButtonView(title: "SKIP") {
-//                self.onButtonTap()
-//            }
+            PrimaryButton(title: "SKIP") {
+                self.onButtonTap()
+            }
         }
     }
 }

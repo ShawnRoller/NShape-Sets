@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ActiveWorkoutView: View {
+    @Environment(\.presentationMode) var presentationMode
     @State private var workoutState: ScreenState = .active
     @State private var showingAlert = false
     @ObservedObject var timer: TimerWrapper
@@ -20,7 +21,7 @@ struct ActiveWorkoutView: View {
         }
         .alert(isPresented: $showingAlert) {
             Alert(title: Text("Workout complete!"), message: Text("You completed all sets!"), dismissButton: .default(Text("OK"), action: {
-                // TODO: go back
+                self.goBack()
             }))
         }
     }
@@ -38,6 +39,10 @@ struct ActiveWorkoutView: View {
                 }
             }
         }
+    }
+    
+    func goBack() {
+        presentationMode.wrappedValue.dismiss()
     }
     
     func onRest() {

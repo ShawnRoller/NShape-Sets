@@ -17,10 +17,21 @@ struct SetupView: View {
             SelectorView(value: $sets, title: "Sets")
             SelectorView(value: $rest, title: "Rest")
             Spacer()
-            PrimaryButtonView(title: "Start", destination: ActiveWorkoutView(timer: TimerWrapper.example, workout: Workout.example))
+            NavigationButton(title: "Start", destination: getWorkoutView())
             Spacer()
                 .frame(height:0)
         }
+    }
+    
+    func getWorkoutView() -> ActiveWorkoutView {
+        let workout = self.getWorkoutWith(sets: self.sets, rest: self.rest)
+        let timer = TimerWrapper(rest: Int(self.rest), rounds: Int(self.sets), currentRound: 1)
+        return ActiveWorkoutView(timer: timer, workout: workout)
+    }
+    
+    func getWorkoutWith(sets: Double, rest: Double) -> Workout {
+        let workout = Workout(sets: sets, rest: rest, currentSet: 1)
+        return workout
     }
 }
 
