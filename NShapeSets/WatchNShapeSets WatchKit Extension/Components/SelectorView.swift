@@ -20,12 +20,12 @@ struct SelectorView: View {
                 .watchTitleFont()
                 .foregroundColor(Palette.accentColor1)
             HStack(spacing: 0){
-                ButtonView(value: $value, iconName: "minus.square.fill") {
+                SelectorButton(value: $value, iconName: "minus.square.fill") {
                     self.onDecrement()
                 }
                 TextFieldView(title: title, text: $value.stringValue)
                     .frame(minWidth: 45, maxWidth: 50, minHeight: 30, maxHeight: 40)
-                ButtonView(value: $value, iconName: "plus.square.fill") {
+                SelectorButton(value: $value, iconName: "plus.square.fill") {
                     self.onIncrement()
                 }
             }

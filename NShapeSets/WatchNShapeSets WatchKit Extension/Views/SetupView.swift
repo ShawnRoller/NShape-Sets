@@ -17,7 +17,7 @@ struct SetupView: View {
             SelectorView(value: $sets, title: "Sets")
             SelectorView(value: $rest, title: "Rest")
             Spacer()
-            PrimaryButtonView(title: "Start", destination: ActiveWorkoutView(timer: TimerWrapper.example, workout: Workout.example))
+            NavigationButton(title: "Start", destination: ActiveWorkoutView(timer: TimerWrapper.example, workout: Workout.example))
             Spacer()
                 .frame(height:0)
         }

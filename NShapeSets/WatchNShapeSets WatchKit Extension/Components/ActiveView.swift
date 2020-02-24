@@ -19,9 +19,9 @@ struct ActiveView: View {
             Spacer()
             DetailView(title: "Next set:", value: "\(timer.rounds - timer.currentRound)")
             Spacer()
-//            PrimaryButtonView(title: "REST") {
-//                self.onButtonTap()
-//            }
+            PrimaryButton(title: "REST") {
+                self.onButtonTap()
+            }
         }
     }
 }

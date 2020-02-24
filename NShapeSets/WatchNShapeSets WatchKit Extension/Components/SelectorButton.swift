@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ButtonView: View {
+struct SelectorButton: View {
     @Binding var value: Double
     var iconName: String
     var onButtonTap: () -> Void
@@ -27,6 +27,6 @@ struct ButtonView: View {
 
 struct ButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonView(value: .constant(5), iconName: "minus.square.fill", onButtonTap: {})
+        SelectorButton(value: .constant(5), iconName: "minus.square.fill", onButtonTap: {})
     }
 }
