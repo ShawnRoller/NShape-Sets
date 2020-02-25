@@ -15,6 +15,11 @@ struct ActiveWorkoutView: View {
     @ObservedObject var timer: TimerWrapper
     var workout: Workout
     
+    init(workout: Workout) {
+        self.workout = workout
+        self.timer = TimerWrapper.example
+    }
+    
     var body: some View {
         VStack {
             getViewForState(workoutState)
@@ -27,6 +32,7 @@ struct ActiveWorkoutView: View {
     }
     
     func getViewForState(_ state: ScreenState) -> some View {
+        playHaptic()
         return Group {
             if timer.isActive {
                 RestView(workout: workout, timer: timer) {
@@ -39,6 +45,10 @@ struct ActiveWorkoutView: View {
                 }
             }
         }
+    }
+    
+    func playHaptic() {
+        print("rest remaining: \(timer.remainingRest)")
     }
     
     func goBack() {
@@ -63,6 +73,7 @@ struct ActiveWorkoutView: View {
 
 struct ActiveWorkoutView_Previews: PreviewProvider {
     static var previews: some View {
-        ActiveWorkoutView(timer: TimerWrapper.example, workout: Workout.example)
+//        ActiveWorkoutView(timer: TimerWrapper.example, workout: Workout.example)
+        ActiveWorkoutView(workout: Workout.example)
     }
 }

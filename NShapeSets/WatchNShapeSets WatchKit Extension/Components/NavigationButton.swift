@@ -24,6 +24,6 @@ struct NavigationButton: View {
 
 struct PrimaryButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationButton(title: "Start", destination: ActiveWorkoutView(timer: TimerWrapper.example, workout: Workout.example))
+        NavigationButton(title: "Start", destination: ActiveWorkoutView(workout: Workout.example))
     }
 }
