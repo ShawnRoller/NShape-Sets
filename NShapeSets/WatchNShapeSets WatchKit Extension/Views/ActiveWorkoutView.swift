@@ -51,6 +51,12 @@ struct ActiveWorkoutView: View {
         print("rest remaining: \(timer.remainingRest)")
     }
     
+    func onRestEnd() {
+        print("rest is over")
+        workoutState = workoutState == .active ? .rest : .active
+        timer.restComplete()
+    }
+    
     func goBack() {
         presentationMode.wrappedValue.dismiss()
     }
@@ -66,8 +72,7 @@ struct ActiveWorkoutView: View {
     }
     
     func onSkip() {
-        workoutState = workoutState == .active ? .rest : .active
-        timer.restComplete()
+        onRestEnd()
     }
 }
 

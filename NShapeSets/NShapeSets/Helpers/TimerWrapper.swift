@@ -35,7 +35,7 @@ class TimerWrapper: ObservableObject {
         self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (theTimer) in
             self.remainingRest -= 1
             if self.remainingRest < 0 {
-                self.restComplete()
+                self.onRestComplete()
             }
         })
     }

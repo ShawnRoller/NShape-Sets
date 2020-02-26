@@ -27,8 +27,9 @@ struct SetupView: View {
         let workout = self.getWorkoutWith(sets: self.sets, rest: self.rest)
         var workoutView = ActiveWorkoutView(workout: workout)
         
+        // Setup timer
         let timer = TimerWrapper(rest: Int(self.rest), rounds: Int(self.sets), currentRound: 1, {
-            workoutView.playHaptic()
+            workoutView.onRestEnd()
         }) {
             workoutView.playHaptic()
         }
