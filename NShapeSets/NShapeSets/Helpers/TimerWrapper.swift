@@ -18,21 +18,31 @@ class TimerWrapper: ObservableObject {
         return timer != nil ? timer.isValid : false
     }
     
-    init(rest: Int, rounds: Int, currentRound: Int) {
+    var onRestComplete: () -> Void?
+    var onRestTimeChange: () -> Void?
+    
+    init(rest: Int, rounds: Int, currentRound: Int, _ onRestComplete: @escaping () -> Void? = {}, onRestTimeChange: @escaping () -> Void? = {}) {
         self.rest = rest
         self.rounds = rounds
         self.remainingRest = rest
         self.currentRound = currentRound
+        self.onRestComplete = onRestComplete
+        self.onRestTimeChange = onRestTimeChange
     }
     
     func start() {
         self.timer?.invalidate()
         self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (theTimer) in
-            self.remainingRest -= 1
-            if self.remainingRest < 0 {
-                self.restComplete()
-            }
+            self.countdown()
         })
+    }
+    
+    func countdown() {
+        onRestTimeChange()
+        self.remainingRest -= 1
+        if self.remainingRest < 0 {
+            self.onRestComplete()
+        }
     }
     
     func restComplete() {

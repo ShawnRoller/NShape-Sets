@@ -25,8 +25,17 @@ struct SetupView: View {
     
     func getWorkoutView() -> ActiveWorkoutView {
         let workout = self.getWorkoutWith(sets: self.sets, rest: self.rest)
-        let timer = TimerWrapper(rest: Int(self.rest), rounds: Int(self.sets), currentRound: 1)
-        return ActiveWorkoutView(timer: timer, workout: workout)
+        var workoutView = ActiveWorkoutView(workout: workout)
+        
+        // Setup timer
+        let timer = TimerWrapper(rest: Int(self.rest), rounds: Int(self.sets), currentRound: 1, {
+            workoutView.onRestEnd()
+        }) {
+            workoutView.countdown()
+        }
+        workoutView.timer = timer
+        
+        return workoutView
     }
     
     func getWorkoutWith(sets: Double, rest: Double) -> Workout {

@@ -15,6 +15,11 @@ struct ActiveWorkoutView: View {
     @ObservedObject var timer: TimerWrapper
     var workout: Workout
     
+    init(workout: Workout) {
+        self.workout = workout
+        self.timer = TimerWrapper.example
+    }
+    
     var body: some View {
         VStack {
             getViewForState(workoutState)
@@ -41,6 +46,18 @@ struct ActiveWorkoutView: View {
         }
     }
     
+    func countdown() {
+        if 1...3 ~= timer.remainingRest {
+            HapticHelper.playCountdownHaptic()
+        }
+    }
+    
+    func onRestEnd() {
+        print("rest is over")
+        workoutState = workoutState == .active ? .rest : .active
+        timer.restComplete()
+    }
+    
     func goBack() {
         presentationMode.wrappedValue.dismiss()
     }
@@ -56,13 +73,12 @@ struct ActiveWorkoutView: View {
     }
     
     func onSkip() {
-        workoutState = workoutState == .active ? .rest : .active
-        timer.restComplete()
+        onRestEnd()
     }
 }
 
 struct ActiveWorkoutView_Previews: PreviewProvider {
     static var previews: some View {
-        ActiveWorkoutView(timer: TimerWrapper.example, workout: Workout.example)
+        ActiveWorkoutView(workout: Workout.example)
     }
 }

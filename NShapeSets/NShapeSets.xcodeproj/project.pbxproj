@@ -147,6 +147,7 @@
 		29B10F9223D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
 		29B10F9323D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
 		29B10F9423D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
+		29BDC1AC2408740200CC2B7D /* HapticHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BDC1AB2408740200CC2B7D /* HapticHelper.swift */; };
 		29C9561D2393042500373031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C9561C2393042500373031 /* AppDelegate.swift */; };
 		29C9561F2393042500373031 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C9561E2393042500373031 /* SceneDelegate.swift */; };
 		29C956212393042500373031 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C956202393042500373031 /* ContentView.swift */; };
@@ -296,6 +297,7 @@
 		297FDD1623FB896200D9E56E /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		297FDD1823FB8EA000D9E56E /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 		29B10F9123D8F57500BD9700 /* TypeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeExtensions.swift; sourceTree = "<group>"; };
+		29BDC1AB2408740200CC2B7D /* HapticHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticHelper.swift; sourceTree = "<group>"; };
 		29C956192393042500373031 /* NShapeSets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NShapeSets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C9561C2393042500373031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29C9561E2393042500373031 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 		29201EF823988F600016DF8C /* WatchNShapeSets WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				29BDC1AA240873E800CC2B7D /* Helpers */,
 				292DD4DE23F9EE73007166E0 /* Components */,
 				292DD4DD23F9EE6D007166E0 /* Controller */,
 				292DD4DC23F9EE64007166E0 /* Views */,
@@ -495,6 +498,14 @@
 			path = Theming;
 			sourceTree = "<group>";
 		};
+		29BDC1AA240873E800CC2B7D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				29BDC1AB2408740200CC2B7D /* HapticHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		29C956102393042500373031 = {
 			isa = PBXGroup;
 			children = (
@@ -588,8 +599,8 @@
 		29FDE4802395B2910061EF5E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				29FDE47C2395B28B0061EF5E /* SetupView.swift */,
 				29C956202393042500373031 /* ContentView.swift */,
+				29FDE47C2395B28B0061EF5E /* SetupView.swift */,
 				29CDDC2723DCC6D3008BB4B8 /* ActiveWorkoutView.swift */,
 			);
 			path = Views;
@@ -919,6 +930,7 @@
 				292DD4EA23F9F4CF007166E0 /* SelectorView.swift in Sources */,
 				292DD4EE23F9F7B9007166E0 /* SelectorButton.swift in Sources */,
 				29DE9EAA24031C7E00C6FE68 /* ActiveView.swift in Sources */,
+				29BDC1AC2408740200CC2B7D /* HapticHelper.swift in Sources */,
 				292DD4EC23F9F518007166E0 /* TypeExtensions.swift in Sources */,
 				29DE9EA6240319AF00C6FE68 /* InstructionView.swift in Sources */,
 				29DE9EA824031A2000C6FE68 /* DetailView.swift in Sources */,

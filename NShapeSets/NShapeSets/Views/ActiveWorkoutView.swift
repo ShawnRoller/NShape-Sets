@@ -18,6 +18,12 @@ struct ActiveWorkoutView: View {
     var workout: Workout
     @Binding var isPresented: Bool
     
+    init(workout: Workout, isPresented: Bool) {
+        self.workout = workout
+        self.isPresented = isPresented
+        self.timer = TimerWrapper.example
+    }
+    
     var body: some View {
         ZStack {
             BackgroundView()
@@ -33,6 +39,22 @@ struct ActiveWorkoutView: View {
                 }))
             }
         }
+    }
+    
+    func playSound() {
+        print("rest remaining: \(timer.remainingRest)")
+    }
+    
+    func countdown() {
+        if 1...3 ~= timer.remainingRest {
+            playSound()
+        }
+    }
+    
+    func onRestEnd() {
+        print("rest is over")
+        workoutState = workoutState == .active ? .rest : .active
+        timer.restComplete()
     }
     
     func goBack() {
@@ -70,8 +92,7 @@ struct ActiveWorkoutView: View {
     }
     
     func onSkip() {
-        workoutState = workoutState == .active ? .rest : .active
-        timer.restComplete()
+        onRestEnd()
     }
 }
 
