@@ -41,8 +41,14 @@ struct ActiveWorkoutView: View {
         }
     }
     
-    func playHaptic() {
+    func playSound() {
         print("rest remaining: \(timer.remainingRest)")
+    }
+    
+    func countdown() {
+        if 1...3 ~= timer.remainingRest {
+            playSound()
+        }
     }
     
     func onRestEnd() {

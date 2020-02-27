@@ -33,11 +33,16 @@ class TimerWrapper: ObservableObject {
     func start() {
         self.timer?.invalidate()
         self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (theTimer) in
-            self.remainingRest -= 1
-            if self.remainingRest < 0 {
-                self.onRestComplete()
-            }
+            self.countdown()
         })
+    }
+    
+    func countdown() {
+        onRestTimeChange()
+        self.remainingRest -= 1
+        if self.remainingRest < 0 {
+            self.onRestComplete()
+        }
     }
     
     func restComplete() {

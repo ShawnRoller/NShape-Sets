@@ -32,7 +32,6 @@ struct ActiveWorkoutView: View {
     }
     
     func getViewForState(_ state: ScreenState) -> some View {
-        playHaptic()
         return Group {
             if timer.isActive {
                 RestView(workout: workout, timer: timer) {
@@ -47,8 +46,10 @@ struct ActiveWorkoutView: View {
         }
     }
     
-    func playHaptic() {
-        print("rest remaining: \(timer.remainingRest)")
+    func countdown() {
+        if 1...3 ~= timer.remainingRest {
+            HapticHelper.playCountdownHaptic()
+        }
     }
     
     func onRestEnd() {
@@ -78,7 +79,6 @@ struct ActiveWorkoutView: View {
 
 struct ActiveWorkoutView_Previews: PreviewProvider {
     static var previews: some View {
-//        ActiveWorkoutView(timer: TimerWrapper.example, workout: Workout.example)
         ActiveWorkoutView(workout: Workout.example)
     }
 }
