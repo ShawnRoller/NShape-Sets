@@ -10,6 +10,7 @@ import SwiftUI
 
 struct PrimaryButton: View {
     var title: String
+    var buttonColor: Color = Palette.button2Color
     var onButtonTap: () -> Void
     
     var body: some View {
@@ -19,12 +20,13 @@ struct PrimaryButton: View {
             Text(title)
                 .watchTitleFont()
         })
-            .accentColor(Palette.accentColor1)
+            .background(buttonColor)
+            .cornerRadius(100)
     }
 }
 
 struct PrimaryButton_Previews: PreviewProvider {
     static var previews: some View {
-        PrimaryButton(title: "REST", onButtonTap: {})
+        PrimaryButton(title: "REST", buttonColor: Palette.button1Color, onButtonTap: {})
     }
 }
