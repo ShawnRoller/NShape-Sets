@@ -19,5 +19,6 @@ struct Palette {
     static let inputColor = Color("InputColor")
     static let accentColor1 = Color("AccentColor1")
     static let accentColor2 = Color("AccentColor2")
+    static let buttonTitleColor = Color.white
     
 }

@@ -16,8 +16,9 @@ struct NavigationButton: View {
         NavigationLink(destination: destination) {
             Text(title)
                 .watchTitleFont()
-                .accentColor(Palette.accentColor1)
         }
+        .background(Palette.button2Color)
+        .cornerRadius(100)
         
     }
 }
