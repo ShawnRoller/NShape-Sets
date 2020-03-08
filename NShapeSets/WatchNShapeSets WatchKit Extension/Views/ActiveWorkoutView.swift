@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct ActiveWorkoutView: View {
     @Environment(\.presentationMode) var presentationMode
@@ -14,6 +15,8 @@ struct ActiveWorkoutView: View {
     @State private var showingAlert = false
     @ObservedObject var timer: TimerWrapper
     var workout: Workout
+    
+    private var healthStore = HKHealthStore()
     
     init(workout: Workout) {
         self.workout = workout

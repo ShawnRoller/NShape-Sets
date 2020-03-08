@@ -144,6 +144,8 @@
 		2965290823F09E1B00C203F8 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965290523F09E1B00C203F8 /* AppExtensions.swift */; };
 		297FDD1723FB896200D9E56E /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297FDD1623FB896200D9E56E /* SetupView.swift */; };
 		297FDD1923FB8EA000D9E56E /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297FDD1823FB8EA000D9E56E /* NavigationButton.swift */; };
+		29A4AEF924148F15005A446E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A4AEF824148F15005A446E /* HealthKit.framework */; };
+		29A4AEFC24148F67005A446E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A4AEFB24148F67005A446E /* HealthKit.framework */; };
 		29B10F9223D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
 		29B10F9323D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
 		29B10F9423D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
@@ -296,6 +298,10 @@
 		2965290523F09E1B00C203F8 /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
 		297FDD1623FB896200D9E56E /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		297FDD1823FB8EA000D9E56E /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
+		29A4AEF624148F15005A446E /* NShapeSets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NShapeSets.entitlements; sourceTree = "<group>"; };
+		29A4AEF824148F15005A446E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		29A4AEFA24148F67005A446E /* WatchNShapeSets WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchNShapeSets WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		29A4AEFB24148F67005A446E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		29B10F9123D8F57500BD9700 /* TypeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeExtensions.swift; sourceTree = "<group>"; };
 		29BDC1AB2408740200CC2B7D /* HapticHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticHelper.swift; sourceTree = "<group>"; };
 		29C956192393042500373031 /* NShapeSets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NShapeSets.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -333,6 +339,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A4AEFC24148F67005A446E /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +347,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A4AEF924148F15005A446E /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +391,7 @@
 		29201EF823988F600016DF8C /* WatchNShapeSets WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				29A4AEFA24148F67005A446E /* WatchNShapeSets WatchKit Extension.entitlements */,
 				29BDC1AA240873E800CC2B7D /* Helpers */,
 				292DD4DE23F9EE73007166E0 /* Components */,
 				292DD4DD23F9EE6D007166E0 /* Controller */,
@@ -498,6 +507,15 @@
 			path = Theming;
 			sourceTree = "<group>";
 		};
+		29A4AEF724148F15005A446E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29A4AEFB24148F67005A446E /* HealthKit.framework */,
+				29A4AEF824148F15005A446E /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		29BDC1AA240873E800CC2B7D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,6 +533,7 @@
 				29201EE923988F5F0016DF8C /* WatchNShapeSets WatchKit App */,
 				29201EF823988F600016DF8C /* WatchNShapeSets WatchKit Extension */,
 				29C9561A2393042500373031 /* Products */,
+				29A4AEF724148F15005A446E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -534,6 +553,7 @@
 		29C9561B2393042500373031 /* NShapeSets */ = {
 			isa = PBXGroup;
 			children = (
+				29A4AEF624148F15005A446E /* NShapeSets.entitlements */,
 				29CDDC1C23DB2322008BB4B8 /* Protocols */,
 				29D43BE723A8392E00C7981B /* Models */,
 				2911C2AD23A59A9200405306 /* Extensions */,
@@ -1173,6 +1193,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "WatchNShapeSets WatchKit Extension/WatchNShapeSets WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchNShapeSets WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
@@ -1197,6 +1218,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "WatchNShapeSets WatchKit Extension/WatchNShapeSets WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchNShapeSets WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
@@ -1335,6 +1357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NShapeSets/NShapeSets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"NShapeSets/Preview Content\"";
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
@@ -1355,6 +1378,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NShapeSets/NShapeSets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"NShapeSets/Preview Content\"";
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
