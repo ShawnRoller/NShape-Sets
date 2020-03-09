@@ -19,8 +19,6 @@ struct ActiveWorkoutView: View {
     var workout: Workout
     @Binding var isPresented: Bool
     
-    private var healthStore = HKHealthStore()
-    
     init(workout: Workout, isPresented: Bool) {
         self.workout = workout
         self.isPresented = isPresented
