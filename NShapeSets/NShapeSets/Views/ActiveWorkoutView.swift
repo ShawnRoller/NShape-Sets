@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct ActiveWorkoutView: View {
     @Environment(\.presentationMode) var presentationMode
