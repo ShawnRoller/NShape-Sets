@@ -11,6 +11,7 @@ import SwiftUI
 struct SelectorView: View {
     @Binding var value: Double
     var title: String
+    var incrementorValue: Double = 1
     
     var range: ClosedRange<Double> = 1...100
     
@@ -33,11 +34,13 @@ struct SelectorView: View {
     }
     
     func onDecrement() {
-        value -= 1
+        let newValue = value - incrementorValue
+        value = max(newValue, 0)
     }
     
     func onIncrement() {
-        value += 1
+        let newValue = value + incrementorValue
+        value = min(newValue, 500)
     }
     
 }

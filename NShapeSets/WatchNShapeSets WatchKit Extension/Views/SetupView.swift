@@ -17,7 +17,7 @@ struct SetupView: View {
             Spacer()
                 .frame(height:10)
             SelectorView(value: $sets, title: "Sets")
-            SelectorView(value: $rest, title: "Rest")
+            SelectorView(value: $rest, title: "Rest", incrementorValue: 5)
             Spacer()
             NavigationButton(title: "Start", destination: getWorkoutView())
                 .frame(height: 0)
