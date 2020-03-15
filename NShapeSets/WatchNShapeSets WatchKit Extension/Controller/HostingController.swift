@@ -11,7 +11,11 @@ import Foundation
 import SwiftUI
 
 class HostingController: WKHostingController<ContentView> {
+    private var hkHelper = HealthKitHelper()
+    
     override var body: ContentView {
+        self.hkHelper.setupHK()
+        
         return ContentView()
     }
 }

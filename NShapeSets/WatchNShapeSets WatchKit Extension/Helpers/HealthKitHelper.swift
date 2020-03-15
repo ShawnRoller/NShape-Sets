@@ -12,10 +12,59 @@ import HealthKit
 
 class HealthKitHelper: WKInterfaceController, HKWorkoutSessionDelegate, HKLiveWorkoutBuilderDelegate {
     
-    private var healthStore: HKHealthStore!
+    private var context: WorkoutSessionContext!
+    private var healthStore = HKHealthStore()
     private var config: HKWorkoutConfiguration!
     private var session: HKWorkoutSession!
     private var builder: HKLiveWorkoutBuilder!
+    
+    func setupHK() {
+        let typesToShare: Set = [HKQuantityType.workoutType()]
+        let typesToRead: Set = [
+            HKQuantityType.quantityType(forIdentifier: .heartRate)!,
+            HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!
+        ]
+        
+        healthStore.requestAuthorization(toShare: typesToShare, read: typesToRead) { (success, error) in
+            /// TODO: handle error
+            if (success) {
+                self.onHKAuth()
+            }
+        }
+    }
+    
+    func getWorkoutConfig() -> HKWorkoutConfiguration {
+        let config = HKWorkoutConfiguration()
+        config.activityType = .traditionalStrengthTraining
+        config.locationType = .unknown
+        return config
+    }
+    
+    func onHKAuth() {
+        self.config = getWorkoutConfig()
+        self.context = WorkoutSessionContext(healthStore: self.healthStore, configuration: self.config)
+    }
+    
+    func getContext() -> WorkoutSessionContext {
+        return self.context
+    }
+    
+    func setupWorkout() {
+        
+        do {
+            session = try HKWorkoutSession(healthStore: healthStore, configuration: config)
+            builder = session.associatedWorkoutBuilder()
+        }
+        catch {
+            // handle error
+            return
+        }
+        
+        builder.dataSource = HKLiveWorkoutDataSource(healthStore: healthStore, workoutConfiguration: config)
+        
+        session.delegate = self
+        builder.delegate = self
+    }
     
     func workoutSession(_ workoutSession: HKWorkoutSession, didChangeTo toState: HKWorkoutSessionState, from fromState: HKWorkoutSessionState, date: Date) {
         // Dispatch to main, because we are updating the interface.
@@ -58,38 +107,6 @@ class HealthKitHelper: WKInterfaceController, HKWorkoutSessionDelegate, HKLiveWo
 //            return
 //
 //        }
-    }
-    
-    func setupHK() {
-        let typesToShare: Set = [HKQuantityType.workoutType()]
-        let typesToRead: Set = [
-            HKQuantityType.quantityType(forIdentifier: .heartRate)!,
-            HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!
-        ]
-        
-        healthStore.requestAuthorization(toShare: typesToShare, read: typesToRead) { (success, error) in
-            
-        }
-    }
-    
-    func setupWorkout() {
-        let config = HKWorkoutConfiguration()
-        config.activityType = .traditionalStrengthTraining
-        config.locationType = .unknown
-        
-        do {
-            session = try HKWorkoutSession(healthStore: healthStore, configuration: config)
-            builder = session.associatedWorkoutBuilder()
-        }
-        catch {
-            // handle error
-            return
-        }
-        
-        builder.dataSource = HKLiveWorkoutDataSource(healthStore: healthStore, workoutConfiguration: config)
-        
-        session.delegate = self
-        builder.delegate = self
     }
     
     func startWorkoutSession() {
