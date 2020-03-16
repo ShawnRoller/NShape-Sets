@@ -12,6 +12,8 @@ struct SetupView: View {
     @State private var sets = 8.0
     @State private var rest = 5.0
     
+    var hkHelper: HealthKitHelper
+    
     var body: some View {
         VStack {
             Spacer()
@@ -27,7 +29,7 @@ struct SetupView: View {
     
     func getWorkoutView() -> ActiveWorkoutView {
         let workout = self.getWorkoutWith(sets: self.sets, rest: self.rest)
-        var workoutView = ActiveWorkoutView(workout: workout)
+        var workoutView = ActiveWorkoutView(workout: workout, hkHelper: self.hkHelper)
         
         // Setup timer
         let timer = TimerWrapper(rest: Int(self.rest), rounds: Int(self.sets), currentRound: 1, {
@@ -48,6 +50,6 @@ struct SetupView: View {
 
 struct SetupView_Previews: PreviewProvider {
     static var previews: some View {
-        SetupView()
+        SetupView(hkHelper: HealthKitHelper())
     }
 }

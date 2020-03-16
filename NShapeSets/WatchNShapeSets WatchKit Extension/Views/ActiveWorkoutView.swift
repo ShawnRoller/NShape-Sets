@@ -16,11 +16,14 @@ struct ActiveWorkoutView: View {
     @ObservedObject var timer: TimerWrapper
     var workout: Workout
     
+    var hkHelper: HealthKitHelper
+    
     private var healthStore = HKHealthStore()
     
-    init(workout: Workout) {
+    init(workout: Workout, hkHelper: HealthKitHelper) {
         self.workout = workout
         self.timer = TimerWrapper.example
+        self.hkHelper = hkHelper
     }
     
     var body: some View {
@@ -82,6 +85,6 @@ struct ActiveWorkoutView: View {
 
 struct ActiveWorkoutView_Previews: PreviewProvider {
     static var previews: some View {
-        ActiveWorkoutView(workout: Workout.example)
+        ActiveWorkoutView(workout: Workout.example, hkHelper: HealthKitHelper())
     }
 }

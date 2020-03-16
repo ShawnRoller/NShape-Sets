@@ -56,14 +56,22 @@ class HealthKitHelper: WKInterfaceController, HKWorkoutSessionDelegate, HKLiveWo
             builder = session.associatedWorkoutBuilder()
         }
         catch {
-            // handle error
+            /// TODO: handle error
             return
         }
         
-        builder.dataSource = HKLiveWorkoutDataSource(healthStore: healthStore, workoutConfiguration: config)
-        
         session.delegate = self
         builder.delegate = self
+        
+        builder.dataSource = HKLiveWorkoutDataSource(healthStore: healthStore, workoutConfiguration: config)
+        
+        session.startActivity(with: Date())
+        builder.beginCollection(withStart: Date()) { (success, error) in
+            /// TODO: handle error
+            if success {
+                /// TODO: handle tracking time
+            }
+        }
     }
     
     func workoutSession(_ workoutSession: HKWorkoutSession, didChangeTo toState: HKWorkoutSessionState, from fromState: HKWorkoutSessionState, date: Date) {

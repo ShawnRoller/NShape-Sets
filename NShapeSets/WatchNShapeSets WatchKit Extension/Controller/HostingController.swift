@@ -16,6 +16,6 @@ class HostingController: WKHostingController<ContentView> {
     override var body: ContentView {
         self.hkHelper.setupHK()
         
-        return ContentView()
+        return ContentView(hkHelper: self.hkHelper)
     }
 }
