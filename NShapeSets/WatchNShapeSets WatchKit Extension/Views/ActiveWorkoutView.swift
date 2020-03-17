@@ -24,14 +24,28 @@ struct ActiveWorkoutView: View {
         self.workout = workout
         self.timer = TimerWrapper.example
         self.hkHelper = hkHelper
+        self.startWorkout()
+    }
+    
+    func startWorkout() {
+        self.hkHelper.setupWorkout()
+        self.hkHelper.startWorkoutSession()
+    }
+    
+    func endWorkout() {
+        self.hkHelper.endWorkout()
     }
     
     var body: some View {
         VStack {
             getViewForState(workoutState)
         }
+        .onDisappear() {
+            self.endWorkout()
+        }
         .alert(isPresented: $showingAlert) {
-            Alert(title: Text("Workout complete!"), message: Text("You completed all sets!"), dismissButton: .default(Text("OK"), action: {
+            self.endWorkout()
+            return Alert(title: Text("Workout complete!"), message: Text("You completed all sets!"), dismissButton: .default(Text("OK"), action: {
                 self.goBack()
             }))
         }
