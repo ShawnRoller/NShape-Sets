@@ -15,10 +15,10 @@ struct ActiveView: View {
     
     var body: some View {
         VStack {
-            InstructionView(title: "Remaining sets:", value: "\(timer.currentRound)")
+            InstructionView(title: "Current set:", value: "\(timer.currentRound)")
             Spacer()
                 .frame(height: 20)
-            DetailView(title: "Next set:", value: "\(timer.rounds - timer.currentRound)")
+            DetailView(title: "Remaining sets:", value: "\(timer.rounds - timer.currentRound)")
             Spacer()
             PrimaryButton(title: "REST", buttonColor: Palette.button2Color) {
                 self.onButtonTap()
