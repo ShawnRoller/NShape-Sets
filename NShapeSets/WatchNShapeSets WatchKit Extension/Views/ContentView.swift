@@ -13,6 +13,9 @@ struct ContentView: View {
     
     var body: some View {
         SetupView(hkHelper: self.hkHelper)
+        .onAppear() {
+            self.hkHelper.setupHK()
+        }
     }
 }
 

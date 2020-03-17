@@ -24,7 +24,6 @@ struct ActiveWorkoutView: View {
         self.workout = workout
         self.timer = TimerWrapper.example
         self.hkHelper = hkHelper
-        self.startWorkout()
     }
     
     func startWorkout() {
@@ -39,6 +38,9 @@ struct ActiveWorkoutView: View {
     var body: some View {
         VStack {
             getViewForState(workoutState)
+        }
+        .onAppear() {
+            self.startWorkout()
         }
         .onDisappear() {
             self.endWorkout()

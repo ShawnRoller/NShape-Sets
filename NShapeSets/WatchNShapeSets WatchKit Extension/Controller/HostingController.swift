@@ -14,7 +14,7 @@ class HostingController: WKHostingController<ContentView> {
     private var hkHelper = HealthKitHelper()
     
     override var body: ContentView {
-        self.hkHelper.setupHK()
+        
         
         return ContentView(hkHelper: self.hkHelper)
     }
