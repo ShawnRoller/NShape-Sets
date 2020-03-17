@@ -17,10 +17,10 @@ struct TextFieldView: View {
     var body: some View {
         Text(text)
             .padding()
-//            .overlay(
-//                RoundedRectangle(cornerRadius: 2)
-//                    .stroke(accentColor, lineWidth: 1)
-//            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 2)
+                    .stroke(accentColor, lineWidth: 1)
+            )
             .multilineTextAlignment(.center)
             .watchInputFont()
     }

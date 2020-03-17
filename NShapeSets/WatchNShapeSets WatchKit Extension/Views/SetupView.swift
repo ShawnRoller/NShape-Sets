@@ -17,13 +17,12 @@ struct SetupView: View {
     var body: some View {
         VStack {
             Spacer()
-                .frame(height:0)
+                .frame(height:10)
             SelectorView(value: $sets, title: "Sets")
-            SelectorView(value: $rest, title: "Rest")
+            SelectorView(value: $rest, title: "Rest", incrementorValue: 5)
             Spacer()
             NavigationButton(title: "Start", destination: getWorkoutView())
-            Spacer()
-                .frame(height:0)
+                .frame(height: 0)
         }
     }
     
