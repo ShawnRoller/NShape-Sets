@@ -19,7 +19,7 @@ struct SelectorButton: View {
         }, label: {
             Image(systemName: iconName)
                 .foregroundColor(Palette.button1Color)
-                .header2Font()
+                .watchHeader2Font()
         })
             .buttonStyle(PlainButtonStyle())
     }

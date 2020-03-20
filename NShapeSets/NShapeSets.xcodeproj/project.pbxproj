@@ -154,6 +154,7 @@
 		29B10F9223D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
 		29B10F9323D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
 		29B10F9423D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
+		29B45DC9241E826000CB1D02 /* WorkoutSessionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B45DC8241E826000CB1D02 /* WorkoutSessionContext.swift */; };
 		29BDC1AC2408740200CC2B7D /* HapticHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BDC1AB2408740200CC2B7D /* HapticHelper.swift */; };
 		29C9561D2393042500373031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C9561C2393042500373031 /* AppDelegate.swift */; };
 		29C9561F2393042500373031 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C9561E2393042500373031 /* SceneDelegate.swift */; };
@@ -310,6 +311,7 @@
 		29A4AEFB24148F67005A446E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		29A4AEFF241591E0005A446E /* HealthKitHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitHelper.swift; sourceTree = "<group>"; };
 		29B10F9123D8F57500BD9700 /* TypeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeExtensions.swift; sourceTree = "<group>"; };
+		29B45DC8241E826000CB1D02 /* WorkoutSessionContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSessionContext.swift; sourceTree = "<group>"; };
 		29BDC1AB2408740200CC2B7D /* HapticHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticHelper.swift; sourceTree = "<group>"; };
 		29C956192393042500373031 /* NShapeSets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NShapeSets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C9561C2393042500373031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 		29201EF823988F600016DF8C /* WatchNShapeSets WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				29B45DC7241E824900CB1D02 /* HealthKit */,
 				29A4AEFA24148F67005A446E /* WatchNShapeSets WatchKit Extension.entitlements */,
 				29BDC1AA240873E800CC2B7D /* Helpers */,
 				292DD4DE23F9EE73007166E0 /* Components */,
@@ -521,6 +524,14 @@
 				29A4AEF824148F15005A446E /* HealthKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		29B45DC7241E824900CB1D02 /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				29B45DC8241E826000CB1D02 /* WorkoutSessionContext.swift */,
+			);
+			path = HealthKit;
 			sourceTree = "<group>";
 		};
 		29BDC1AA240873E800CC2B7D /* Helpers */ = {
@@ -949,6 +960,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29B45DC9241E826000CB1D02 /* WorkoutSessionContext.swift in Sources */,
 				29201EFC23988F600016DF8C /* HostingController.swift in Sources */,
 				292DD4E123F9F0F1007166E0 /* Palette.swift in Sources */,
 				292DD4EB23F9F4DA007166E0 /* TextFieldView.swift in Sources */,

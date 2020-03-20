@@ -12,21 +12,21 @@ struct SetupView: View {
     @State private var sets = 8.0
     @State private var rest = 5.0
     
+    var hkHelper: HealthKitHelper
+    
     var body: some View {
         VStack {
             Spacer()
-                .frame(height:10)
             SelectorView(value: $sets, title: "Sets")
             SelectorView(value: $rest, title: "Rest", incrementorValue: 5)
             Spacer()
             NavigationButton(title: "Start", destination: getWorkoutView())
-                .frame(height: 0)
         }
     }
     
     func getWorkoutView() -> ActiveWorkoutView {
         let workout = self.getWorkoutWith(sets: self.sets, rest: self.rest)
-        var workoutView = ActiveWorkoutView(workout: workout)
+        var workoutView = ActiveWorkoutView(workout: workout, hkHelper: self.hkHelper)
         
         // Setup timer
         let timer = TimerWrapper(rest: Int(self.rest), rounds: Int(self.sets), currentRound: 1, {
@@ -47,6 +47,11 @@ struct SetupView: View {
 
 struct SetupView_Previews: PreviewProvider {
     static var previews: some View {
-        SetupView()
+        Group {
+            SetupView(hkHelper: HealthKitHelper())
+                .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 3 - 42mm"))
+            SetupView(hkHelper: HealthKitHelper())
+                .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 3 - 38mm"))
+        }
     }
 }

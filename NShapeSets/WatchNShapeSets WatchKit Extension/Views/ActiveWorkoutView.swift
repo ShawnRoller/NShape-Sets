@@ -16,19 +16,38 @@ struct ActiveWorkoutView: View {
     @ObservedObject var timer: TimerWrapper
     var workout: Workout
     
+    var hkHelper: HealthKitHelper
+    
     private var healthStore = HKHealthStore()
     
-    init(workout: Workout) {
+    init(workout: Workout, hkHelper: HealthKitHelper) {
         self.workout = workout
         self.timer = TimerWrapper.example
+        self.hkHelper = hkHelper
+    }
+    
+    func startWorkout() {
+        self.hkHelper.setupWorkout()
+        self.hkHelper.startWorkoutSession()
+    }
+    
+    func endWorkout() {
+        self.hkHelper.endWorkout()
     }
     
     var body: some View {
         VStack {
             getViewForState(workoutState)
         }
+        .onAppear() {
+            self.startWorkout()
+        }
+        .onDisappear() {
+            self.endWorkout()
+        }
         .alert(isPresented: $showingAlert) {
-            Alert(title: Text("Workout complete!"), message: Text("You completed all sets!"), dismissButton: .default(Text("OK"), action: {
+            self.endWorkout()
+            return Alert(title: Text("Workout complete!"), message: Text("You completed all sets!"), dismissButton: .default(Text("OK"), action: {
                 self.goBack()
             }))
         }
@@ -82,6 +101,6 @@ struct ActiveWorkoutView: View {
 
 struct ActiveWorkoutView_Previews: PreviewProvider {
     static var previews: some View {
-        ActiveWorkoutView(workout: Workout.example)
+        ActiveWorkoutView(workout: Workout.example, hkHelper: HealthKitHelper())
     }
 }
