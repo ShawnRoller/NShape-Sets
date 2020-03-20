@@ -17,12 +17,10 @@ struct SetupView: View {
     var body: some View {
         VStack {
             Spacer()
-                .frame(height:10)
             SelectorView(value: $sets, title: "Sets")
             SelectorView(value: $rest, title: "Rest", incrementorValue: 5)
             Spacer()
             NavigationButton(title: "Start", destination: getWorkoutView())
-                .frame(height: 0)
         }
     }
     
@@ -49,6 +47,11 @@ struct SetupView: View {
 
 struct SetupView_Previews: PreviewProvider {
     static var previews: some View {
-        SetupView(hkHelper: HealthKitHelper())
+        Group {
+            SetupView(hkHelper: HealthKitHelper())
+                .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 3 - 42mm"))
+            SetupView(hkHelper: HealthKitHelper())
+                .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 3 - 38mm"))
+        }
     }
 }

@@ -17,13 +17,11 @@ struct ActiveView: View {
         VStack {
             InstructionView(title: "Current set:", value: "\(timer.currentRound)")
             Spacer()
-                .frame(height: 20)
             DetailView(title: "Next set:", value: "\(timer.rounds - timer.currentRound)")
             Spacer()
             PrimaryButton(title: "REST", buttonColor: Palette.button2Color) {
                 self.onButtonTap()
             }
-                .frame(height: 0)
         }
     }
 }
