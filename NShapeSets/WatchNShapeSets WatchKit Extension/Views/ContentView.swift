@@ -9,13 +9,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    var hkHelper: HealthKitHelper
+    
     var body: some View {
-        SetupView()
+        SetupView(hkHelper: self.hkHelper)
+        .onAppear() {
+            self.hkHelper.setupHK()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(hkHelper: HealthKitHelper())
     }
 }

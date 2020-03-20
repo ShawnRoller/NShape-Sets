@@ -16,16 +16,17 @@ struct SelectorView: View {
     var range: ClosedRange<Double> = 1...100
     
     var body: some View {
-        HStack(spacing: 15) {
+        HStack(spacing: 5) {
             Text(title)
                 .watchTitleFont()
                 .foregroundColor(Palette.accentColor1)
+                .lineLimit(1)
             HStack(spacing: 0){
                 SelectorButton(value: $value, iconName: "minus.square.fill") {
                     self.onDecrement()
                 }
                 TextFieldView(title: title, text: $value.stringValue)
-                    .frame(minWidth: 45, maxWidth: 50, minHeight: 30, maxHeight: 40)
+                    .frame(minWidth: 35, maxWidth: 50, minHeight: 25, maxHeight: 40)
                 SelectorButton(value: $value, iconName: "plus.square.fill") {
                     self.onIncrement()
                 }

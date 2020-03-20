@@ -42,10 +42,10 @@ extension View {
         return self.modifier(ScaledFont(name: "Gotham-Book", size:40))
     }
     func watchHeader2Font() -> some View {
-        return self.modifier(ScaledFont(name: "Gotham-Book", size:20))
+        return self.modifier(ScaledFont(name: "Gotham-Book", size:30))
     }
     func watchTitleFont() -> some View {
-        return self.modifier(ScaledFont(name: "Gotham-Book", size:22))
+        return self.modifier(ScaledFont(name: "Gotham-Book", size:20))
     }
     func watchInstructionFont() -> some View {
         return self.modifier(ScaledFont(name: "Gotham-Book", size:38))

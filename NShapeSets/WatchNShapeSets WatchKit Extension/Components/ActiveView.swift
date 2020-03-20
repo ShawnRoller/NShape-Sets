@@ -22,7 +22,6 @@ struct ActiveView: View {
             PrimaryButton(title: "REST", buttonColor: Palette.button2Color) {
                 self.onButtonTap()
             }
-                .frame(height: 0)
         }
     }
 }

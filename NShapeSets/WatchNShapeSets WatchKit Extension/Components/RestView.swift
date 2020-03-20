@@ -17,13 +17,11 @@ struct RestView: View {
         VStack {
             InstructionView(title: "Resting...", value: "\(timer.remainingRest)")
             Spacer()
-                .frame(height: 20)
             DetailView(title: "Next set:", value: "\(timer.currentRound + 1)")
             Spacer()
             PrimaryButton(title: "SKIP", buttonColor: Palette.button1Color) {
                 self.onButtonTap()
             }
-                .frame(height: 0)
         }
     }
 }
