@@ -76,6 +76,7 @@ struct ActiveWorkoutView: View {
     
     func onRestEnd() {
         print("rest is over")
+        HapticHelper.playStartHaptic()
         workoutState = workoutState == .active ? .rest : .active
         timer.restComplete()
     }

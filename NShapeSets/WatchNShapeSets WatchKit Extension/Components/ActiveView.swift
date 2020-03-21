@@ -13,13 +13,18 @@ struct ActiveView: View {
     @ObservedObject var timer: TimerWrapper
     var onButtonTap: () -> Void
     
+    var buttonTitle: String {
+        let remainingRounds = timer.rounds - timer.currentRound
+        return remainingRounds > 0 ? "REST" : "DONE"
+    }
+    
     var body: some View {
         VStack {
             InstructionView(title: "Current set:", value: "\(timer.currentRound)")
             Spacer()
             DetailView(title: "Remaining sets:", value: "\(timer.rounds - timer.currentRound)")
             Spacer()
-            PrimaryButton(title: "REST", buttonColor: Palette.button2Color) {
+            PrimaryButton(title: buttonTitle, buttonColor: Palette.button2Color) {
                 self.onButtonTap()
             }
         }
