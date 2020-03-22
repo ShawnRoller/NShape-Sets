@@ -21,6 +21,10 @@ class TimerWrapper: ObservableObject {
     var onRestComplete: () -> Void?
     var onRestTimeChange: () -> Void?
     
+    // Track total active time
+    var totalTimer: Timer!
+    var totalTime = 0
+    
     init(rest: Int, rounds: Int, currentRound: Int, _ onRestComplete: @escaping () -> Void? = {}, onRestTimeChange: @escaping () -> Void? = {}) {
         self.rest = rest
         self.rounds = rounds
@@ -61,10 +65,31 @@ class TimerWrapper: ObservableObject {
         self.remainingRest = 0
         self.currentRound = 1
         self.remainingRest = rest
+        
+        self.totalTimer?.invalidate()
+        self.totalTime = 0
     }
     
     func pause() {
         self.timer?.invalidate()
+        self.totalTimer?.invalidate()
+    }
+    
+    func incrementTotalTime() {
+        self.totalTime += 1
+    }
+    
+    func startTimeTracking() {
+        if self.totalTime == 0 {
+            self.totalTimer?.invalidate()
+            self.totalTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (theTimer) in
+                self.incrementTotalTime()
+            })
+        }
+    }
+    
+    func stopTimeTracking() {
+        self.totalTimer?.invalidate()
     }
     
     #if DEBUG

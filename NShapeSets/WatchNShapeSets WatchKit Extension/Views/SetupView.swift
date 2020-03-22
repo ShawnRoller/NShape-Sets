@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct SetupView: View {
-    @State private var sets = 8.0
-    @State private var rest = 5.0
+    @State private var sets = 1.0
+    @State private var rest = 3.0
     
     var hkHelper: HealthKitHelper
     

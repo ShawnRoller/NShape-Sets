@@ -34,8 +34,16 @@ struct ActiveWorkoutView: View {
                 getViewForState(workoutState)
                 Spacer()
             }
+            .onAppear() {
+                self.timer.startTimeTracking()
+                /// TODO: start workout
+            }
+            .onDisappear() {
+                /// TODO: end workout
+            }
             .alert(isPresented: $showingAlert) {
-                Alert(title: Text("Workout complete!"), message: Text("You completed all sets!"), dismissButton: .default(Text("OK"), action: {
+                self.timer.stopTimeTracking()
+                Alert(title: Text("Workout complete!"), message: Text("You completed all sets in \(self.timer.totalTime) seconds!"), dismissButton: .default(Text("OK"), action: {
                     self.goBack()
                 }))
             }

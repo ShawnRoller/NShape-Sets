@@ -40,15 +40,19 @@ struct ActiveWorkoutView: View {
             getViewForState(workoutState)
         }
         .onAppear() {
+            self.timer.startTimeTracking()
             self.startWorkout()
         }
         .onDisappear() {
             self.endWorkout()
         }
         .alert(isPresented: $showingAlert) {
-            self.endWorkout()
-            return Alert(title: Text("Workout complete!"), message: Text("You completed all sets!"), dismissButton: .default(Text("OK"), action: {
-                self.goBack()
+            self.timer.stopTimeTracking()
+            return Alert(title: Text("Workout complete!"), message: Text("You completed all sets in \(self.timer.totalTime) seconds!"), dismissButton: .default(Text("OK"), action: {
+                /// TODO: need to add a delay here as the "start" button doesn't work if there's no delay.  This appears to be a bug with how the callback is handled and may be fixed in a new version of swiftui
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.01) {
+                    self.goBack()
+                }
             }))
         }
     }
