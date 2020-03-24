@@ -19,7 +19,7 @@ struct RestView: View {
             Spacer()
             DetailView(title: "Next set:", value: "\(timer.currentRound + 1)")
             Spacer()
-            PrimaryButton(title: "SKIP", buttonColor: Palette.button1Color) {
+            PrimaryButton(title: "Skip", buttonColor: Palette.button1Color) {
                 self.onButtonTap()
             }
         }

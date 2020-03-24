@@ -15,7 +15,7 @@ struct ActiveView: View {
     
     var buttonTitle: String {
         let remainingRounds = timer.rounds - timer.currentRound
-        return remainingRounds > 0 ? "REST" : "DONE"
+        return remainingRounds > 0 ? "Rest" : "Done"
     }
     
     var body: some View {

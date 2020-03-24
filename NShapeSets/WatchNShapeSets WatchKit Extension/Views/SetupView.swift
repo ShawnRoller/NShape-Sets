@@ -16,7 +16,7 @@ struct SetupView: View {
     
     var body: some View {
         VStack {
-            Spacer().frame(height: 0)
+            Spacer()
             SelectorView(value: $sets, title: "Sets")
             SelectorView(value: $rest, title: "Rest", incrementorValue: 5)
             Spacer()
