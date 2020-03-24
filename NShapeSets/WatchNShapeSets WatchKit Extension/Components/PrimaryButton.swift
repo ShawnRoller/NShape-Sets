@@ -18,7 +18,7 @@ struct PrimaryButton: View {
             self.onButtonTap()
         }, label: {
             Text(title)
-                .watchTitleFont()
+                .watchInputFont()
         })
             .background(buttonColor)
             .cornerRadius(100)

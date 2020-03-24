@@ -15,7 +15,7 @@ struct NavigationButton: View {
     var body: some View {
         NavigationLink(destination: destination) {
             Text(title)
-                .watchTitleFont()
+                .watchInputFont()
         }
         .background(Palette.button2Color)
         .cornerRadius(100)
