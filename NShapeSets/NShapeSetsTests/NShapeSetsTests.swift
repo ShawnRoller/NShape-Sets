@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import NShapeSets
+//import TimeHelper
 
 class NShapeSetsTests: XCTestCase {
 
@@ -19,9 +20,9 @@ class NShapeSetsTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testTimeFromSeconds() {
+        let time = TimeHelper.getTimeFromSeconds(90)
+        XCTAssert(time == "1:30")
     }
 
     func testPerformanceExample() {
