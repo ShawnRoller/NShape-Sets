@@ -51,7 +51,7 @@ struct ActiveWorkoutView: View {
             let totalTime = TimeHelper.getTimeFromSeconds(self.timer.totalTime)
             return Alert(title: Text("Workout complete!"), message: Text("You completed all sets in \(totalTime)!"), dismissButton: .default(Text("OK"), action: {
                 /// TODO: need to add a delay here as the "start" button doesn't work if there's no delay.  This appears to be a bug with how the callback is handled and may be fixed in a new version of swiftui
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.01) {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
                     self.goBack()
                 }
             }))

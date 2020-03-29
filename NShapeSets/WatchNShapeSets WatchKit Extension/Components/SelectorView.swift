@@ -13,35 +13,44 @@ struct SelectorView: View {
     var title: String
     var incrementorValue: Double = 1
     
+    @State var isFocused = false
     var range: ClosedRange<Double> = 1...100
     
+    let MIN_VALUE = 0.0
+    let MAX_VALUE = 500.0
+    
     var body: some View {
-        HStack(spacing: 5) {
+        VStack(spacing: 1) {
             Text(title)
                 .watchTitleFont()
-                .foregroundColor(Palette.accentColor1)
+                .foregroundColor(Palette.accentColor2)
                 .lineLimit(1)
-            HStack(spacing: 0){
+            HStack(spacing: 3){
+                Spacer()
                 SelectorButton(value: $value, iconName: "minus.square.fill") {
                     self.onDecrement()
                 }
-                TextFieldView(title: title, text: $value.stringValue)
-                    .frame(minWidth: 35, maxWidth: 50, minHeight: 25, maxHeight: 40)
+                TextFieldView(title: title, text: $value.stringValue, isFocused: $isFocused)
+                    .focusable(true, onFocusChange: { (focused) in
+                        self.isFocused = focused
+                    })
+                    .digitalCrownRotation($value, from: MIN_VALUE, through: MAX_VALUE, by: self.incrementorValue, sensitivity: .low, isHapticFeedbackEnabled: true)
                 SelectorButton(value: $value, iconName: "plus.square.fill") {
                     self.onIncrement()
                 }
+                Spacer()
             }
         }
     }
     
     func onDecrement() {
         let newValue = value - incrementorValue
-        value = max(newValue, 0)
+        value = max(newValue, MIN_VALUE)
     }
     
     func onIncrement() {
         let newValue = value + incrementorValue
-        value = min(newValue, 500)
+        value = min(newValue, MAX_VALUE)
     }
     
 }

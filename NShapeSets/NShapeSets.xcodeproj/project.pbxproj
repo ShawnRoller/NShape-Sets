@@ -34,6 +34,7 @@
 		292DD4EB23F9F4DA007166E0 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DD4E823F9F291007166E0 /* TextFieldView.swift */; };
 		292DD4EC23F9F518007166E0 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
 		292DD4EE23F9F7B9007166E0 /* SelectorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DD4ED23F9F7B9007166E0 /* SelectorButton.swift */; };
+		2943657024312F3900A7A476 /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B77580242FB10200EDD23D /* TimeHelper.swift */; };
 		294B33A923D642D600D6BF14 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294B33A823D642D600D6BF14 /* BannerView.swift */; };
 		294B33AA23D642D600D6BF14 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294B33A823D642D600D6BF14 /* BannerView.swift */; };
 		294B33AC23D6436000D6BF14 /* SelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294B33AB23D6436000D6BF14 /* SelectorView.swift */; };
@@ -989,6 +990,7 @@
 				292DD4EA23F9F4CF007166E0 /* SelectorView.swift in Sources */,
 				297C8CA82419096900D7583E /* Wrappers.swift in Sources */,
 				29A4AF01241591E0005A446E /* HealthKitHelper.swift in Sources */,
+				2943657024312F3900A7A476 /* TimeHelper.swift in Sources */,
 				292DD4EE23F9F7B9007166E0 /* SelectorButton.swift in Sources */,
 				29DE9EAA24031C7E00C6FE68 /* ActiveView.swift in Sources */,
 				29BDC1AC2408740200CC2B7D /* HapticHelper.swift in Sources */,
