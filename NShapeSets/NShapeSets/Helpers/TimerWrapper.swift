@@ -62,7 +62,6 @@ class TimerWrapper: ObservableObject {
     
     func reset() {
         self.timer?.invalidate()
-        self.remainingRest = 0
         self.currentRound = 1
         self.remainingRest = rest
         

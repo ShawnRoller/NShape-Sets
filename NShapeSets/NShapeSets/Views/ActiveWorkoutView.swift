@@ -44,6 +44,7 @@ struct ActiveWorkoutView: View {
             .alert(isPresented: $showingAlert) {
                 self.timer.stopTimeTracking()
                 let totalTime = TimeHelper.getTimeFromSeconds(self.timer.totalTime)
+                self.timer.reset()
                 return Alert(title: Text("Workout complete!"), message: Text("You completed all sets in \(totalTime)!"), dismissButton: .default(Text("OK"), action: {
                     self.goBack()
                 }))
