@@ -22,7 +22,7 @@ struct TextFieldView: View {
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 25, maxHeight: 40)
             .padding(1)
             .overlay(
-                RoundedRectangle(cornerRadius: 2)
+                RoundedRectangle(cornerRadius: .infinity)
                     .stroke(accentColor, lineWidth: 1)
             )
             .multilineTextAlignment(.center)

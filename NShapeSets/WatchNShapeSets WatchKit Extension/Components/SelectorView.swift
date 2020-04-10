@@ -27,15 +27,15 @@ struct SelectorView: View {
                 .lineLimit(1)
             HStack(spacing: 3){
                 Spacer()
-                SelectorButton(value: $value, iconName: "minus.square.fill") {
+                SelectorButton(value: $value, iconName: "minus.circle.fill") {
                     self.onDecrement()
                 }
                 TextFieldView(title: title, text: $value.stringValue, isFocused: $isFocused)
                     .focusable(true, onFocusChange: { (focused) in
                         self.isFocused = focused
                     })
-                    .digitalCrownRotation($value, from: MIN_VALUE, through: MAX_VALUE, by: self.incrementorValue, sensitivity: .low, isHapticFeedbackEnabled: true)
-                SelectorButton(value: $value, iconName: "plus.square.fill") {
+                    .digitalCrownRotation($value, from: MIN_VALUE, through: MAX_VALUE, by: self.incrementorValue, sensitivity: .medium, isHapticFeedbackEnabled: true)
+                SelectorButton(value: $value, iconName: "plus.circle.fill") {
                     self.onIncrement()
                 }
                 Spacer()
