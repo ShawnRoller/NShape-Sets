@@ -19,9 +19,9 @@ struct ActiveWorkoutView: View {
     var workout: Workout
     @Binding var isPresented: Bool
     
-    init(workout: Workout, isPresented: Bool) {
+    init(workout: Workout, isPresented: Binding<Bool>) {
         self.workout = workout
-        self.isPresented = isPresented
+        self._isPresented = isPresented
         self.timer = TimerWrapper.example
     }
     
@@ -109,6 +109,6 @@ struct ActiveWorkoutView: View {
 
 struct ActiveWorkoutView_Previews: PreviewProvider {
     static var previews: some View {
-        ActiveWorkoutView(timer: TimerWrapper.example, workout: Workout.example, isPresented: .constant(false))
+        ActiveWorkoutView(workout: Workout.example, isPresented: .constant(false))
     }
 }
