@@ -13,13 +13,11 @@ class HealthManager {
 
     let healthKitStore: HKHealthStore = HKHealthStore()
     
-    func authorizeHealthKit() -> Bool {
+    /// TODO: this should use a completion
+    func authorizeHealthKit(completion: @escaping (_ success: Bool) -> Void) {
         
         //set the types to read from HKStore
         let healthKitTypesToRead = Set(arrayLiteral:
-            HKObjectType.characteristicType(forIdentifier: HKCharacteristicTypeIdentifier.biologicalSex)!,
-            HKObjectType.characteristicType(forIdentifier: HKCharacteristicTypeIdentifier.dateOfBirth)!,
-            HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!,
             HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!,
             HKObjectType.workoutType()
             )
@@ -32,16 +30,19 @@ class HealthManager {
         
         //if store unavailable return an error
         if !HKHealthStore.isHealthDataAvailable() {
-            return false
+            completion(false)
         }
         
         //request healthkit authorization
         healthKitStore.requestAuthorization(toShare: healthKitTypesToWrite, read: healthKitTypesToRead) { (success, error) -> Void in
-//            return true
-            print(success)
-            
+            if success {
+                completion(true)
+            }
+            else {
+                print(error as Any)
+                completion(false)
+            }
         }
-        return true
     }
     
     func readProfile() -> ( age:Int?,  biologicalsex:HKBiologicalSexObject?)
