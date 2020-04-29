@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     
     var step: ScreenState
+    var healthManager: HealthManager?
     
     var body: some View {
         NavigationView {
@@ -19,7 +20,7 @@ struct ContentView: View {
                     .onTapGesture {
                         UIApplication.shared.endEditing()
                     }
-                SetupView()
+                SetupView(healthManager: self.healthManager)
             }
             .navigationBarHidden(true)
         }

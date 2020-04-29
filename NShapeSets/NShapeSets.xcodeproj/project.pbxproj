@@ -43,6 +43,9 @@
 		294B33B023D64A2C00D6BF14 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294B33AE23D64A2C00D6BF14 /* CustomSlider.swift */; };
 		294B33B523D6500E00D6BF14 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294B33B423D6500E00D6BF14 /* TextFieldView.swift */; };
 		294B33B623D6500E00D6BF14 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294B33B423D6500E00D6BF14 /* TextFieldView.swift */; };
+		294BA21F244A534600C809DD /* HealthKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294BA21E244A534600C809DD /* HealthKitHelper.swift */; };
+		294BA220244A534600C809DD /* HealthKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294BA21E244A534600C809DD /* HealthKitHelper.swift */; };
+		294BA221244A534600C809DD /* HealthKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294BA21E244A534600C809DD /* HealthKitHelper.swift */; };
 		294BBB9F23A44C6E0022AC8C /* Gotham-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB8F23A44C6D0022AC8C /* Gotham-Thin.otf */; };
 		294BBBA023A44C6E0022AC8C /* Gotham-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB8F23A44C6D0022AC8C /* Gotham-Thin.otf */; };
 		294BBBA123A44C6E0022AC8C /* Gotham-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB8F23A44C6D0022AC8C /* Gotham-Thin.otf */; };
@@ -295,6 +298,7 @@
 		294B33AB23D6436000D6BF14 /* SelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorView.swift; sourceTree = "<group>"; };
 		294B33AE23D64A2C00D6BF14 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		294B33B423D6500E00D6BF14 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		294BA21E244A534600C809DD /* HealthKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitHelper.swift; sourceTree = "<group>"; };
 		294BBB8F23A44C6D0022AC8C /* Gotham-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Thin.otf"; sourceTree = "<group>"; };
 		294BBB9023A44C6D0022AC8C /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Bold.otf"; sourceTree = "<group>"; };
 		294BBB9123A44C6D0022AC8C /* Gotham-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Book.otf"; sourceTree = "<group>"; };
@@ -509,6 +513,7 @@
 				296528FF23E9A32E00C203F8 /* TimerWrapper.swift */,
 				29F51C9923F88F12002E8498 /* AudioUtil.swift */,
 				29B77580242FB10200EDD23D /* TimeHelper.swift */,
+				294BA21E244A534600C809DD /* HealthKitHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1034,6 +1039,7 @@
 				294B33AF23D64A2C00D6BF14 /* CustomSlider.swift in Sources */,
 				294BBBF223A44CA00022AC8C /* Constants.swift in Sources */,
 				296528FC23DF7F6B00C203F8 /* RestView.swift in Sources */,
+				294BA21F244A534600C809DD /* HealthKitHelper.swift in Sources */,
 				2965290023E9A32E00C203F8 /* TimerWrapper.swift in Sources */,
 				29F51C9A23F88F12002E8498 /* AudioUtil.swift in Sources */,
 				2965290623F09E1B00C203F8 /* AppExtensions.swift in Sources */,
@@ -1070,6 +1076,7 @@
 				296528F923DF7C2100C203F8 /* ActiveView.swift in Sources */,
 				29B77586242FB3A800EDD23D /* SceneDelegate.swift in Sources */,
 				29B7758D242FB3C100EDD23D /* CustomSlider.swift in Sources */,
+				294BA220244A534600C809DD /* HealthKitHelper.swift in Sources */,
 				29CDDC3123DCCD86008BB4B8 /* InfoView.swift in Sources */,
 				296528FD23DF7F6B00C203F8 /* RestView.swift in Sources */,
 				29CDDC1F23DB2340008BB4B8 /* ViewProtocols.swift in Sources */,
@@ -1104,6 +1111,7 @@
 				2965290223E9A32E00C203F8 /* TimerWrapper.swift in Sources */,
 				2965290823F09E1B00C203F8 /* AppExtensions.swift in Sources */,
 				295AFFC3239C2552003E24C6 /* Palette.swift in Sources */,
+				294BA221244A534600C809DD /* HealthKitHelper.swift in Sources */,
 				29B77587242FB3A900EDD23D /* SceneDelegate.swift in Sources */,
 				29B77583242FB10200EDD23D /* TimeHelper.swift in Sources */,
 				2911C2B123A59AB500405306 /* TypefaceExtensions.swift in Sources */,
