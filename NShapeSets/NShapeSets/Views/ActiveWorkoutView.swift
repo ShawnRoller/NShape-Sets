@@ -38,10 +38,11 @@ struct ActiveWorkoutView: View {
             }
             .onAppear() {
                 self.timer.startTimeTracking()
-                /// TODO: start workout
             }
             .onDisappear() {
-                /// TODO: end workout
+                let totalSeconds = self.timer.totalTime
+                self.saveWorkout(withSeconds: totalSeconds)
+                self.timer.reset()
             }
             .alert(isPresented: $showingAlert) {
                 self.timer.stopTimeTracking()
@@ -49,8 +50,6 @@ struct ActiveWorkoutView: View {
                 let totalTime = TimeHelper.getTimeFromSeconds(totalSeconds)
                 
                 return Alert(title: Text("Workout complete!"), message: Text("You completed all sets in \(totalTime)!"), dismissButton: .default(Text("OK"), action: {
-                    self.saveWorkout(withSeconds: totalSeconds)
-                    self.timer.reset()
                     self.goBack()
                 }))
             }
