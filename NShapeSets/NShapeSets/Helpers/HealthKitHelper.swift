@@ -12,9 +12,10 @@ import HealthKit
 class HealthManager {
 
     let healthKitStore: HKHealthStore = HKHealthStore()
+    var didAuthorize = false
     
     /// TODO: this should use a completion
-    func authorizeHealthKit(completion: @escaping (_ success: Bool) -> Void) {
+    func authorizeHealthKit() {
         
         //set the types to read from HKStore
         let healthKitTypesToRead = Set(arrayLiteral:
@@ -30,17 +31,17 @@ class HealthManager {
         
         //if store unavailable return an error
         if !HKHealthStore.isHealthDataAvailable() {
-            completion(false)
+            self.didAuthorize = false
         }
         
         //request healthkit authorization
         healthKitStore.requestAuthorization(toShare: healthKitTypesToWrite, read: healthKitTypesToRead) { (success, error) -> Void in
             if success {
-                completion(true)
+                self.didAuthorize = true
             }
             else {
                 print(error as Any)
-                completion(false)
+                self.didAuthorize = false
             }
         }
     }
@@ -100,31 +101,33 @@ class HealthManager {
     }
     
     func saveWorkout(_ calories: Double, startDate: Date, endDate: Date) {
-        let energy = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.activeEnergyBurned)
-        let quantity = HKQuantity(unit: HKUnit.smallCalorie(), doubleValue: calories)
-        let sample = HKQuantitySample(type: energy!, quantity: quantity, start: startDate, end: endDate)
-        
-        let distanceQuantity = HKQuantity(unit: HKUnit.meterUnit(with: .kilo), doubleValue: 0.0)
-        let workout = HKWorkout(activityType: .crossTraining, start: startDate, end: endDate, duration: abs(endDate.timeIntervalSince(startDate)), totalEnergyBurned: quantity, totalDistance: distanceQuantity, metadata: nil)
-        
-        healthKitStore.save(sample, withCompletion: { (success, error) -> Void in
+        if self.didAuthorize {
+            let energy = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.activeEnergyBurned)
+            let quantity = HKQuantity(unit: HKUnit.smallCalorie(), doubleValue: calories)
+            let sample = HKQuantitySample(type: energy!, quantity: quantity, start: startDate, end: endDate)
             
-            if error != nil {
-                print("error saving calorie burn sample: \(String(describing: error?.localizedDescription))")
-            } else {
-                print("calories saved successfully")
-                self.healthKitStore.save(workout, withCompletion: { (saved, errors) -> Void in
-                    
-                    if errors != nil {
-                        print("error saving workout")
-                    } else {
-                        print("workout saved successfully")
-                    }
-                    
-                })
-            }
+            let distanceQuantity = HKQuantity(unit: HKUnit.meterUnit(with: .kilo), doubleValue: 0.0)
+            let workout = HKWorkout(activityType: .crossTraining, start: startDate, end: endDate, duration: abs(endDate.timeIntervalSince(startDate)), totalEnergyBurned: quantity, totalDistance: distanceQuantity, metadata: nil)
             
-        })
+            healthKitStore.save(sample, withCompletion: { (success, error) -> Void in
+                
+                if error != nil {
+                    print("error saving calorie burn sample: \(String(describing: error?.localizedDescription))")
+                } else {
+                    print("calories saved successfully")
+                    self.healthKitStore.save(workout, withCompletion: { (saved, errors) -> Void in
+                        
+                        if errors != nil {
+                            print("error saving workout")
+                        } else {
+                            print("workout saved successfully")
+                        }
+                        
+                    })
+                }
+                
+            })
+        }
         
     }
     
