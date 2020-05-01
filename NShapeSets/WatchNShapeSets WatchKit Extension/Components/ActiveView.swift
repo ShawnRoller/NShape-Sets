@@ -22,7 +22,7 @@ struct ActiveView: View {
         VStack {
             InstructionView(title: "Current set:", value: "\(timer.currentRound)")
             Spacer()
-            DetailView(title: "Remaining sets:", value: "\(timer.rounds - timer.currentRound)")
+            DetailView(title: "Remaining:", value: "\(timer.remainingRounds)")
             Spacer()
             PrimaryButton(title: buttonTitle, buttonColor: Palette.button2Color) {
                 self.onButtonTap()

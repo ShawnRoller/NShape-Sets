@@ -22,6 +22,9 @@ class TimerWrapper: ObservableObject {
         let finalString = nextSet == self.rounds ? "Last Set" : "\(nextSet)"
         return finalString
     }
+    var remainingRounds: Int {
+        return self.rounds - self.currentRound
+    }
     
     var onRestComplete: () -> Void?
     var onRestTimeChange: () -> Void?

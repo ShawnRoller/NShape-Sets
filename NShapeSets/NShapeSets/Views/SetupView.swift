@@ -23,26 +23,25 @@ struct SetupView: View {
     }
     
     var body: some View {
-        VStack {
-            BannerView()
-                .frame(height: self.bannerHeight)
-            getSpacer()
-            SelectorView(value: $sets, title: "Sets", range: 1.0...100.0, step: 1.0, image: ImageAsset.sets)
-            getSpacer()
-            SelectorView(value: $rest, title: "Rest", range: 1.0...100.0, step: 1.0, image: ImageAsset.rest)
-            getSpacer()
-            renderStartButton(useModal: useModal)
-            Spacer()
-        }
-        .animation(.spring())
-        .sheet(isPresented: $isWorkoutActive) {
-            if self.useModal {
-                self.getWorkoutView()
+        Group {
+            VStack {
+                BannerView()
+                    .frame(height: self.bannerHeight)
+                getSpacer()
+                SelectorView(value: $sets, title: "Sets", range: 1.0...100.0, step: 1.0, image: ImageAsset.sets)
+                getSpacer()
+                SelectorView(value: $rest, title: "Rest", range: 1.0...100.0, step: 1.0, image: ImageAsset.rest)
+                getSpacer()
+                renderStartButton(useModal: useModal)
+                Spacer()
             }
-        }
-        .onAppear {
-            self.handleKeyboardNotifications()
-        }
+            .animation(.spring())
+            .sheet(isPresented: $isWorkoutActive) {
+                if self.useModal {
+                    self.getWorkoutView()
+                }
+            }
+        }.modifier(AdaptsToSoftwareKeyboard())
     }
     
     func renderStartButton(useModal: Bool) -> some View {
@@ -61,16 +60,6 @@ struct SetupView: View {
             }
         }
         
-    }
-    
-    func handleKeyboardNotifications() {
-        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { (notification) in
-            self.bannerHeight = 100
-        }
-        
-        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { (notification) in
-            self.bannerHeight = 300
-        }
     }
     
     func getSpacer() -> some View {

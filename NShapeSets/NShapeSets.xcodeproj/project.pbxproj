@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		290079D7245CCB5A003A54EB /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290079D6245CCB5A003A54EB /* KeyboardHelper.swift */; };
+		290079D8245CCB5A003A54EB /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290079D6245CCB5A003A54EB /* KeyboardHelper.swift */; };
+		290079D9245CCB5A003A54EB /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290079D6245CCB5A003A54EB /* KeyboardHelper.swift */; };
 		2911C2AF23A59AB500405306 /* TypefaceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypefaceExtensions.swift */; };
 		2911C2B023A59AB500405306 /* TypefaceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypefaceExtensions.swift */; };
 		2911C2B123A59AB500405306 /* TypefaceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypefaceExtensions.swift */; };
@@ -274,6 +277,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		290079D6245CCB5A003A54EB /* KeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHelper.swift; sourceTree = "<group>"; };
 		2911C2AE23A59AB500405306 /* TypefaceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypefaceExtensions.swift; sourceTree = "<group>"; };
 		29201EE223988F5F0016DF8C /* WatchNShapeSets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchNShapeSets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29201EE523988F5F0016DF8C /* WatchNShapeSets WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchNShapeSets WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -514,6 +518,7 @@
 				29F51C9923F88F12002E8498 /* AudioUtil.swift */,
 				29B77580242FB10200EDD23D /* TimeHelper.swift */,
 				294BA21E244A534600C809DD /* HealthKitHelper.swift */,
+				290079D6245CCB5A003A54EB /* KeyboardHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1031,6 +1036,7 @@
 				294B33AC23D6436000D6BF14 /* SelectorView.swift in Sources */,
 				29FDE47D2395B28B0061EF5E /* SetupView.swift in Sources */,
 				29C956212393042500373031 /* ContentView.swift in Sources */,
+				290079D7245CCB5A003A54EB /* KeyboardHelper.swift in Sources */,
 				297C8CA5241908D200D7583E /* Wrappers.swift in Sources */,
 				294B33B523D6500E00D6BF14 /* TextFieldView.swift in Sources */,
 				295AFFC2239C2552003E24C6 /* Palette.swift in Sources */,
@@ -1078,6 +1084,7 @@
 				29B7758D242FB3C100EDD23D /* CustomSlider.swift in Sources */,
 				294BA220244A534600C809DD /* HealthKitHelper.swift in Sources */,
 				29CDDC3123DCCD86008BB4B8 /* InfoView.swift in Sources */,
+				290079D8245CCB5A003A54EB /* KeyboardHelper.swift in Sources */,
 				296528FD23DF7F6B00C203F8 /* RestView.swift in Sources */,
 				29CDDC1F23DB2340008BB4B8 /* ViewProtocols.swift in Sources */,
 				29B7758F242FB3C500EDD23D /* BannerView.swift in Sources */,
@@ -1113,6 +1120,7 @@
 				295AFFC3239C2552003E24C6 /* Palette.swift in Sources */,
 				294BA221244A534600C809DD /* HealthKitHelper.swift in Sources */,
 				29B77587242FB3A900EDD23D /* SceneDelegate.swift in Sources */,
+				290079D9245CCB5A003A54EB /* KeyboardHelper.swift in Sources */,
 				29B77583242FB10200EDD23D /* TimeHelper.swift in Sources */,
 				2911C2B123A59AB500405306 /* TypefaceExtensions.swift in Sources */,
 				296528FE23DF7F6B00C203F8 /* RestView.swift in Sources */,

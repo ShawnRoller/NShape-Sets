@@ -17,7 +17,7 @@ struct ActiveView: View, ActiveWorkoutContent {
         VStack {
             InfoView(imageString: ImageAsset.currentSet, text: "\(timer.currentRound)")
             Spacer()
-            InfoView(imageString: ImageAsset.remainingSets, text: "\(timer.rounds - timer.currentRound)")
+            InfoView(imageString: ImageAsset.remainingSets, text: "\(timer.remainingRounds)")
             Spacer()
             Image(ImageAsset.buttonRest)
                 .onTapGesture {
