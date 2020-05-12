@@ -17,7 +17,7 @@ struct RestView: View {
         VStack {
             InstructionView(title: "Resting...", value: "\(timer.remainingRest)")
             Spacer()
-            DetailView(title: "Next set:", value: "\(timer.nextSetString) of \(timer.remainingRounds)")
+            DetailView(title: "Next set:", value: "\(timer.nextSetString)")
             Spacer()
             PrimaryButton(title: "Skip", buttonColor: Palette.button1Color) {
                 self.onButtonTap()

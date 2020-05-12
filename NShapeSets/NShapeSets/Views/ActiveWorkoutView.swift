@@ -67,9 +67,6 @@ struct ActiveWorkoutView: View {
         durationComponents.second = seconds * -1
         let startDate = (userCalendar as NSCalendar).date(byAdding: durationComponents, to: date, options: [])
         
-        print("startDate: \(startDate!)")
-        print("endDate: \(date)")
-        
         self.healthManager?.saveWorkout(calories, startDate: startDate!, endDate: date)
     }
     

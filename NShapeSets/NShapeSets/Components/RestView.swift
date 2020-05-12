@@ -17,7 +17,7 @@ struct RestView: View, ActiveWorkoutContent {
         VStack {
             InfoView(imageString: ImageAsset.restTime, text: "\(timer.remainingRest)")
             Spacer()
-            InfoView(imageString: ImageAsset.nextSet, text: "\(timer.nextSetString) of \(timer.remainingRounds)")
+            InfoView(imageString: ImageAsset.nextSet, text: "\(timer.nextSetString)")
             Spacer()
             Image(ImageAsset.buttonSkip)
                 .onTapGesture {
