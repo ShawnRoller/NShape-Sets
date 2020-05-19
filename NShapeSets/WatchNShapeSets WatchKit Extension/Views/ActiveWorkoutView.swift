@@ -13,11 +13,11 @@ struct ActiveWorkoutView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var workoutState: ScreenState = .active
     @State private var showingAlert = false
+    @State private var didSaveWorkout = false
     @ObservedObject var timer: TimerWrapper
     var workout: Workout
     
     var hkHelper: HealthKitHelper
-    
     private var healthStore = HKHealthStore()
     
     init(workout: Workout, hkHelper: HealthKitHelper) {
@@ -32,7 +32,10 @@ struct ActiveWorkoutView: View {
     }
     
     func endWorkout() {
-        self.hkHelper.endWorkout()
+        if !self.didSaveWorkout {
+            self.didSaveWorkout = true
+            self.hkHelper.endWorkout()
+        }
     }
     
     var body: some View {

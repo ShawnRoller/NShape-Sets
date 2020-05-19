@@ -20,6 +20,8 @@ struct ActiveWorkoutView: View {
     @Binding var isPresented: Bool
     var healthManager: HealthManager?
     
+    @State private var didSaveWorkout = false
+    
     init(workout: Workout, isPresented: Binding<Bool>, healthManager: HealthManager?) {
         self.workout = workout
         self._isPresented = isPresented
@@ -57,17 +59,21 @@ struct ActiveWorkoutView: View {
     }
     
     func saveWorkout(withSeconds seconds: Int) {
-        let caloriesPerSecond = 0.16
-        let calories = (caloriesPerSecond * Double(seconds)) * 1000
-        
-        //get workout times
-        let userCalendar = Calendar.current
-        let date = Date()
-        var durationComponents = DateComponents()
-        durationComponents.second = seconds * -1
-        let startDate = (userCalendar as NSCalendar).date(byAdding: durationComponents, to: date, options: [])
-        
-        self.healthManager?.saveWorkout(calories, startDate: startDate!, endDate: date)
+        if !didSaveWorkout {
+            didSaveWorkout = true
+            
+            let caloriesPerSecond = 0.16
+            let calories = (caloriesPerSecond * Double(seconds)) * 1000
+            
+            //get workout times
+            let userCalendar = Calendar.current
+            let date = Date()
+            var durationComponents = DateComponents()
+            durationComponents.second = seconds * -1
+            let startDate = (userCalendar as NSCalendar).date(byAdding: durationComponents, to: date, options: [])
+            
+            self.healthManager?.saveWorkout(calories, startDate: startDate!, endDate: date)
+        }
     }
     
     func playSound() {
