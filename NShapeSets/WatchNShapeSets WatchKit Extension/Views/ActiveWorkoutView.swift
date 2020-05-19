@@ -27,8 +27,10 @@ struct ActiveWorkoutView: View {
     }
     
     func startWorkout() {
-        self.hkHelper.setupWorkout()
-        self.hkHelper.startWorkoutSession()
+        if !self.didSaveWorkout {
+            self.hkHelper.setupWorkout()
+            self.hkHelper.startWorkoutSession()
+        }
     }
     
     func endWorkout() {
