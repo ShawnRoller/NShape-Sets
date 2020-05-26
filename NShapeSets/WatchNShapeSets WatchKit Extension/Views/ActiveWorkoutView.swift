@@ -13,31 +13,14 @@ struct ActiveWorkoutView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var workoutState: ScreenState = .active
     @State private var showingAlert = false
-    @State private var didSaveWorkout = false
     @ObservedObject var timer: TimerWrapper
     var workout: Workout
     
-    var hkHelper: HealthKitHelper
     private var healthStore = HKHealthStore()
     
-    init(workout: Workout, hkHelper: HealthKitHelper) {
+    init(workout: Workout) {
         self.workout = workout
         self.timer = TimerWrapper.example
-        self.hkHelper = hkHelper
-    }
-    
-    func startWorkout() {
-        if !self.didSaveWorkout {
-            self.hkHelper.setupWorkout()
-            self.hkHelper.startWorkoutSession()
-        }
-    }
-    
-    func endWorkout() {
-        if !self.didSaveWorkout {
-            self.didSaveWorkout = true
-            self.hkHelper.endWorkout()
-        }
     }
     
     var body: some View {
@@ -46,10 +29,6 @@ struct ActiveWorkoutView: View {
         }
         .onAppear() {
             self.timer.startTimeTracking()
-            self.startWorkout()
-        }
-        .onDisappear() {
-            self.endWorkout()
         }
         .alert(isPresented: $showingAlert) {
             self.timer.stopTimeTracking()
@@ -113,6 +92,6 @@ struct ActiveWorkoutView: View {
 
 struct ActiveWorkoutView_Previews: PreviewProvider {
     static var previews: some View {
-        ActiveWorkoutView(workout: Workout.example, hkHelper: HealthKitHelper())
+        ActiveWorkoutView(workout: Workout.example)
     }
 }

@@ -23,11 +23,14 @@ struct SetupView: View {
             NavigationButton(title: "Start", destination: getWorkoutView())
             Spacer().frame(height: 0)
         }
+        .onAppear() {
+            self.endWorkout()
+        }
     }
     
     func getWorkoutView() -> ActiveWorkoutView {
         let workout = self.getWorkoutWith(sets: self.sets, rest: self.rest)
-        var workoutView = ActiveWorkoutView(workout: workout, hkHelper: self.hkHelper)
+        var workoutView = ActiveWorkoutView(workout: workout)
         
         // Setup timer
         let timer = TimerWrapper(rest: Int(self.rest), rounds: Int(self.sets), currentRound: 1, {
@@ -43,6 +46,17 @@ struct SetupView: View {
     func getWorkoutWith(sets: Double, rest: Double) -> Workout {
         let workout = Workout(sets: sets, rest: rest, currentSet: 1)
         return workout
+    }
+    
+    func startWorkout() {
+        self.hkHelper.setupWorkout()
+        self.hkHelper.startWorkoutSession()
+    }
+    
+    func endWorkout() {
+        print("ended workout...")
+        
+        self.hkHelper.endWorkout()
     }
 }
 

@@ -56,7 +56,7 @@ class HealthKitHelper: WKInterfaceController, HKWorkoutSessionDelegate, HKLiveWo
             builder = session.associatedWorkoutBuilder()
         }
         catch {
-            /// TODO: handle error
+            print("had error")
             return
         }
         
@@ -124,10 +124,12 @@ class HealthKitHelper: WKInterfaceController, HKWorkoutSessionDelegate, HKLiveWo
     func endWorkout() {
         /// Update the timer based on the state we are in.
         /// - Tag: SaveWorkout
-        session.end()
-        builder.endCollection(withEnd: Date()) { (success, error) in
-            self.builder.finishWorkout { (workout, error) in
-                
+        if session.state != .ended {
+            session.end()
+            builder.endCollection(withEnd: Date()) { (success, error) in
+                self.builder.finishWorkout { (workout, error) in
+                    
+                }
             }
         }
     }
