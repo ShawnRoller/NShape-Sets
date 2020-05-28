@@ -30,7 +30,7 @@ struct SetupView: View {
     
     func getWorkoutView() -> ActiveWorkoutView {
         let workout = self.getWorkoutWith(sets: self.sets, rest: self.rest)
-        var workoutView = ActiveWorkoutView(workout: workout)
+        var workoutView = ActiveWorkoutView(workout: workout, hkHelper: self.hkHelper)
         
         // Setup timer
         let timer = TimerWrapper(rest: Int(self.rest), rounds: Int(self.sets), currentRound: 1, {
@@ -48,14 +48,7 @@ struct SetupView: View {
         return workout
     }
     
-    func startWorkout() {
-        self.hkHelper.setupWorkout()
-        self.hkHelper.startWorkoutSession()
-    }
-    
     func endWorkout() {
-        print("ended workout...")
-        
         self.hkHelper.endWorkout()
     }
 }

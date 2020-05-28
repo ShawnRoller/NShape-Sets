@@ -50,6 +50,10 @@ class HealthKitHelper: WKInterfaceController, HKWorkoutSessionDelegate, HKLiveWo
     }
     
     func setupWorkout() {
+        guard session == nil else { return }
+        if self.config == nil {
+            self.onHKAuth()
+        }
         
         do {
             session = try HKWorkoutSession(healthStore: healthStore, configuration: config)
@@ -110,6 +114,8 @@ class HealthKitHelper: WKInterfaceController, HKWorkoutSessionDelegate, HKLiveWo
     }
     
     func startWorkoutSession() {
+        guard let session = session, ![HKWorkoutSessionState.paused, HKWorkoutSessionState.running].contains(session.state) else { return }
+        
         session.startActivity(with: Date())
         builder.beginCollection(withStart: Date()) { (success, error) in
             guard success else {
@@ -124,6 +130,8 @@ class HealthKitHelper: WKInterfaceController, HKWorkoutSessionDelegate, HKLiveWo
     func endWorkout() {
         /// Update the timer based on the state we are in.
         /// - Tag: SaveWorkout
+        guard let session = session else { return }
+        
         if session.state != .ended {
             session.end()
             builder.endCollection(withEnd: Date()) { (success, error) in
