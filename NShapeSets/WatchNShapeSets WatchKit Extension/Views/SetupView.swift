@@ -23,6 +23,9 @@ struct SetupView: View {
             NavigationButton(title: "Start", destination: getWorkoutView())
             Spacer().frame(height: 0)
         }
+        .onAppear() {
+            self.endWorkout()
+        }
     }
     
     func getWorkoutView() -> ActiveWorkoutView {
@@ -43,6 +46,10 @@ struct SetupView: View {
     func getWorkoutWith(sets: Double, rest: Double) -> Workout {
         let workout = Workout(sets: sets, rest: rest, currentSet: 1)
         return workout
+    }
+    
+    func endWorkout() {
+        self.hkHelper.endWorkout()
     }
 }
 
