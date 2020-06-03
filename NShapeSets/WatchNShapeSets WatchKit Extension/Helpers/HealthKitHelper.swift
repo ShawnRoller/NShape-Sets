@@ -114,7 +114,7 @@ class HealthKitHelper: WKInterfaceController, HKWorkoutSessionDelegate, HKLiveWo
     }
     
     func startWorkoutSession() {
-        guard let session = session, ![HKWorkoutSessionState.paused, HKWorkoutSessionState.running].contains(session.state) else { return }
+        guard let session = session, ![HKWorkoutSessionState.paused, HKWorkoutSessionState.running].contains(session.state), self.isAuthorized() else { return }
         
         session.startActivity(with: Date())
         builder.beginCollection(withStart: Date()) { (success, error) in
@@ -130,7 +130,7 @@ class HealthKitHelper: WKInterfaceController, HKWorkoutSessionDelegate, HKLiveWo
     func endWorkout() {
         /// Update the timer based on the state we are in.
         /// - Tag: SaveWorkout
-        guard let session = session else { return }
+        guard let session = session, self.isAuthorized() else { return }
         
         if session.state != .ended {
             session.end()
@@ -140,6 +140,11 @@ class HealthKitHelper: WKInterfaceController, HKWorkoutSessionDelegate, HKLiveWo
                 }
             }
         }
+    }
+    
+    func isAuthorized() -> Bool {
+        let authorizationStatus = healthStore.authorizationStatus(for: HKSampleType.workoutType())
+        return authorizationStatus == .sharingAuthorized
     }
     
 }
