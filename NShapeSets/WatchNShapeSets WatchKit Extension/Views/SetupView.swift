@@ -56,6 +56,10 @@ struct SetupView: View {
         let workout = Workout(sets: sets, rest: rest, currentSet: 1)
         return workout
     }
+    
+    func endWorkout() {
+        self.hkHelper.endWorkout()
+    }
 }
 
 struct SetupView_Previews: PreviewProvider {
