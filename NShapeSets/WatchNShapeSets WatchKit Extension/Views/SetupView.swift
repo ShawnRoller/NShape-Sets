@@ -23,6 +23,18 @@ struct SetupView: View {
             NavigationButton(title: "Start", destination: getWorkoutView())
             Spacer().frame(height: 0)
         }
+        .onAppear() {
+            self.getDefaultSettings()
+            self.endWorkout()
+        }
+    }
+    
+    func getDefaultSettings() {
+        let defaultWorkoutRest = DefaultManager.getDefault(forKey: Defaults.workoutRest) as? Double ?? 5
+        let defaultWorkoutSets = DefaultManager.getDefault(forKey: Defaults.workoutRounds) as? Double ?? 10
+        
+        self.rest = defaultWorkoutRest
+        self.sets = defaultWorkoutSets
     }
     
     func getWorkoutView() -> ActiveWorkoutView {

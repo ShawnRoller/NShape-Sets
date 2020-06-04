@@ -35,3 +35,8 @@ struct ImageAsset {
     static let restTime = "Title-RestTime"
     static let sets = "Title-Sets"
 }
+
+struct Defaults {
+    static let workoutRest = "workout_rest"
+    static let workoutRounds = "workout_rounds"
+}

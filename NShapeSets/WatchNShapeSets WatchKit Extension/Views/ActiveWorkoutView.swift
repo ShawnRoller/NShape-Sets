@@ -45,6 +45,7 @@ struct ActiveWorkoutView: View {
             getViewForState(workoutState)
         }
         .onAppear() {
+            self.setDefaultSettings()
             self.timer.startTimeTracking()
             self.startWorkout()
         }
@@ -62,6 +63,14 @@ struct ActiveWorkoutView: View {
                 }
             }))
         }
+    }
+    
+    func setDefaultSettings() {
+        let defaultWorkoutRest = self.workout.rest
+        let defaultWorkoutSets = self.workout.sets
+        
+        DefaultManager.setDefault(value: defaultWorkoutRest, forKey: Defaults.workoutRest)
+        DefaultManager.setDefault(value: defaultWorkoutSets, forKey: Defaults.workoutRounds)
     }
     
     func getViewForState(_ state: ScreenState) -> some View {

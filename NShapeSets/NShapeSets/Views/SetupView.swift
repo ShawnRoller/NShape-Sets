@@ -41,7 +41,18 @@ struct SetupView: View {
                     self.getWorkoutView()
                 }
             }
+            .onAppear() {
+                self.getDefaultSettings()
+            }
         }.modifier(AdaptsToSoftwareKeyboard())
+    }
+    
+    func getDefaultSettings() {
+        let defaultWorkoutRest = DefaultManager.getDefault(forKey: Defaults.workoutRest) as? Double ?? 5
+        let defaultWorkoutSets = DefaultManager.getDefault(forKey: Defaults.workoutRounds) as? Double ?? 10
+        
+        self.rest = defaultWorkoutRest
+        self.sets = defaultWorkoutSets
     }
     
     func renderStartButton(useModal: Bool) -> some View {
