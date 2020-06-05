@@ -27,6 +27,9 @@ struct SetupView: View {
             self.getDefaultSettings()
             self.endWorkout()
         }
+        .contextMenu(menuItems: {
+            Text("Version: \(App.version)")
+        })
     }
     
     func getDefaultSettings() {
