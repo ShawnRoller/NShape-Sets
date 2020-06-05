@@ -56,4 +56,7 @@ extension View {
     func watchInstructionDetailFont() -> some View {
         return self.modifier(ScaledFont(name: "Gotham-Book", size:17))
     }
+    func footerFont() -> some View {
+        return self.modifier(ScaledFont(name: "Gotham-Book", size:14))
+    }
 }

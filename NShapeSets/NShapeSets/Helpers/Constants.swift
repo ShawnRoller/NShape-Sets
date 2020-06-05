@@ -40,3 +40,12 @@ struct Defaults {
     static let workoutRest = "workout_rest"
     static let workoutRounds = "workout_rounds"
 }
+
+struct App {
+    static var version: String {
+        let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String
+        let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
+        let buildString = "\(appVersion ?? "").\(build ?? "")"
+        return buildString
+    }
+}

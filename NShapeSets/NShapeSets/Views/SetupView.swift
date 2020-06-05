@@ -34,6 +34,9 @@ struct SetupView: View {
                 getSpacer()
                 renderStartButton(useModal: useModal)
                 Spacer()
+                Text(App.version)
+                    .footerFont()
+                    .accentColor(Palette.inactiveColor)
             }
             .animation(.spring())
             .sheet(isPresented: $isWorkoutActive) {
