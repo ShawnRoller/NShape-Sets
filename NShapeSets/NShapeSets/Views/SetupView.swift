@@ -62,12 +62,14 @@ struct SetupView: View {
                     .onTapGesture {
                         self.isWorkoutActive.toggle()
                     }
+                    .disabled(self.sets <= 0 || self.rest <= 0)
             }
             else {
                 NavigationLink(destination: getWorkoutView()) {
                     Image(ImageAsset.buttonStart)
                 }
                 .buttonStyle(PlainButtonStyle())
+                .disabled(self.sets <= 0 || self.rest <= 0)
             }
         }
         

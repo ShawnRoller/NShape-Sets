@@ -26,6 +26,9 @@ struct TextFieldView: View {
             .multilineTextAlignment(.center)
             .keyboardType(.numberPad)
             .inputFont()
+            .onTapGesture {
+                self.text = ""
+            }
     }
 }
 
