@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import os
 
 struct SetupView: View {
     var healthManager: HealthManager?
@@ -53,6 +54,8 @@ struct SetupView: View {
         
         self.rest = defaultWorkoutRest
         self.sets = defaultWorkoutSets
+        
+        os_log("Got defaults - rest: %d, sets: %d", log: .test, defaultWorkoutRest, defaultWorkoutSets)
     }
     
     func renderStartButton(useModal: Bool) -> some View {
