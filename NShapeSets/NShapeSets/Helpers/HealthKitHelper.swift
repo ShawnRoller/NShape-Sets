@@ -8,6 +8,7 @@
 
 import Foundation
 import HealthKit
+import os
 
 class HealthManager {
 
@@ -37,10 +38,11 @@ class HealthManager {
         //request healthkit authorization
         healthKitStore.requestAuthorization(toShare: healthKitTypesToWrite, read: healthKitTypesToRead) { (success, error) -> Void in
             if success {
+                os_log("HeathKit authorized", log: .healthKit)
                 self.didAuthorize = true
             }
             else {
-                print(error as Any)
+                os_log("HeathKit failed auth: %{public}@", log: .healthKit, type: .error, error as CVarArg? ?? "")
                 self.didAuthorize = false
             }
         }
@@ -59,13 +61,13 @@ class HealthManager {
             
             age = differenceComponents.year
         } catch {
-            print("error capturing age")
+            os_log("error capturing age", log: .healthKit, type: .error)
         }
         
         do {
             biologicalSex = try healthKitStore.biologicalSex()
         } catch {
-            print("error capturing sex")
+            os_log("error capturing sex", log: .healthKit, type: .error)
         }
 
         return (age, biologicalSex)
@@ -83,7 +85,8 @@ class HealthManager {
         
         let sampleQuery = HKSampleQuery(sampleType: sampleType, predicate: mostRecentPredicate, limit: limit, sortDescriptors: [sortDescriptor]) { (sampleQuery, results, error) -> Void in
             
-            if let _ = error {
+            if let err = error {
+                os_log("error reading sample %{public}@", log: .healthKit, type: .error, err as CVarArg)
                 completion(nil, nil)
                 return
             }
@@ -112,15 +115,15 @@ class HealthManager {
             healthKitStore.save(sample, withCompletion: { (success, error) -> Void in
                 
                 if error != nil {
-                    print("error saving calorie burn sample: \(String(describing: error?.localizedDescription))")
+                    os_log("error saving calorie burn sample: %{public}@", log: .healthKit, type: .error, String(describing: error?.localizedDescription))
                 } else {
                     print("calories saved successfully")
                     self.healthKitStore.save(workout, withCompletion: { (saved, errors) -> Void in
                         
                         if errors != nil {
-                            print("error saving workout")
+                            os_log("error saving workout: %{public}@", log: .healthKit, type: .error, String(describing: errors?.localizedDescription))
                         } else {
-                            print("workout saved successfully")
+                            os_log("workout saved successfully", log: .healthKit)
                         }
                         
                     })
