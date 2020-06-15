@@ -9,6 +9,7 @@
 import WatchKit
 import Foundation
 import HealthKit
+import os
 
 class HealthKitHelper: WKInterfaceController, HKWorkoutSessionDelegate, HKLiveWorkoutBuilderDelegate {
     
@@ -25,10 +26,14 @@ class HealthKitHelper: WKInterfaceController, HKWorkoutSessionDelegate, HKLiveWo
             HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!
         ]
         
+        os_log("Authorizing HealthKit if necessary...", log: .healthKit)
+        
         healthStore.requestAuthorization(toShare: typesToShare, read: typesToRead) { (success, error) in
-            /// TODO: handle error
             if (success) {
+                os_log("Authorized HealthKit!", log: .healthKit)
                 self.onHKAuth()
+            } else {
+                os_log("HeathKit failed auth: %{public}@", log: .healthKit, type: .error, error as CVarArg? ?? "")
             }
         }
     }
@@ -56,11 +61,12 @@ class HealthKitHelper: WKInterfaceController, HKWorkoutSessionDelegate, HKLiveWo
         }
         
         do {
+            os_log("Setting up workout...", log: .healthKit)
             session = try HKWorkoutSession(healthStore: healthStore, configuration: config)
             builder = session.associatedWorkoutBuilder()
         }
         catch {
-            print("had error")
+            os_log("HeathKit failed auth: %{public}@", log: .healthKit, type: .error, error as CVarArg? ?? "")
             return
         }
         
@@ -70,76 +76,92 @@ class HealthKitHelper: WKInterfaceController, HKWorkoutSessionDelegate, HKLiveWo
         builder.dataSource = HKLiveWorkoutDataSource(healthStore: healthStore, workoutConfiguration: config)
     }
     
-    func workoutSession(_ workoutSession: HKWorkoutSession, didChangeTo toState: HKWorkoutSessionState, from fromState: HKWorkoutSessionState, date: Date) {
-        // Dispatch to main, because we are updating the interface.
-        DispatchQueue.main.async {
-            // update the UI based on state
-        }
-    }
-    
-    func workoutSession(_ workoutSession: HKWorkoutSession, didFailWithError error: Error) {
-        DispatchQueue.main.async {
-            // update the UI based on state
-        }
-    }
-    
-    func workoutBuilder(_ workoutBuilder: HKLiveWorkoutBuilder, didCollectDataOf collectedTypes: Set<HKSampleType>) {
-        for type in collectedTypes {
-            guard let quantityType = type as? HKQuantityType else {
-                return // Nothing to do.
-            }
-            
-            /// - Tag: GetStatistics
-//            let statistics = workoutBuilder.statistics(for: quantityType)
-//            let label = labelForQuantityType(quantityType)
-//
-//            updateLabel(label, withStatistics: statistics)
-        }
-    }
-    
-    func workoutBuilderDidCollectEvent(_ workoutBuilder: HKLiveWorkoutBuilder) {
-        // Retreive the workout event.
-        guard let workoutEventType = workoutBuilder.workoutEvents.last?.type else { return }
-        
-        // Update the timer based on the event received.
-//        switch workoutEventType {
-//        case .pause: // The user paused the workout.
-//            setDurationTimerDate(.paused)
-//        case .resume: // The user resumed the workout.
-//            setDurationTimerDate(.running)
-//        default:
-//            return
-//
-//        }
-    }
-    
     func startWorkoutSession() {
-        guard let session = session, ![HKWorkoutSessionState.paused, HKWorkoutSessionState.running].contains(session.state) else { return }
+        guard let session = session, ![HKWorkoutSessionState.paused, HKWorkoutSessionState.running].contains(session.state) else {
+            os_log("startWorkoutSession - couldn't start workout!", log: .healthKit, type: .error)
+            return
+        }
+        
+        os_log("Starting workout...", log: .healthKit)
         
         session.startActivity(with: Date())
         builder.beginCollection(withStart: Date()) { (success, error) in
             guard success else {
                 // handle error
+                os_log("Couldn't begin collecting workout data", log: .healthKit, type: .error)
                 return
             }
             
             // session has started
+            os_log("Started collecting workout data...", log: .healthKit)
         }
     }
     
     func endWorkout() {
         /// Update the timer based on the state we are in.
         /// - Tag: SaveWorkout
-        guard let session = session else { return }
+        guard let session = session else {
+            os_log("endWorkout - couldn't get the session!!", log: .healthKit, type: .error)
+            return
+        }
+        
+        os_log("Ending workout...", log: .healthKit)
         
         if session.state != .ended {
             session.end()
             builder.endCollection(withEnd: Date()) { (success, error) in
                 self.builder.finishWorkout { (workout, error) in
-                    
+                    if (error != nil) {
+                        os_log("HeathKit failed auth: %{public}@", log: .healthKit, type: .error, error as CVarArg? ?? "")
+                    } else {
+                        os_log("Finalized workout: %@", log: .healthKit, workout ?? "")
+                    }
                 }
             }
         }
     }
+        
+        func workoutSession(_ workoutSession: HKWorkoutSession, didChangeTo toState: HKWorkoutSessionState, from fromState: HKWorkoutSessionState, date: Date) {
+    //        // Dispatch to main, because we are updating the interface.
+    //        DispatchQueue.main.async {
+    //            // update the UI based on state
+    //        }
+        }
+        
+        func workoutSession(_ workoutSession: HKWorkoutSession, didFailWithError error: Error) {
+    //        DispatchQueue.main.async {
+    //            // update the UI based on state
+    //        }
+        }
+        
+        func workoutBuilder(_ workoutBuilder: HKLiveWorkoutBuilder, didCollectDataOf collectedTypes: Set<HKSampleType>) {
+    //        for type in collectedTypes {
+    //            guard let quantityType = type as? HKQuantityType else {
+    //                return // Nothing to do.
+    //            }
+                
+                /// - Tag: GetStatistics
+    //            let statistics = workoutBuilder.statistics(for: quantityType)
+    //            let label = labelForQuantityType(quantityType)
+    //
+    //            updateLabel(label, withStatistics: statistics)
+    //        }
+        }
+        
+        func workoutBuilderDidCollectEvent(_ workoutBuilder: HKLiveWorkoutBuilder) {
+            // Retreive the workout event.
+    //        guard let workoutEventType = workoutBuilder.workoutEvents.last?.type else { return }
+            
+            // Update the timer based on the event received.
+    //        switch workoutEventType {
+    //        case .pause: // The user paused the workout.
+    //            setDurationTimerDate(.paused)
+    //        case .resume: // The user resumed the workout.
+    //            setDurationTimerDate(.running)
+    //        default:
+    //            return
+    //
+    //        }
+        }
     
 }
