@@ -17,6 +17,7 @@ class HealthManager {
     
     /// TODO: this should use a completion
     func authorizeHealthKit() {
+        os_log("Authorizing HealthKit...", log: .healthKit)
         
         //set the types to read from HKStore
         let healthKitTypesToRead = Set(arrayLiteral:
@@ -50,6 +51,8 @@ class HealthManager {
     
     func readProfile() -> ( age:Int?,  biologicalsex:HKBiologicalSexObject?)
     {
+        os_log("Reading profile...", log: .healthKit)
+        
         var age:Int?
         var biologicalSex: HKBiologicalSexObject = HKBiologicalSexObject()
         
@@ -74,6 +77,7 @@ class HealthManager {
     }
     
     func readMostRecentSample(_ sampleType: HKSampleType, completion: ((HKSample?, NSError?) -> Void)!) {
+        os_log("Reading sample...", log: .healthKit)
         
         let past = Date.distantPast
         let now = Date()
@@ -104,6 +108,8 @@ class HealthManager {
     }
     
     func saveWorkout(_ calories: Double, startDate: Date, endDate: Date) {
+        os_log("Saving workout...", log: .healthKit)
+        
         if self.didAuthorize {
             let energy = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.activeEnergyBurned)
             let quantity = HKQuantity(unit: HKUnit.smallCalorie(), doubleValue: calories)
