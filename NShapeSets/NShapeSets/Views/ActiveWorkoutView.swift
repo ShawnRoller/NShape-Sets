@@ -8,6 +8,7 @@
 
 import SwiftUI
 import HealthKit
+import os
 
 struct ActiveWorkoutView: View {
     @Environment(\.presentationMode) var presentationMode
@@ -39,6 +40,7 @@ struct ActiveWorkoutView: View {
                 Spacer()
             }
             .onAppear() {
+                os_log("Workout became active!", log: .ui)
                 self.setDefaultSettings()
                 self.timer.startTimeTracking()
             }
@@ -63,11 +65,14 @@ struct ActiveWorkoutView: View {
         let defaultWorkoutRest = self.workout.rest
         let defaultWorkoutSets = self.workout.sets
         
+        os_log("Setting defaults - rest: \(defaultWorkoutRest), sets: \(defaultWorkoutSets)", log: .ui)
+        
         DefaultManager.setDefault(value: defaultWorkoutRest, forKey: Defaults.workoutRest)
         DefaultManager.setDefault(value: defaultWorkoutSets, forKey: Defaults.workoutRounds)
     }
     
     func saveWorkout(withSeconds seconds: Int) {
+        os_log("Saving workout...", log: .ui)
         if !didSaveWorkout {
             didSaveWorkout = true
             
@@ -86,7 +91,7 @@ struct ActiveWorkoutView: View {
     }
     
     func playSound() {
-        print("rest remaining: \(timer.remainingRest)")
+        os_log("Rest remaining: \(timer.remainingRest)", log: .ui)
     }
     
     func countdown() {
@@ -96,12 +101,13 @@ struct ActiveWorkoutView: View {
     }
     
     func onRestEnd() {
-        print("rest is over")
+        os_log("Rest is ", log: .ui)
         workoutState = workoutState == .active ? .rest : .active
         timer.restComplete()
     }
     
     func goBack() {
+        os_log("Going back to setup...", log: .ui)
         if isPresented {
             isPresented = false
         }
@@ -126,6 +132,7 @@ struct ActiveWorkoutView: View {
     }
     
     func onRest() {
+        os_log("Rest started", log: .ui)
         if timer.currentRound == timer.rounds {
             showingAlert = true
         }
@@ -136,6 +143,7 @@ struct ActiveWorkoutView: View {
     }
     
     func onSkip() {
+        os_log("Rest was skipped", log: .ui)
         onRestEnd()
     }
 }

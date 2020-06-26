@@ -8,6 +8,7 @@
 
 import SwiftUI
 import HealthKit
+import os
 
 struct ActiveWorkoutView: View {
     @Environment(\.presentationMode) var presentationMode
@@ -40,6 +41,7 @@ struct ActiveWorkoutView: View {
             getViewForState(workoutState)
         }
         .onAppear() {
+            os_log("Active workout appeared!", log: .ui)
             self.setDefaultSettings()
             self.timer.startTimeTracking()
             self.startWorkout()
@@ -87,17 +89,19 @@ struct ActiveWorkoutView: View {
     }
     
     func onRestEnd() {
-        print("rest is over")
+        os_log("rest is over", log: .ui)
         HapticHelper.playStartHaptic()
         workoutState = workoutState == .active ? .rest : .active
         timer.restComplete()
     }
     
     func goBack() {
+        os_log("Going back to setup...", log: .ui)
         presentationMode.wrappedValue.dismiss()
     }
     
     func onRest() {
+        os_log("Rest started", log: .ui)
         if timer.currentRound == timer.rounds {
             showingAlert = true
         }
@@ -108,6 +112,7 @@ struct ActiveWorkoutView: View {
     }
     
     func onSkip() {
+        os_log("Rest was skipped", log: .ui)
         onRestEnd()
     }
 }
