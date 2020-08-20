@@ -65,7 +65,7 @@ struct ActiveWorkoutView: View {
         let defaultWorkoutRest = self.workout.rest
         let defaultWorkoutSets = self.workout.sets
         
-        os_log("Setting defaults - rest: \(defaultWorkoutRest), sets: \(defaultWorkoutSets)", log: .ui)
+        os_log("Setting defaults - rest: %d, sets: %d", log: .ui, defaultWorkoutRest, defaultWorkoutSets)
         
         DefaultManager.setDefault(value: defaultWorkoutRest, forKey: Defaults.workoutRest)
         DefaultManager.setDefault(value: defaultWorkoutSets, forKey: Defaults.workoutRounds)
@@ -91,7 +91,7 @@ struct ActiveWorkoutView: View {
     }
     
     func playSound() {
-        os_log("Rest remaining: \(timer.remainingRest)", log: .ui)
+        os_log("Rest remaining: %d", log: .ui, timer.remainingRest)
     }
     
     func countdown() {
