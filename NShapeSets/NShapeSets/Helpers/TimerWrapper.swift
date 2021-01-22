@@ -33,7 +33,7 @@ class TimerWrapper: ObservableObject {
     var totalTimer: Timer!
     var totalTime = 0
     
-    init(rest: Int, rounds: Int, currentRound: Int, _ onRestComplete: @escaping () -> Void? = {}, onRestTimeChange: @escaping () -> Void? = {}) {
+    init(rest: Int, rounds: Int, currentRound: Int, _ onRestComplete: @escaping () -> Void?, onRestTimeChange: @escaping () -> Void?) {
         self.rest = rest
         self.rounds = rounds
         self.remainingRest = rest
@@ -99,7 +99,10 @@ class TimerWrapper: ObservableObject {
         self.totalTimer?.invalidate()
     }
     
-    #if DEBUG
-    static let example = TimerWrapper(rest: 3, rounds: 4, currentRound: 1)
-    #endif
+    static let example = TimerWrapper(rest: 3, rounds: 4, currentRound: 1) { () -> Void? in
+        return
+    } onRestTimeChange: { () -> Void? in
+        return
+    }
+
 }

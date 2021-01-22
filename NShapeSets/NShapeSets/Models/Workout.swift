@@ -19,7 +19,5 @@ class Workout {
         self.currentSet = currentSet
     }
 
-    #if DEBUG
     static let example = Workout(sets: 3, rest: 5, currentSet: 3)
-    #endif
 }

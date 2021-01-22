@@ -1,0 +1,48 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'NShapeSets' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for NShapeSets
+  
+  # add the Firebase pod for Google Analytics
+  pod 'Firebase/Analytics'
+  # add pods for any other desired Firebase products
+  # https://firebase.google.com/docs/ios/setup#available-pods
+
+  target 'NShapeSetsTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'NShapeSetsUITests' do
+    # Pods for testing
+  end
+
+end
+
+target 'WatchNShapeSets' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for WatchNShapeSets
+
+end
+
+target 'WatchNShapeSets WatchKit App' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for WatchNShapeSets WatchKit App
+
+end
+
+target 'WatchNShapeSets WatchKit Extension' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for WatchNShapeSets WatchKit Extension
+
+end
