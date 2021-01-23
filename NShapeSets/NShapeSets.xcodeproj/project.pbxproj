@@ -159,6 +159,14 @@
 		2965290623F09E1B00C203F8 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965290523F09E1B00C203F8 /* AppExtensions.swift */; };
 		2965290723F09E1B00C203F8 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965290523F09E1B00C203F8 /* AppExtensions.swift */; };
 		2965290823F09E1B00C203F8 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965290523F09E1B00C203F8 /* AppExtensions.swift */; };
+		2977AB1825BCCDE800EBF3B6 /* TVNShapeSetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2977AB1725BCCDE800EBF3B6 /* TVNShapeSetsApp.swift */; };
+		2977AB1A25BCCDE800EBF3B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2977AB1925BCCDE800EBF3B6 /* ContentView.swift */; };
+		2977AB1C25BCCDE900EBF3B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2977AB1B25BCCDE900EBF3B6 /* Assets.xcassets */; };
+		2977AB1F25BCCDE900EBF3B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2977AB1E25BCCDE900EBF3B6 /* Preview Assets.xcassets */; };
+		2977AB4925BCCE7500EBF3B6 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AFFBC239C21F8003E24C6 /* BackgroundView.swift */; };
+		2977AB5825BCCEAE00EBF3B6 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AFFC1239C2552003E24C6 /* Palette.swift */; };
+		2977AB6025BCCEEB00EBF3B6 /* StateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D43BE823A8394400C7981B /* StateModels.swift */; };
+		2977AB8D25BCD0D800EBF3B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29C956222393042800373031 /* Assets.xcassets */; };
 		297C8CA5241908D200D7583E /* Wrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C8CA4241908D200D7583E /* Wrappers.swift */; };
 		297C8CA6241908D200D7583E /* Wrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C8CA4241908D200D7583E /* Wrappers.swift */; };
 		297C8CA7241908D200D7583E /* Wrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C8CA4241908D200D7583E /* Wrappers.swift */; };
@@ -354,6 +362,12 @@
 		296528FB23DF7F6B00C203F8 /* RestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestView.swift; sourceTree = "<group>"; };
 		296528FF23E9A32E00C203F8 /* TimerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerWrapper.swift; sourceTree = "<group>"; };
 		2965290523F09E1B00C203F8 /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
+		2977AB1525BCCDE800EBF3B6 /* TVNShapeSets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVNShapeSets.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2977AB1725BCCDE800EBF3B6 /* TVNShapeSetsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVNShapeSetsApp.swift; sourceTree = "<group>"; };
+		2977AB1925BCCDE800EBF3B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2977AB1B25BCCDE900EBF3B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2977AB1E25BCCDE900EBF3B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2977AB2025BCCDE900EBF3B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		297C8CA4241908D200D7583E /* Wrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wrappers.swift; sourceTree = "<group>"; };
 		297FDD1623FB896200D9E56E /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		297FDD1823FB8EA000D9E56E /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
@@ -417,6 +431,13 @@
 			files = (
 				29A4AEFC24148F67005A446E /* HealthKit.framework in Frameworks */,
 				09B20A9160B36ACF19495046 /* Pods_WatchNShapeSets_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2977AB1225BCCDE800EBF3B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +630,26 @@
 			path = Theming;
 			sourceTree = "<group>";
 		};
+		2977AB1625BCCDE800EBF3B6 /* TVNShapeSets */ = {
+			isa = PBXGroup;
+			children = (
+				2977AB1725BCCDE800EBF3B6 /* TVNShapeSetsApp.swift */,
+				2977AB1925BCCDE800EBF3B6 /* ContentView.swift */,
+				2977AB1B25BCCDE900EBF3B6 /* Assets.xcassets */,
+				2977AB2025BCCDE900EBF3B6 /* Info.plist */,
+				2977AB1D25BCCDE900EBF3B6 /* Preview Content */,
+			);
+			path = TVNShapeSets;
+			sourceTree = "<group>";
+		};
+		2977AB1D25BCCDE900EBF3B6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2977AB1E25BCCDE900EBF3B6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		29A4AEF724148F15005A446E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -649,6 +690,7 @@
 				29C9563D2393042800373031 /* NShapeSetsUITests */,
 				29201EE923988F5F0016DF8C /* WatchNShapeSets WatchKit App */,
 				29201EF823988F600016DF8C /* WatchNShapeSets WatchKit Extension */,
+				2977AB1625BCCDE800EBF3B6 /* TVNShapeSets */,
 				29C9561A2393042500373031 /* Products */,
 				29A4AEF724148F15005A446E /* Frameworks */,
 				8D57AF812DF136F104DBC3FA /* Pods */,
@@ -664,6 +706,7 @@
 				29201EE223988F5F0016DF8C /* WatchNShapeSets.app */,
 				29201EE523988F5F0016DF8C /* WatchNShapeSets WatchKit App.app */,
 				29201EF423988F600016DF8C /* WatchNShapeSets WatchKit Extension.appex */,
+				2977AB1525BCCDE800EBF3B6 /* TVNShapeSets.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -832,6 +875,23 @@
 			productReference = 29201EF423988F600016DF8C /* WatchNShapeSets WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
+		2977AB1425BCCDE800EBF3B6 /* TVNShapeSets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2977AB2325BCCDE900EBF3B6 /* Build configuration list for PBXNativeTarget "TVNShapeSets" */;
+			buildPhases = (
+				2977AB1125BCCDE800EBF3B6 /* Sources */,
+				2977AB1225BCCDE800EBF3B6 /* Frameworks */,
+				2977AB1325BCCDE800EBF3B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TVNShapeSets;
+			productName = TVNShapeSets;
+			productReference = 2977AB1525BCCDE800EBF3B6 /* TVNShapeSets.app */;
+			productType = "com.apple.product-type.application";
+		};
 		29C956182393042500373031 /* NShapeSets */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29C956432393042800373031 /* Build configuration list for PBXNativeTarget "NShapeSets" */;
@@ -896,7 +956,7 @@
 		29C956112393042500373031 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
+				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "offensively-bad";
 				TargetAttributes = {
@@ -910,6 +970,9 @@
 					};
 					29201EF323988F600016DF8C = {
 						CreatedOnToolsVersion = 11.2.1;
+					};
+					2977AB1425BCCDE800EBF3B6 = {
+						CreatedOnToolsVersion = 12.3;
 					};
 					29C956182393042500373031 = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -943,6 +1006,7 @@
 				29201EE123988F5F0016DF8C /* WatchNShapeSets */,
 				29201EE423988F5F0016DF8C /* WatchNShapeSets WatchKit App */,
 				29201EF323988F600016DF8C /* WatchNShapeSets WatchKit Extension */,
+				2977AB1425BCCDE800EBF3B6 /* TVNShapeSets */,
 			);
 		};
 /* End PBXProject section */
@@ -1024,6 +1088,16 @@
 				2940AF2A24F00A40003A3EA4 /* GoogleService-Info.plist in Resources */,
 				294BBBC623A44C6E0022AC8C /* Gotham-BoldItalic.otf in Resources */,
 				29201F0623988F610016DF8C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2977AB1325BCCDE800EBF3B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2977AB1F25BCCDE900EBF3B6 /* Preview Assets.xcassets in Resources */,
+				2977AB8D25BCD0D800EBF3B6 /* Assets.xcassets in Resources */,
+				2977AB1C25BCCDE900EBF3B6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1295,6 +1369,18 @@
 				297FDD1723FB896200D9E56E /* SetupView.swift in Sources */,
 				29F51C9E240195FC002E8498 /* ActiveWorkoutView.swift in Sources */,
 				29201F0423988F600016DF8C /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2977AB1125BCCDE800EBF3B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2977AB1A25BCCDE800EBF3B6 /* ContentView.swift in Sources */,
+				2977AB1825BCCDE800EBF3B6 /* TVNShapeSetsApp.swift in Sources */,
+				2977AB4925BCCE7500EBF3B6 /* BackgroundView.swift in Sources */,
+				2977AB6025BCCEEB00EBF3B6 /* StateModels.swift in Sources */,
+				2977AB5825BCCEAE00EBF3B6 /* Palette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1606,6 +1692,54 @@
 			};
 			name = Release;
 		};
+		2977AB2125BCCDE900EBF3B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"TVNShapeSets/Preview Content\"";
+				DEVELOPMENT_TEAM = EWH85CQYYJ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TVNShapeSets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.offensively-bad.TVNShapeSets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.3;
+			};
+			name = Debug;
+		};
+		2977AB2225BCCDE900EBF3B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"TVNShapeSets/Preview Content\"";
+				DEVELOPMENT_TEAM = EWH85CQYYJ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TVNShapeSets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.offensively-bad.TVNShapeSets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.3;
+			};
+			name = Release;
+		};
 		29C956412393042800373031 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1879,6 +2013,15 @@
 			buildConfigurations = (
 				29201F0C23988F610016DF8C /* Debug */,
 				29201F0D23988F610016DF8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2977AB2325BCCDE900EBF3B6 /* Build configuration list for PBXNativeTarget "TVNShapeSets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2977AB2125BCCDE900EBF3B6 /* Debug */,
+				2977AB2225BCCDE900EBF3B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
