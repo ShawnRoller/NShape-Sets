@@ -173,6 +173,10 @@
 		297C8CA82419096900D7583E /* Wrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C8CA4241908D200D7583E /* Wrappers.swift */; };
 		297FDD1723FB896200D9E56E /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297FDD1623FB896200D9E56E /* SetupView.swift */; };
 		297FDD1923FB8EA000D9E56E /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297FDD1823FB8EA000D9E56E /* NavigationButton.swift */; };
+		2988C85D25C0C52200F653CD /* CircleTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2988C85C25C0C52200F653CD /* CircleTimerView.swift */; };
+		2988C85E25C0C52200F653CD /* CircleTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2988C85C25C0C52200F653CD /* CircleTimerView.swift */; };
+		2988C85F25C0C52300F653CD /* CircleTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2988C85C25C0C52200F653CD /* CircleTimerView.swift */; };
+		2988C86025C0C52300F653CD /* CircleTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2988C85C25C0C52200F653CD /* CircleTimerView.swift */; };
 		2993C6E024899B5B00992E1B /* DefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2993C6DF24899B5B00992E1B /* DefaultManager.swift */; };
 		2993C6E124899B5B00992E1B /* DefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2993C6DF24899B5B00992E1B /* DefaultManager.swift */; };
 		2993C6E224899B5B00992E1B /* DefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2993C6DF24899B5B00992E1B /* DefaultManager.swift */; };
@@ -371,6 +375,7 @@
 		297C8CA4241908D200D7583E /* Wrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wrappers.swift; sourceTree = "<group>"; };
 		297FDD1623FB896200D9E56E /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		297FDD1823FB8EA000D9E56E /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
+		2988C85C25C0C52200F653CD /* CircleTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTimerView.swift; sourceTree = "<group>"; };
 		2993C6DF24899B5B00992E1B /* DefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultManager.swift; sourceTree = "<group>"; };
 		29A4AEF624148F15005A446E /* NShapeSets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NShapeSets.entitlements; sourceTree = "<group>"; };
 		29A4AEF824148F15005A446E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -618,6 +623,7 @@
 				29CDDC2F23DCCD86008BB4B8 /* InfoView.swift */,
 				296528F723DF7C2100C203F8 /* ActiveView.swift */,
 				296528FB23DF7F6B00C203F8 /* RestView.swift */,
+				2988C85C25C0C52200F653CD /* CircleTimerView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1368,6 +1374,7 @@
 				297FDD1923FB8EA000D9E56E /* NavigationButton.swift in Sources */,
 				297FDD1723FB896200D9E56E /* SetupView.swift in Sources */,
 				29F51C9E240195FC002E8498 /* ActiveWorkoutView.swift in Sources */,
+				2988C85F25C0C52300F653CD /* CircleTimerView.swift in Sources */,
 				29201F0423988F600016DF8C /* ComplicationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1378,6 +1385,7 @@
 			files = (
 				2977AB1A25BCCDE800EBF3B6 /* ContentView.swift in Sources */,
 				2977AB1825BCCDE800EBF3B6 /* TVNShapeSetsApp.swift in Sources */,
+				2988C86025C0C52300F653CD /* CircleTimerView.swift in Sources */,
 				2977AB4925BCCE7500EBF3B6 /* BackgroundView.swift in Sources */,
 				2977AB6025BCCEEB00EBF3B6 /* StateModels.swift in Sources */,
 				2977AB5825BCCEAE00EBF3B6 /* Palette.swift in Sources */,
@@ -1412,6 +1420,7 @@
 				296528FC23DF7F6B00C203F8 /* RestView.swift in Sources */,
 				294BA21F244A534600C809DD /* HealthKitHelper.swift in Sources */,
 				2965290023E9A32E00C203F8 /* TimerWrapper.swift in Sources */,
+				2988C85D25C0C52200F653CD /* CircleTimerView.swift in Sources */,
 				29F51C9A23F88F12002E8498 /* AudioUtil.swift in Sources */,
 				2965290623F09E1B00C203F8 /* AppExtensions.swift in Sources */,
 				2911C2AF23A59AB500405306 /* TypefaceExtensions.swift in Sources */,
@@ -1493,6 +1502,7 @@
 				29B77583242FB10200EDD23D /* TimeHelper.swift in Sources */,
 				2911C2B123A59AB500405306 /* TypefaceExtensions.swift in Sources */,
 				296528FE23DF7F6B00C203F8 /* RestView.swift in Sources */,
+				2988C85E25C0C52200F653CD /* CircleTimerView.swift in Sources */,
 				29D43BEB23A8394400C7981B /* StateModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
