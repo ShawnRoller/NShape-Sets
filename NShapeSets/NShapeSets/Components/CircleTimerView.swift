@@ -8,17 +8,15 @@
 
 import SwiftUI
 
-struct arcshape: Shape {
-    let currentTime: Int
+struct ArcShape: Shape {
+    var currentTime: CGFloat
     let roundTime: Int
     private var degreesPerSecond: Double {
         360.0 / Double(roundTime)
     }
-    private var startAngle: Angle {
-        Angle(degrees: degreesPerSecond * Double(currentTime))
-    }
+    private let startAngle: Angle = Angle(degrees: 0)
     private var endAngle: Angle {
-        Angle(degrees: startAngle.degrees + degreesPerSecond)
+        Angle(degrees: degreesPerSecond * Double(currentTime))
     }
 
     func path(in rect: CGRect) -> Path {
@@ -29,19 +27,30 @@ struct arcshape: Shape {
             path.addArc(center: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: false)
         }
     }
+    
+    var animatableData: CGFloat {
+        get { currentTime }
+        set { self.currentTime = newValue }
+    }
 }
 
 struct CircleTimerView: View {
-    var roundTime: Int = 60
-    var currentTime: Int = 2
+    var roundTime: Int
+    var currentTime: Int
+    @State private var remainingTime: CGFloat = 50
     
     var body: some View {
         ZStack {
             Circle()
                 .strokeBorder(lineWidth: 24, antialiased: true)
-                    arcshape(currentTime: roundTime, roundTime: currentTime)
-                        .rotation(Angle(degrees: -90))
-                        .stroke(Color.red, lineWidth: 12)
+            ArcShape(currentTime: CGFloat(remainingTime), roundTime: 50)
+                .rotation(Angle(degrees: -90))
+                .stroke(Color.red, lineWidth: 12)
+                .onTapGesture {
+                    withAnimation {
+                        self.remainingTime = self.remainingTime - 1
+                    }
+                }
         }
         .padding(.horizontal)
     }
@@ -49,6 +58,6 @@ struct CircleTimerView: View {
 
 struct CircleTimerView_Previews: PreviewProvider {
     static var previews: some View {
-        CircleTimerView()
+        CircleTimerView(roundTime: 50, currentTime: 15)
     }
 }

@@ -19,6 +19,7 @@ struct RestView: View, ActiveWorkoutContent {
             Spacer()
             InfoView(imageString: ImageAsset.nextSet, text: "\(timer.nextSetString)")
             Spacer()
+//            CircleTimerView(roundTime: timer.rest, currentTime: timer.rest - timer.remainingRest)
             Image(ImageAsset.buttonSkip)
                 .onTapGesture {
                     self.onButtonTap()
