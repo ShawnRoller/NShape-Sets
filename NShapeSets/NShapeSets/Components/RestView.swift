@@ -14,16 +14,18 @@ struct RestView: View, ActiveWorkoutContent {
     var onButtonTap: () -> Void
     
     var body: some View {
-        VStack {
-            InfoView(imageString: ImageAsset.restTime, text: "\(timer.remainingRest)")
-            Spacer()
-            InfoView(imageString: ImageAsset.nextSet, text: "\(timer.nextSetString)")
-            Spacer()
-//            CircleTimerView(roundTime: timer.rest, currentTime: timer.rest - timer.remainingRest)
-            Image(ImageAsset.buttonSkip)
-                .onTapGesture {
-                    self.onButtonTap()
-                }
+        ZStack {
+            CircleTimerView(roundTime: timer.rest, currentTime: timer.remainingRest, backgroundColor: Palette.accentColor2, foregroundColor: Palette.accentColor1)
+            VStack {
+                InfoView(imageString: ImageAsset.restTime, text: "\(timer.remainingRest)")
+                Spacer()
+                InfoView(imageString: ImageAsset.nextSet, text: "\(timer.nextSetString)")
+                Spacer()
+                Image(ImageAsset.buttonSkip)
+                    .onTapGesture {
+                        self.onButtonTap()
+                    }
+            }
         }
     }
 }

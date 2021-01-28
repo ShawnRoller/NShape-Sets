@@ -20,7 +20,7 @@ struct ArcShape: Shape {
     }
 
     func path(in rect: CGRect) -> Path {
-        let diameter = min(rect.size.width, rect.size.height) - 24.0
+        let diameter = min(rect.size.width, rect.size.height) - 20.0
         let radius = diameter / 2.0
         let center = CGPoint(x: rect.origin.x + rect.size.width / 2.0, y: rect.origin.y + rect.size.height / 2.0)
         return Path { path in
@@ -37,22 +37,28 @@ struct ArcShape: Shape {
 struct CircleTimerView: View {
     var roundTime: Int
     var currentTime: Int
-    @State private var remainingTime: CGFloat = 50
+    var backgroundColor: Color = Color.black
+    var foregroundColor: Color = Color.red
+    @State private var remainingTime: CGFloat = 0
     
     var body: some View {
         ZStack {
             Circle()
-                .strokeBorder(lineWidth: 24, antialiased: true)
-            ArcShape(currentTime: CGFloat(remainingTime), roundTime: 50)
+                .strokeBorder(lineWidth: 20, antialiased: true)
+                .foregroundColor(backgroundColor)
+            ArcShape(currentTime: CGFloat(remainingTime), roundTime: roundTime)
                 .rotation(Angle(degrees: -90))
-                .stroke(Color.red, lineWidth: 12)
-                .onTapGesture {
+                .stroke(foregroundColor, lineWidth: 12)
+                .onChange(of: currentTime, perform: { value in
                     withAnimation {
-                        self.remainingTime = self.remainingTime - 1
+                        self.remainingTime = CGFloat(self.currentTime) - 1
                     }
-                }
+                })
         }
         .padding(.horizontal)
+        .onAppear {
+            remainingTime = CGFloat(currentTime)
+        }
     }
 }
 
