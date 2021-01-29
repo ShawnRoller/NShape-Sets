@@ -11,13 +11,20 @@ import SwiftUI
 struct InfoView: View {
     var imageString: String
     var text: String
+    var countdownTotal: Int?
+    var currentCountdown: Int?
     
     var body: some View {
         VStack {
             Image(imageString)
-            Text(text)
-                .foregroundColor(.white)
-                .header2Font()
+            ZStack {
+                if let countdownTotal = countdownTotal, let currentCountdown = currentCountdown {
+                    CircleTimerView(roundTime: countdownTotal, currentTime: currentCountdown, backgroundColor: Palette.accentColor2, foregroundColor: Palette.accentColor1, circleWidth: 14, progressLineWidth: 10)
+                }
+                Text(text)
+                    .foregroundColor(.white)
+                    .header2Font()
+            }
         }
     }
 }

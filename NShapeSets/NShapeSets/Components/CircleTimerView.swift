@@ -11,6 +11,8 @@ import SwiftUI
 struct ArcShape: Shape {
     var currentTime: CGFloat
     let roundTime: Int
+    let strokeWidth: CGFloat
+    
     private var degreesPerSecond: Double {
         360.0 / Double(roundTime)
     }
@@ -20,7 +22,7 @@ struct ArcShape: Shape {
     }
 
     func path(in rect: CGRect) -> Path {
-        let diameter = min(rect.size.width, rect.size.height) - 20.0
+        let diameter = min(rect.size.width, rect.size.height) - strokeWidth
         let radius = diameter / 2.0
         let center = CGPoint(x: rect.origin.x + rect.size.width / 2.0, y: rect.origin.y + rect.size.height / 2.0)
         return Path { path in
@@ -39,16 +41,18 @@ struct CircleTimerView: View {
     var currentTime: Int
     var backgroundColor: Color = Color.black
     var foregroundColor: Color = Color.red
+    var circleWidth: CGFloat = 24.0
+    var progressLineWidth: CGFloat = 12.0
     @State private var remainingTime: CGFloat = 0
     
     var body: some View {
         ZStack {
             Circle()
-                .strokeBorder(lineWidth: 20, antialiased: true)
+                .strokeBorder(lineWidth: circleWidth, antialiased: true)
                 .foregroundColor(backgroundColor)
-            ArcShape(currentTime: CGFloat(remainingTime), roundTime: roundTime)
+            ArcShape(currentTime: CGFloat(remainingTime), roundTime: roundTime, strokeWidth: circleWidth)
                 .rotation(Angle(degrees: -90))
-                .stroke(foregroundColor, lineWidth: 12)
+                .stroke(foregroundColor, lineWidth: progressLineWidth)
                 .onChange(of: currentTime, perform: { value in
                     withAnimation {
                         self.remainingTime = CGFloat(self.currentTime) - 1
