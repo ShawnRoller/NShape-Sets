@@ -21,7 +21,6 @@ struct SetupView: View {
             SelectorView(value: $rest, title: "Rest", incrementorValue: 5)
             Spacer()
             NavigationButton(title: "Start", destination: getWorkoutView())
-            Spacer().frame(height: 0)
         }
         .onAppear() {
             self.getDefaultSettings()
@@ -66,9 +65,9 @@ struct SetupView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             SetupView(hkHelper: HealthKitHelper())
-                .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 3 - 42mm"))
+                .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 5 - 40mm"))
             SetupView(hkHelper: HealthKitHelper())
-                .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 3 - 38mm"))
+                .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 5 - 44mm"))
         }
     }
 }
