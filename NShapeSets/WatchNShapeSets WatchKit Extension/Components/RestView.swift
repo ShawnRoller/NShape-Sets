@@ -15,7 +15,7 @@ struct RestView: View {
     
     var body: some View {
         VStack {
-            InstructionView(title: "Resting...", value: "\(timer.remainingRest)")
+            InstructionView(title: "Resting...", value: "\(timer.remainingRest)", countdownTotal: timer.rest, currentCountdown: timer.remainingRest)
             Spacer()
             DetailView(title: "Next set:", value: "\(timer.nextSetString)")
             Spacer()

@@ -9,13 +9,13 @@
 import SwiftUI
 
 class TimerWrapper: ObservableObject {
-    var timer: Timer!
+    var timer: Timer?
     var rest: Int = 0
     var rounds: Int = 0
     @Published var remainingRest = 0
     @Published var currentRound = 1
     var isActive: Bool {
-        return timer != nil ? timer.isValid : false
+        return timer?.isValid ?? false
     }
     var nextSetString: String {
         let nextSet = self.currentRound + 1
@@ -44,16 +44,24 @@ class TimerWrapper: ObservableObject {
     
     func start() {
         self.timer?.invalidate()
-        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (theTimer) in
-            self.countdown()
-        })
+        self.timer = nil
+        let newTimer = Timer(timeInterval: 1.0,
+                        target: self,
+                        selector: #selector(countdown),
+                        userInfo: nil,
+                        repeats: true)
+        RunLoop.current.add(newTimer, forMode: .default)
+        newTimer.tolerance = 0.1
+        self.timer = newTimer
     }
     
-    func countdown() {
-        onRestTimeChange()
-        self.remainingRest -= 1
-        if self.remainingRest < 0 {
-            self.onRestComplete()
+    @objc func countdown() {
+        DispatchQueue.main.async {
+            self.onRestTimeChange()
+            self.remainingRest -= 1
+            if self.remainingRest < 0 {
+                self.onRestComplete()
+            }
         }
     }
     
@@ -82,16 +90,22 @@ class TimerWrapper: ObservableObject {
         self.totalTimer?.invalidate()
     }
     
-    func incrementTotalTime() {
+    @objc func incrementTotalTime() {
         self.totalTime += 1
     }
     
     func startTimeTracking() {
         if self.totalTime == 0 {
             self.totalTimer?.invalidate()
-            self.totalTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (theTimer) in
-                self.incrementTotalTime()
-            })
+            self.totalTimer = nil
+            let newTimer = Timer(timeInterval: 1.0,
+                            target: self,
+                            selector: #selector(incrementTotalTime),
+                            userInfo: nil,
+                            repeats: true)
+            RunLoop.current.add(newTimer, forMode: .default)
+            newTimer.tolerance = 0.1
+            self.totalTimer = newTimer
         }
     }
     

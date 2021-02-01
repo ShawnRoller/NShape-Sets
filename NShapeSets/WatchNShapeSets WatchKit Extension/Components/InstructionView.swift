@@ -11,15 +11,22 @@ import SwiftUI
 struct InstructionView: View {
     var title: String
     var value: String
+    var countdownTotal: Int?
+    var currentCountdown: Int?
     
     var body: some View {
         VStack {
             Text(title)
                 .foregroundColor(Palette.accentColor1)
                 .watchInstructionTitleFont()
+            ZStack {
+                if let countdownTotal = countdownTotal, let currentCountdown = currentCountdown {
+                    CircleTimerView(roundTime: countdownTotal, currentTime: currentCountdown, backgroundColor: Palette.accentColor2, foregroundColor: Palette.accentColor1, circleWidth: 6, progressLineWidth: 4)
+                }
             Text(value)
                 .foregroundColor(Palette.inputColor)
                 .watchInstructionFont()
+            }
         }
     }
 }
