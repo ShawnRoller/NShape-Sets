@@ -14,6 +14,7 @@ class TimerWrapper: ObservableObject {
     var rounds: Int = 0
     @Published var remainingRest = 0
     @Published var currentRound = 1
+    var startDate: Date?
     var isActive: Bool {
         return timer?.isValid ?? false
     }
@@ -30,8 +31,9 @@ class TimerWrapper: ObservableObject {
     var onRestTimeChange: () -> Void?
     
     // Track total active time
-    var totalTimer: Timer!
+    var totalTimer: Timer?
     var totalTime = 0
+    var totalStartDate: Date?
     
     init(rest: Int, rounds: Int, currentRound: Int, _ onRestComplete: @escaping () -> Void?, onRestTimeChange: @escaping () -> Void?) {
         self.rest = rest
@@ -53,12 +55,13 @@ class TimerWrapper: ObservableObject {
         RunLoop.current.add(newTimer, forMode: .default)
         newTimer.tolerance = 0.1
         self.timer = newTimer
+        self.startDate = Date()
     }
     
     @objc func countdown() {
         DispatchQueue.main.async {
             self.onRestTimeChange()
-            self.remainingRest -= 1
+            self.remainingRest = self.rest - Int(Date().timeIntervalSince(self.startDate ?? Date()))
             if self.remainingRest < 0 {
                 self.onRestComplete()
             }
@@ -91,7 +94,7 @@ class TimerWrapper: ObservableObject {
     }
     
     @objc func incrementTotalTime() {
-        self.totalTime += 1
+        self.totalTime = Int(Date().timeIntervalSince(self.totalStartDate ?? Date()))
     }
     
     func startTimeTracking() {
@@ -106,6 +109,7 @@ class TimerWrapper: ObservableObject {
             RunLoop.current.add(newTimer, forMode: .default)
             newTimer.tolerance = 0.1
             self.totalTimer = newTimer
+            self.totalStartDate = Date()
         }
     }
     
