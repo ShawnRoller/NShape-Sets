@@ -11,6 +11,7 @@ import SwiftUI
 struct SetupView: View {
     @State private var sets = 5.0
     @State private var rest = 5.0
+    @State private var authorizedNotifications = false
     
     var hkHelper: HealthKitHelper
     
@@ -41,7 +42,7 @@ struct SetupView: View {
         var workoutView = ActiveWorkoutView(workout: workout, hkHelper: self.hkHelper)
         
         // Setup timer
-        let timer = TimerWrapper(rest: Int(self.rest), rounds: Int(self.sets), currentRound: 1, {
+        let timer = TimerWrapper(rest: Int(self.rest), rounds: Int(self.sets), currentRound: 1, authorizedNotifications: self.authorizedNotifications, {
             workoutView.onRestEnd()
         }) {
             workoutView.countdown()

@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 class TimerWrapper: ObservableObject {
     var timer: Timer?
@@ -35,16 +36,74 @@ class TimerWrapper: ObservableObject {
     var totalTime = 0
     var totalStartDate: Date?
     
-    init(rest: Int, rounds: Int, currentRound: Int, _ onRestComplete: @escaping () -> Void?, onRestTimeChange: @escaping () -> Void?) {
+    // Notifications
+    var authorizedNotifications = false
+    var notificationID: String? = nil
+    
+    init(rest: Int, rounds: Int, currentRound: Int, authorizedNotifications: Bool, _ onRestComplete: @escaping () -> Void?, onRestTimeChange: @escaping () -> Void?) {
         self.rest = rest
         self.rounds = rounds
         self.remainingRest = rest
         self.currentRound = currentRound
+        self.authorizedNotifications = authorizedNotifications
         self.onRestComplete = onRestComplete
         self.onRestTimeChange = onRestTimeChange
     }
     
+    deinit {
+        if self.authorizedNotifications {
+            let notificationCenter = NotificationCenter.default
+            notificationCenter.removeObserver(self, name: UIApplication.willResignActiveNotification, object: nil)
+            notificationCenter.removeObserver(self, name: UIApplication.didBecomeActiveNotification, object: nil)
+        }
+    }
+    
     func start() {
+        self.setupTimer()
+        self.startDate = Date()
+        
+        // Listen for a notification to determine if the app enters the background so we can invalidate the timer and setup a local notification
+        self.addNotificationListener()
+    }
+    
+    func addNotificationListener() {
+        if self.authorizedNotifications {
+            let notificationCenter = NotificationCenter.default
+            notificationCenter.addObserver(self, selector: #selector(movedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
+            notificationCenter.addObserver(self, selector: #selector(movedToForeground), name: UIApplication.didBecomeActiveNotification, object: nil)
+        }
+    }
+    
+    @objc func movedToBackground() {
+        if self.isActive {
+            print("moved to background - setup a local notification!")
+            self.timer?.invalidate()
+            self.timer = nil
+            self.setupLocalNotification()
+        }
+    }
+    
+    @objc func movedToForeground() {
+        if let id = self.notificationID {
+            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [id])
+            self.setupTimer()
+        }
+    }
+    
+    func setupLocalNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "Rest complete!"
+        content.subtitle = "You're on set \(currentRound + 1). Go!"
+        content.sound = UNNotificationSound.default
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(self.remainingRest), repeats: false)
+        self.notificationID = UUID().uuidString
+        let request = UNNotificationRequest(identifier: self.notificationID ?? UUID().uuidString, content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request)
+    }
+    
+    func setupTimer() {
         self.timer?.invalidate()
         self.timer = nil
         let newTimer = Timer(timeInterval: 1.0,
@@ -55,7 +114,6 @@ class TimerWrapper: ObservableObject {
         RunLoop.current.add(newTimer, forMode: .default)
         newTimer.tolerance = 0.1
         self.timer = newTimer
-        self.startDate = Date()
     }
     
     @objc func countdown() {
@@ -117,7 +175,7 @@ class TimerWrapper: ObservableObject {
         self.totalTimer?.invalidate()
     }
     
-    static let example = TimerWrapper(rest: 3, rounds: 4, currentRound: 1) { () -> Void? in
+    static let example = TimerWrapper(rest: 3, rounds: 4, currentRound: 1, authorizedNotifications: false) { () -> Void? in
         return
     } onRestTimeChange: { () -> Void? in
         return
