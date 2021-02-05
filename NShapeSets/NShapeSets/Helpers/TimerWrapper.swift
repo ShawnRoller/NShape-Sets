@@ -51,27 +51,33 @@ class TimerWrapper: ObservableObject {
     }
     
     deinit {
-        if self.authorizedNotifications {
-            let notificationCenter = NotificationCenter.default
-            notificationCenter.removeObserver(self, name: UIApplication.willResignActiveNotification, object: nil)
-            notificationCenter.removeObserver(self, name: UIApplication.didBecomeActiveNotification, object: nil)
-        }
+        #if os(iOS)
+            if self.authorizedNotifications {
+                    let notificationCenter = NotificationCenter.default
+                    notificationCenter.removeObserver(self, name: UIApplication.willResignActiveNotification, object: nil)
+                    notificationCenter.removeObserver(self, name: UIApplication.didBecomeActiveNotification, object: nil)
+            }
+        #endif
     }
     
     func start() {
         self.setupTimer()
         self.startDate = Date()
         
-        // Listen for a notification to determine if the app enters the background so we can invalidate the timer and setup a local notification
-        self.addNotificationListener()
+        #if os(iOS)
+            // Listen for a notification to determine if the app enters the background so we can invalidate the timer and setup a local notification
+            self.addNotificationListener()
+        #endif
     }
     
     func addNotificationListener() {
-        if self.authorizedNotifications {
-            let notificationCenter = NotificationCenter.default
-            notificationCenter.addObserver(self, selector: #selector(movedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
-            notificationCenter.addObserver(self, selector: #selector(movedToForeground), name: UIApplication.didBecomeActiveNotification, object: nil)
-        }
+        #if os(iOS)
+            if self.authorizedNotifications {
+                let notificationCenter = NotificationCenter.default
+                notificationCenter.addObserver(self, selector: #selector(movedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
+                notificationCenter.addObserver(self, selector: #selector(movedToForeground), name: UIApplication.didBecomeActiveNotification, object: nil)
+            }
+        #endif
     }
     
     @objc func movedToBackground() {
