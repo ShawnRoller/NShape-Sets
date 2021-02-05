@@ -9,14 +9,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    let background = LinearGradient(gradient: Palette.backgroundGradient, startPoint: .top, endPoint: .bottom)
     
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-        Rectangle()
-            .fill(background)
-            .edgesIgnoringSafeArea(.all)
+        ZStack {
+            BackgroundView()
+            Text("Hello, world!")
+                .padding()
+        }
     }
 }
 

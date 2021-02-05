@@ -97,16 +97,18 @@ class TimerWrapper: ObservableObject {
     }
     
     func setupLocalNotification() {
-        let content = UNMutableNotificationContent()
-        content.title = "Rest complete!"
-        content.subtitle = "You're on set \(currentRound + 1). Go!"
-        content.sound = UNNotificationSound.default
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(self.remainingRest), repeats: false)
-        self.notificationID = UUID().uuidString
-        let request = UNNotificationRequest(identifier: self.notificationID ?? UUID().uuidString, content: content, trigger: trigger)
-        
-        UNUserNotificationCenter.current().add(request)
+        #if os(iOS)
+            let content = UNMutableNotificationContent()
+            content.title = "Rest complete!"
+            content.subtitle = "You're on set \(currentRound + 1). Go!"
+            content.sound = UNNotificationSound.default
+            
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(self.remainingRest), repeats: false)
+            self.notificationID = UUID().uuidString
+            let request = UNNotificationRequest(identifier: self.notificationID ?? UUID().uuidString, content: content, trigger: trigger)
+            
+            UNUserNotificationCenter.current().add(request)
+        #if os(iOS)
     }
     
     func setupTimer() {
