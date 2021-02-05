@@ -108,7 +108,7 @@ class TimerWrapper: ObservableObject {
             let request = UNNotificationRequest(identifier: self.notificationID ?? UUID().uuidString, content: content, trigger: trigger)
             
             UNUserNotificationCenter.current().add(request)
-        #if os(iOS)
+        #endif
     }
     
     func setupTimer() {
