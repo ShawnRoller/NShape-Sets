@@ -8,6 +8,7 @@
 
 import SwiftUI
 import os
+import UserNotifications
 
 struct SetupView: View {
     var healthManager: HealthManager?
@@ -16,6 +17,7 @@ struct SetupView: View {
     @State private var rest = 5.0
     @State private var isWorkoutActive = false
     @State private var bannerHeight: CGFloat = 300
+    @State private var authorizedNotifications = false
     
     private var useModal = false
     
@@ -44,8 +46,19 @@ struct SetupView: View {
             }
             .onAppear() {
                 self.getDefaultSettings()
+                self.requestToNotify()
             }
         }.modifier(AdaptsToSoftwareKeyboard())
+    }
+    
+    func requestToNotify() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+            if success {
+                self.authorizedNotifications = true
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+        }
     }
     
     func getDefaultSettings() {
@@ -88,7 +101,7 @@ struct SetupView: View {
         var workoutView = ActiveWorkoutView(workout: workout, isPresented: $isWorkoutActive, healthManager: self.healthManager)
         
         // Setup timer
-        let timer = TimerWrapper(rest: Int(self.rest), rounds: Int(self.sets), currentRound: 1, {
+        let timer = TimerWrapper(rest: Int(self.rest), rounds: Int(self.sets), currentRound: 1, authorizedNotifications: self.authorizedNotifications, {
             workoutView.onRestEnd()
         }) {
             workoutView.countdown()
