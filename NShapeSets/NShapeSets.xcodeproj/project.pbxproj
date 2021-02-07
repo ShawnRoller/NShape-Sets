@@ -184,6 +184,7 @@
 		29A4AEF924148F15005A446E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A4AEF824148F15005A446E /* HealthKit.framework */; };
 		29A4AEFC24148F67005A446E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A4AEFB24148F67005A446E /* HealthKit.framework */; };
 		29A4AF01241591E0005A446E /* HealthKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4AEFF241591E0005A446E /* HealthKitHelper.swift */; };
+		29A6A9A725D04FCA00F38288 /* TimerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296528FF23E9A32E00C203F8 /* TimerWrapper.swift */; };
 		29B10F9223D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
 		29B10F9323D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
 		29B10F9423D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
@@ -1389,6 +1390,7 @@
 				2977AB4925BCCE7500EBF3B6 /* BackgroundView.swift in Sources */,
 				2977AB6025BCCEEB00EBF3B6 /* StateModels.swift in Sources */,
 				2977AB5825BCCEAE00EBF3B6 /* Palette.swift in Sources */,
+				29A6A9A725D04FCA00F38288 /* TimerWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
