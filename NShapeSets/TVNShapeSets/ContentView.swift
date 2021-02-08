@@ -10,17 +10,25 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @ObservedObject var timer: TimerWrapper
+    
     var body: some View {
         ZStack {
             BackgroundView()
-            Text("Hello, world!")
-                .padding()
+            VStack {
+                Text("Hello, world!")
+                    .padding()
+                Text("Remaining rest: \(timer.remainingRest)")
+                Button("Start") {
+                    timer.start()
+                }
+            }
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(timer: TimerWrapper.example)
     }
 }

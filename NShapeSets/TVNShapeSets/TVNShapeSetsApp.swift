@@ -10,9 +10,15 @@ import SwiftUI
 
 @main
 struct TVNShapeSetsApp: App {
+    let timer = TimerWrapper(rest: 30, rounds: 2, currentRound: 1, authorizedNotifications: false, {
+        
+    }) {
+        
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(timer: timer)
         }
     }
 }
