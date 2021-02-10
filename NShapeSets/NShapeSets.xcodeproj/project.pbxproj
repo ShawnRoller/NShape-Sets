@@ -147,6 +147,8 @@
 		295AFFBE239C21F8003E24C6 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AFFBC239C21F8003E24C6 /* BackgroundView.swift */; };
 		295AFFC2239C2552003E24C6 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AFFC1239C2552003E24C6 /* Palette.swift */; };
 		295AFFC3239C2552003E24C6 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AFFC1239C2552003E24C6 /* Palette.swift */; };
+		295BF8CF25D2331400D08E8E /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295BF8CE25D2331400D08E8E /* SetupView.swift */; };
+		295BF8DF25D2332100D08E8E /* ActiveWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295BF8DE25D2332100D08E8E /* ActiveWorkoutView.swift */; };
 		296528F823DF7C2100C203F8 /* ActiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296528F723DF7C2100C203F8 /* ActiveView.swift */; };
 		296528F923DF7C2100C203F8 /* ActiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296528F723DF7C2100C203F8 /* ActiveView.swift */; };
 		296528FA23DF7C2100C203F8 /* ActiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296528F723DF7C2100C203F8 /* ActiveView.swift */; };
@@ -363,6 +365,8 @@
 		294BBBF123A44CA00022AC8C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		295AFFBC239C21F8003E24C6 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		295AFFC1239C2552003E24C6 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		295BF8CE25D2331400D08E8E /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		295BF8DE25D2332100D08E8E /* ActiveWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveWorkoutView.swift; sourceTree = "<group>"; };
 		296528F723DF7C2100C203F8 /* ActiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveView.swift; sourceTree = "<group>"; };
 		296528FB23DF7F6B00C203F8 /* RestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestView.swift; sourceTree = "<group>"; };
 		296528FF23E9A32E00C203F8 /* TimerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerWrapper.swift; sourceTree = "<group>"; };
@@ -637,11 +641,21 @@
 			path = Theming;
 			sourceTree = "<group>";
 		};
+		295BF8CD25D2330000D08E8E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2977AB1925BCCDE800EBF3B6 /* ContentView.swift */,
+				295BF8CE25D2331400D08E8E /* SetupView.swift */,
+				295BF8DE25D2332100D08E8E /* ActiveWorkoutView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		2977AB1625BCCDE800EBF3B6 /* TVNShapeSets */ = {
 			isa = PBXGroup;
 			children = (
+				295BF8CD25D2330000D08E8E /* Views */,
 				2977AB1725BCCDE800EBF3B6 /* TVNShapeSetsApp.swift */,
-				2977AB1925BCCDE800EBF3B6 /* ContentView.swift */,
 				2977AB1B25BCCDE900EBF3B6 /* Assets.xcassets */,
 				2977AB2025BCCDE900EBF3B6 /* Info.plist */,
 				2977AB1D25BCCDE900EBF3B6 /* Preview Content */,
@@ -1386,10 +1400,12 @@
 			files = (
 				2977AB1A25BCCDE800EBF3B6 /* ContentView.swift in Sources */,
 				2977AB1825BCCDE800EBF3B6 /* TVNShapeSetsApp.swift in Sources */,
+				295BF8DF25D2332100D08E8E /* ActiveWorkoutView.swift in Sources */,
 				2988C86025C0C52300F653CD /* CircleTimerView.swift in Sources */,
 				2977AB4925BCCE7500EBF3B6 /* BackgroundView.swift in Sources */,
 				2977AB6025BCCEEB00EBF3B6 /* StateModels.swift in Sources */,
 				2977AB5825BCCEAE00EBF3B6 /* Palette.swift in Sources */,
+				295BF8CF25D2331400D08E8E /* SetupView.swift in Sources */,
 				29A6A9A725D04FCA00F38288 /* TimerWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
