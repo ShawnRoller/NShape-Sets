@@ -11,10 +11,10 @@ import WatchKit
 
 struct HapticHelper {
     static func playCountdownHaptic() {
-        WKInterfaceDevice.current().play(.click)
+        WKInterfaceDevice.current().play(.start)
     }
     
     static func playStartHaptic() {
-        WKInterfaceDevice.current().play(.start)
+        WKInterfaceDevice.current().play(.success)
     }
 }
