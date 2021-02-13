@@ -159,6 +159,7 @@
 		2965290623F09E1B00C203F8 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965290523F09E1B00C203F8 /* AppExtensions.swift */; };
 		2965290723F09E1B00C203F8 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965290523F09E1B00C203F8 /* AppExtensions.swift */; };
 		2965290823F09E1B00C203F8 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965290523F09E1B00C203F8 /* AppExtensions.swift */; };
+		296E60E425D86928001AEE9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294BBBF123A44CA00022AC8C /* Constants.swift */; };
 		2977AB1825BCCDE800EBF3B6 /* TVNShapeSetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2977AB1725BCCDE800EBF3B6 /* TVNShapeSetsApp.swift */; };
 		2977AB1A25BCCDE800EBF3B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2977AB1925BCCDE800EBF3B6 /* ContentView.swift */; };
 		2977AB1C25BCCDE900EBF3B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2977AB1B25BCCDE900EBF3B6 /* Assets.xcassets */; };
@@ -1387,6 +1388,7 @@
 				2977AB1825BCCDE800EBF3B6 /* TVNShapeSetsApp.swift in Sources */,
 				2988C86025C0C52300F653CD /* CircleTimerView.swift in Sources */,
 				2977AB4925BCCE7500EBF3B6 /* BackgroundView.swift in Sources */,
+				296E60E425D86928001AEE9E /* Constants.swift in Sources */,
 				2977AB6025BCCEEB00EBF3B6 /* StateModels.swift in Sources */,
 				2977AB5825BCCEAE00EBF3B6 /* Palette.swift in Sources */,
 			);

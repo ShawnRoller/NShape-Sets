@@ -39,4 +39,5 @@ struct ImageAsset {
 struct Defaults {
     static let workoutRest = "workout_rest"
     static let workoutRounds = "workout_rounds"
+    static let playSoundEffects = "play_sound_effects"
 }

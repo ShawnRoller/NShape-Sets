@@ -10,11 +10,16 @@ import Foundation
 import WatchKit
 
 struct HapticHelper {
+    
     static func playCountdownHaptic() {
-        WKInterfaceDevice.current().play(.start)
+        if UserDefaults.standard.bool(forKey: Defaults.playSoundEffects) {
+            WKInterfaceDevice.current().play(.start)
+        }
     }
     
     static func playStartHaptic() {
-        WKInterfaceDevice.current().play(.success)
+        if UserDefaults.standard.bool(forKey: Defaults.playSoundEffects) {
+            WKInterfaceDevice.current().play(.success)
+        }
     }
 }
