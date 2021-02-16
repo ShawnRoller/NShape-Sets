@@ -34,6 +34,7 @@ struct ActiveWorkoutView: View {
     
     func endWorkout() {
         self.hkHelper.endWorkout()
+        self.timer.stopTimeTracking()
     }
     
     var body: some View {
@@ -48,7 +49,6 @@ struct ActiveWorkoutView: View {
         }
         .alert(isPresented: $showingAlert) {
             self.endWorkout()
-            self.timer.stopTimeTracking()
             let totalTime = TimeHelper.getTimeFromSeconds(self.timer.totalTime)
             return Alert(title: Text("Workout complete!"), message: Text("You completed all sets in \(totalTime)!"), dismissButton: .default(Text("OK"), action: {
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
@@ -56,6 +56,10 @@ struct ActiveWorkoutView: View {
                     self.goBack()
                 }
             }))
+        }
+        .onDisappear() {
+            self.endWorkout()
+            timer.reset()
         }
     }
     

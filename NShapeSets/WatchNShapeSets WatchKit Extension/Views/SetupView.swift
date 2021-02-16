@@ -12,6 +12,7 @@ struct SetupView: View {
     @State private var sets = 5.0
     @State private var rest = 5.0
     @State private var authorizedNotifications = false
+    @State private var playSounds = UserDefaults.standard.bool(forKey: Defaults.playSoundEffects)
     
     var hkHelper: HealthKitHelper
     
@@ -23,6 +24,16 @@ struct SetupView: View {
             Spacer()
             NavigationButton(title: "Start", destination: getWorkoutView())
         }
+        .toolbar(content: {
+            ToolbarItem(id: "sounds", placement: .cancellationAction, showsByDefault: false) {
+                Button(action: {
+                    self.playSounds.toggle()
+                    UserDefaults.standard.setValue(self.playSounds, forKey: Defaults.playSoundEffects)
+                }, label: {
+                    Image(systemName: self.playSounds ? "speaker" : "speaker.slash")
+                })
+            }
+        })
         .onAppear() {
             self.getDefaultSettings()
             self.endWorkout()

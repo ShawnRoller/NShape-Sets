@@ -109,29 +109,28 @@ class HealthKitHelper: WKInterfaceController, HKWorkoutSessionDelegate, HKLiveWo
         
         if session.state != .ended {
             session.end()
-            builder.endCollection(withEnd: Date()) { (success, error) in
-                self.builder.finishWorkout { (workout, error) in
-                    if (error != nil) {
-                        os_log("HeathKit failed auth: %{public}@", log: .healthKit, type: .error, error as CVarArg? ?? "")
-                    } else {
-                        os_log("Finalized workout: %@", log: .healthKit, workout ?? "")
-                    }
-                }
-            }
         }
     }
         
         func workoutSession(_ workoutSession: HKWorkoutSession, didChangeTo toState: HKWorkoutSessionState, from fromState: HKWorkoutSessionState, date: Date) {
-    //        // Dispatch to main, because we are updating the interface.
-    //        DispatchQueue.main.async {
-    //            // update the UI based on state
-    //        }
+            if toState == .ended {
+                builder.endCollection(withEnd: Date()) { (success, error) in
+                    self.builder.finishWorkout { (workout, error) in
+                        if (error != nil) {
+                            os_log("HeathKit failed auth: %{public}@", log: .healthKit, type: .error, error as CVarArg? ?? "")
+                        } else {
+                            os_log("Finalized workout: %@", log: .healthKit, workout ?? "")
+                        }
+                        
+                        os_log("Resetting session...")
+                        self.session = nil
+                    }
+                }
+            }
         }
         
         func workoutSession(_ workoutSession: HKWorkoutSession, didFailWithError error: Error) {
-    //        DispatchQueue.main.async {
-    //            // update the UI based on state
-    //        }
+            os_log("Workout session failed: %@", log: .healthKit, error.localizedDescription)
         }
         
         func workoutBuilder(_ workoutBuilder: HKLiveWorkoutBuilder, didCollectDataOf collectedTypes: Set<HKSampleType>) {
