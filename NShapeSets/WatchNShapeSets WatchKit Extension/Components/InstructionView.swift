@@ -21,11 +21,11 @@ struct InstructionView: View {
                 .watchInstructionTitleFont()
             ZStack {
                 if let countdownTotal = countdownTotal, let currentCountdown = currentCountdown {
-                    CircleTimerView(roundTime: countdownTotal, currentTime: currentCountdown, backgroundColor: Palette.accentColor2, foregroundColor: Palette.accentColor1, circleWidth: 6, progressLineWidth: 4)
+                    CircleTimerView(roundTime: countdownTotal, currentTime: currentCountdown, backgroundColor: Palette.accentColor2, foregroundColor: Palette.accentColor1, circleWidth: 4, progressLineWidth: 3)
                 }
             Text(value)
                 .foregroundColor(Palette.inputColor)
-                .watchInstructionFont()
+                .watchTimerFont()
             }
         }
     }
@@ -33,6 +33,6 @@ struct InstructionView: View {
 
 struct InstructionView_Previews: PreviewProvider {
     static var previews: some View {
-        InstructionView(title: "Current set", value: "99")
+        InstructionView(title: "Current set", value: "99", countdownTotal: 100, currentCountdown: 75)
     }
 }

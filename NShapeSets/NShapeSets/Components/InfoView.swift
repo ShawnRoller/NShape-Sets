@@ -19,7 +19,7 @@ struct InfoView: View {
             Image(imageString)
             ZStack {
                 if let countdownTotal = countdownTotal, let currentCountdown = currentCountdown {
-                    CircleTimerView(roundTime: countdownTotal, currentTime: currentCountdown, backgroundColor: Palette.accentColor2, foregroundColor: Palette.accentColor1, circleWidth: 14, progressLineWidth: 10)
+                    CircleTimerView(roundTime: countdownTotal, currentTime: currentCountdown, backgroundColor: Palette.accentColor2, foregroundColor: Palette.accentColor1, circleWidth: 8, progressLineWidth: 7)
                 }
                 Text(text)
                     .foregroundColor(.white)
