@@ -51,15 +51,17 @@ struct ActiveWorkoutView: View {
             self.endWorkout()
             let totalTime = TimeHelper.getTimeFromSeconds(self.timer.totalTime)
             return Alert(title: Text("Workout complete!"), message: Text("You completed all sets in \(totalTime)!"), dismissButton: .default(Text("OK"), action: {
+                self.timer.reset()
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
-                    self.timer.reset()
                     self.goBack()
                 }
             }))
         }
         .onDisappear() {
-            self.endWorkout()
-            timer.reset()
+            if !self.showingAlert {
+                self.endWorkout()
+                self.timer.reset()
+            }
         }
     }
     
