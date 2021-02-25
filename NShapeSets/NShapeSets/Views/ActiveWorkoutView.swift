@@ -38,6 +38,9 @@ struct ActiveWorkoutView: View {
                 Spacer()
                 getViewForState(workoutState)
                 Spacer()
+                Text("\(self.timer.totalTime)")
+                    .italic()
+                    .foregroundColor(.white)
             }
             .onAppear() {
                 os_log("Workout became active!", log: .ui)
