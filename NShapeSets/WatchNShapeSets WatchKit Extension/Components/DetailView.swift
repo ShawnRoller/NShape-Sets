@@ -11,21 +11,22 @@ import SwiftUI
 struct DetailView: View {
     var title: String
     var value: String
+    var smallText = false
     
     var body: some View {
         HStack {
             Text(title)
                 .foregroundColor(Palette.accentColor2)
-                .watchInstructionDetailFont()
+                .watchInstructionDetailFont(withSmallText: self.smallText)
             Text(value)
                 .foregroundColor(Palette.inputColor)
-                .watchInstructionDetailFont()
+                .watchInstructionDetailFont(withSmallText: self.smallText)
         }
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(title: "Remaining sets:", value: "99")
+        DetailView(title: "Remaining sets:", value: "99", smallText: true)
     }
 }

@@ -20,9 +20,10 @@ struct ActiveView: View {
     
     var body: some View {
         VStack {
+            DetailView(title: "Total time:", value: "\(TimeHelper.getTimeFromSeconds(timer.remainingRounds))", smallText: true)
             InstructionView(title: "Current set:", value: "\(timer.currentRound)")
-            Spacer()
-            DetailView(title: "Remaining:", value: "\(timer.remainingRounds)")
+            Spacer().frame(height:0)
+            DetailView(title: "Remaining:", value: "\(timer.remainingRounds)", smallText: true)
             Spacer()
             PrimaryButton(title: buttonTitle, buttonColor: Palette.button2Color) {
                 self.onButtonTap()
