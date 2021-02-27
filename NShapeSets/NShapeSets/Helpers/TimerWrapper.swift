@@ -33,7 +33,7 @@ class TimerWrapper: ObservableObject {
     
     // Track total active time
     var totalTimer: Timer?
-    var totalTime = 0
+    @Published var totalTime = 0
     var totalStartDate: Date?
     
     // Notifications

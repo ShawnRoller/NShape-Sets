@@ -12,7 +12,7 @@ struct SelectorView: View, SelectorProtocol {
     @Binding var value: Double
     var title: String
     
-    var range: ClosedRange<Double> = 1...100
+    var range: ClosedRange<Double> = 1...300
     var step: Double = 1
     var image: String?
     

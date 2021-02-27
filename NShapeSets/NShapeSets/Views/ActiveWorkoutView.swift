@@ -34,7 +34,16 @@ struct ActiveWorkoutView: View {
         ZStack {
             BackgroundView()
             VStack {
-                BannerView()
+                ZStack {
+                    BannerView()
+                    VStack {
+                        Spacer()
+                        Text("Total time: \(TimeHelper.getTimeFromSeconds(self.timer.totalTime))")
+                            .italic()
+                            .foregroundColor(.white)
+                            .padding()
+                    }
+                }
                 Spacer()
                 getViewForState(workoutState)
                 Spacer()

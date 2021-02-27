@@ -33,7 +33,7 @@ struct SetupView: View {
                 getSpacer()
                 SelectorView(value: $sets, title: "Sets", range: 1.0...100.0, step: 1.0, image: ImageAsset.sets)
                 getSpacer()
-                SelectorView(value: $rest, title: "Rest", range: 1.0...100.0, step: 1.0, image: ImageAsset.rest)
+                SelectorView(value: $rest, title: "Rest", range: 1.0...300.0, step: 1.0, image: ImageAsset.rest)
                 getSpacer()
                 renderStartButton(useModal: useModal)
                 Spacer()
