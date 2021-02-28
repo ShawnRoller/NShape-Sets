@@ -20,7 +20,7 @@ struct ActiveView: View {
     
     var body: some View {
         VStack {
-            DetailView(title: "Total time:", value: "\(TimeHelper.getTimeFromSeconds(timer.remainingRounds))", smallText: true)
+            DetailView(title: "Total time:", value: "\(TimeHelper.getTimeFromSeconds(timer.totalTime))", smallText: true)
             InstructionView(title: "Current set:", value: "\(timer.currentRound)")
             Spacer().frame(height:0)
             DetailView(title: "Remaining:", value: "\(timer.remainingRounds)", smallText: true)
