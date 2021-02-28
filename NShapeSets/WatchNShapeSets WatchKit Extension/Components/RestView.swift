@@ -15,10 +15,11 @@ struct RestView: View {
     
     var body: some View {
         VStack {
+            DetailView(title: "Total time:", value: "\(TimeHelper.getTimeFromSeconds(timer.remainingRounds))", smallText: true)
             InstructionView(title: "Resting...", value: "\(timer.remainingRest)", countdownTotal: timer.rest, currentCountdown: timer.remainingRest)
             Spacer()
-            DetailView(title: "Next set:", value: "\(timer.nextSetString)")
-            Spacer()
+            DetailView(title: "Next set:", value: "\(timer.nextSetString)", smallText: true)
+            Spacer().frame(height: 0)
             PrimaryButton(title: "Skip", buttonColor: Palette.button1Color) {
                 self.onButtonTap()
             }
