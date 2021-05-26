@@ -11,11 +11,21 @@ import SwiftUI
 struct TextFieldView: View {
     var title: String
     @Binding var text: String
+    @State var placeholder: String = ""
     
     var accentColor: Color = Palette.accentColor1
     
     var body: some View {
-        TextField(title, text: $text)
+        TextField(title, text: $text, onEditingChanged: { (editingChanged) in
+            if !editingChanged {
+                if (self.text == "0" || self.text == "") {
+                    self.text = self.placeholder
+                }
+            } else {
+                self.placeholder = self.text
+                self.text = ""
+            }
+        })
             .overlay(
                 RoundedRectangle(cornerRadius: 2)
                     .stroke(accentColor, lineWidth: 1)
@@ -26,9 +36,6 @@ struct TextFieldView: View {
             .multilineTextAlignment(.center)
             .keyboardType(.numberPad)
             .inputFont()
-            .onTapGesture {
-                self.text = ""
-            }
     }
 }
 
