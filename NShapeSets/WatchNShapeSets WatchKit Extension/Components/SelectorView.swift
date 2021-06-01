@@ -23,7 +23,7 @@ struct SelectorView: View {
         VStack(spacing: 1) {
             Text(title)
                 .watchTitleFont()
-                .foregroundColor(Palette.accentColor2)
+                .foregroundColor(Palette.accentColor1)
                 .lineLimit(1)
             HStack(spacing: 3){
                 Spacer()
