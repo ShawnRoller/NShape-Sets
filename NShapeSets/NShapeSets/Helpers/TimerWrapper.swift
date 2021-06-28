@@ -25,7 +25,7 @@ class TimerWrapper: ObservableObject {
         return finalString
     }
     var remainingRounds: Int {
-        return self.rounds - self.currentRound
+        return self.rounds - self.currentRound + 1
     }
     
     var onRestComplete: () -> Void?
