@@ -192,6 +192,7 @@
 		29B10F9323D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
 		29B10F9423D8F57500BD9700 /* TypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B10F9123D8F57500BD9700 /* TypeExtensions.swift */; };
 		29B45DC9241E826000CB1D02 /* WorkoutSessionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B45DC8241E826000CB1D02 /* WorkoutSessionContext.swift */; };
+		29B5314126C6C8650017D79B /* CircleTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2988C85C25C0C52200F653CD /* CircleTimerView.swift */; };
 		29B77581242FB10200EDD23D /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B77580242FB10200EDD23D /* TimeHelper.swift */; };
 		29B77582242FB10200EDD23D /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B77580242FB10200EDD23D /* TimeHelper.swift */; };
 		29B77583242FB10200EDD23D /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B77580242FB10200EDD23D /* TimeHelper.swift */; };
@@ -1484,6 +1485,7 @@
 				296528FD23DF7F6B00C203F8 /* RestView.swift in Sources */,
 				29CDDC1F23DB2340008BB4B8 /* ViewProtocols.swift in Sources */,
 				29B7758F242FB3C500EDD23D /* BannerView.swift in Sources */,
+				29B5314126C6C8650017D79B /* CircleTimerView.swift in Sources */,
 				2965290723F09E1B00C203F8 /* AppExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1820,7 +1822,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1875,7 +1877,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1938,7 +1940,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
 				INFOPLIST_FILE = NShapeSetsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1961,7 +1963,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
 				INFOPLIST_FILE = NShapeSetsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

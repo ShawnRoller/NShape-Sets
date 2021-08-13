@@ -12,6 +12,9 @@ struct ActiveView: View {
     var workout: Workout
     @ObservedObject var timer: TimerWrapper
     var onButtonTap: () -> Void
+    var remainingSets: String {
+        return timer.remainingRounds > 1 ? "1 + \(timer.remainingRounds)" : "\(timer.remainingRounds)"
+    }
     
     var buttonTitle: String {
         let remainingRounds = timer.rounds - timer.currentRound

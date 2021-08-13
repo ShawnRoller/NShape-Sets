@@ -13,7 +13,7 @@ import XCTest
 class NShapeSetsTests: XCTestCase {
     
     @Clamping(initialValue: 1, 0...14) var ph: Int
-    let timer = TimerWrapper(rest: 5, rounds: 2, currentRound: 1)
+    let timer = TimerWrapper(rest: 5, rounds: 2, currentRound: 1, authorizedNotifications: false, {}, onRestTimeChange: {})
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -49,25 +49,8 @@ class NShapeSetsTests: XCTestCase {
     
     func testTimerCountdown() {
         self.timer.reset()
-        
-        self.timer.countdown()
-        XCTAssert(self.timer.remainingRest == 4)
-        
-        self.timer.countdown()
-        XCTAssert(self.timer.remainingRest == 3)
-        
-        self.timer.countdown()
-        XCTAssert(self.timer.remainingRest == 2)
-        
-        self.timer.countdown()
-        XCTAssert(self.timer.remainingRest == 1)
-        
-        self.timer.countdown()
-        XCTAssert(self.timer.remainingRest == 0)
-        
         self.timer.restComplete()
         XCTAssert(self.timer.remainingRest == 5)
         XCTAssert(self.timer.currentRound == 2)
     }
-
 }

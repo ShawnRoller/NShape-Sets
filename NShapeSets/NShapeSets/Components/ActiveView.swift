@@ -12,12 +12,15 @@ struct ActiveView: View, ActiveWorkoutContent {
     var workout: Workout
     @ObservedObject var timer: TimerWrapper
     var onButtonTap: () -> Void
+    var remainingSets: String {
+        return timer.remainingRounds > 1 ? "1 + \(timer.remainingRounds)" : "\(timer.remainingRounds)"
+    }
     
     var body: some View {
         VStack {
             InfoView(imageString: ImageAsset.currentSet, text: "\(timer.currentRound)")
             Spacer()
-            InfoView(imageString: ImageAsset.remainingSets, text: "\(timer.remainingRounds)")
+            InfoView(imageString: ImageAsset.remainingSets, text: remainingSets)
             Spacer()
             Image(ImageAsset.buttonRest)
                 .onTapGesture {
