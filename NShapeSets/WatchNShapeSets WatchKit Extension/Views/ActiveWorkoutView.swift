@@ -13,7 +13,8 @@ import os
 struct ActiveWorkoutView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var workoutState: ScreenState = .active
-    @State private var showingAlert = false
+    @State private var showingDoneAlert = false
+    @State private var showingBackAlert = false
     @ObservedObject var timer: TimerWrapper
     
     var workout: Workout
@@ -47,7 +48,7 @@ struct ActiveWorkoutView: View {
             self.timer.startTimeTracking()
             self.startWorkout()
         }
-        .alert(isPresented: $showingAlert) {
+        .alert(isPresented: $showingDoneAlert) {
             self.endWorkout()
             let totalTime = TimeHelper.getTimeFromSeconds(self.timer.totalTime)
             return Alert(title: Text("Workout complete!"), message: Text("You completed all sets in \(totalTime)!"), dismissButton: .default(Text("OK"), action: {
@@ -57,12 +58,29 @@ struct ActiveWorkoutView: View {
                 }
             }))
         }
+        .alert(isPresented: $showingBackAlert, content: {
+            return Alert(title: Text("All done?"), primaryButton: .destructive(Text("Done!"), action: {
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
+                        self.goBack()
+                    }
+            }), secondaryButton: .cancel())
+        })
         .onDisappear() {
-            if !self.showingAlert {
+            if !self.showingDoneAlert {
                 self.endWorkout()
                 self.timer.reset()
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .toolbar(content: {
+            ToolbarItem(id: "back", placement: .cancellationAction, showsByDefault: false) {
+                Button(action: {
+                    self.showingBackAlert = true
+                }, label: {
+                    Image(systemName: "chevron.left.circle.fill")
+                })
+            }
+        })
     }
     
     func setDefaultSettings() {
@@ -109,7 +127,7 @@ struct ActiveWorkoutView: View {
     func onRest() {
         os_log("Rest started", log: .ui)
         if timer.currentRound == timer.rounds {
-            showingAlert = true
+            showingDoneAlert = true
         }
         else {
             workoutState = workoutState == .active ? .rest : .active
