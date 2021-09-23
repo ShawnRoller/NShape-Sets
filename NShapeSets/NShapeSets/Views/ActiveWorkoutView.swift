@@ -15,6 +15,7 @@ struct ActiveWorkoutView: View {
     
     @State private var workoutState: ScreenState = .active
     @State private var showingAlert = false
+    @State private var activeAlert: ActiveAlert = .done
     
     @ObservedObject var timer: TimerWrapper
     var workout: Workout
@@ -59,14 +60,30 @@ struct ActiveWorkoutView: View {
                 self.timer.reset()
             }
             .alert(isPresented: $showingAlert) {
-                self.timer.stopTimeTracking()
-                let totalSeconds = self.timer.totalTime
-                let totalTime = TimeHelper.getTimeFromSeconds(totalSeconds)
-                
-                return Alert(title: Text("Workout complete!"), message: Text("You completed all sets in \(totalTime)!"), dismissButton: .default(Text("OK"), action: {
-                    self.goBack()
-                }))
+                if (activeAlert == .done) {
+                    self.timer.stopTimeTracking()
+                    let totalSeconds = self.timer.totalTime
+                    let totalTime = TimeHelper.getTimeFromSeconds(totalSeconds)
+                    
+                    return Alert(title: Text("Workout complete!"), message: Text("You completed all sets in \(totalTime)!"), dismissButton: .default(Text("OK"), action: {
+                        self.goBack()
+                    }))
+                } else {
+                    return Alert(title: Text("All done?"), primaryButton: .destructive(Text("Done!"), action: {
+                        self.showingAlert = false
+                        self.goBack()
+                    }), secondaryButton: .cancel())
+                }
             }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: Button(action: {
+                activeAlert = .back
+                showingAlert = true
+            }, label: {
+                Image(systemName: "chevron.left.circle.fill")
+                    .foregroundColor(.white)
+                    .font(.system(size: 25))
+            }))
         }
     }
     
@@ -143,6 +160,7 @@ struct ActiveWorkoutView: View {
     func onRest() {
         os_log("Rest started", log: .ui)
         if timer.currentRound == timer.rounds {
+            activeAlert = .done
             showingAlert = true
         }
         else {
@@ -159,6 +177,8 @@ struct ActiveWorkoutView: View {
 
 struct ActiveWorkoutView_Previews: PreviewProvider {
     static var previews: some View {
-        ActiveWorkoutView(workout: Workout.example, isPresented: .constant(false), healthManager: nil)
+        NavigationView {
+            ActiveWorkoutView(workout: Workout.example, isPresented: .constant(false), healthManager: nil)
+        }
     }
 }

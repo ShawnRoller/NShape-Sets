@@ -19,5 +19,5 @@ class Workout {
         self.currentSet = currentSet
     }
 
-    static let example = Workout(sets: 3, rest: 5, currentSet: 3)
+    static let example = Workout(sets: 5, rest: 5, currentSet: 5)
 }

@@ -14,3 +14,7 @@ enum ScreenState {
     case rest
     case complete
 }
+
+enum ActiveAlert {
+    case done, back
+}
