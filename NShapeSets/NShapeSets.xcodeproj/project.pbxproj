@@ -384,6 +384,7 @@
 		297FDD1823FB8EA000D9E56E /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 		2988C85C25C0C52200F653CD /* CircleTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTimerView.swift; sourceTree = "<group>"; };
 		2993C6DF24899B5B00992E1B /* DefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultManager.swift; sourceTree = "<group>"; };
+		2993E67A2714CFE6004EF99D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29A4AEF624148F15005A446E /* NShapeSets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NShapeSets.entitlements; sourceTree = "<group>"; };
 		29A4AEF824148F15005A446E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		29A4AEFA24148F67005A446E /* WatchNShapeSets WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchNShapeSets WatchKit Extension.entitlements"; sourceTree = "<group>"; };
@@ -673,6 +674,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		2993E6792714CF8E004EF99D /* WatchNShapeSets */ = {
+			isa = PBXGroup;
+			children = (
+				2993E67A2714CFE6004EF99D /* Info.plist */,
+			);
+			path = WatchNShapeSets;
+			sourceTree = "<group>";
+		};
 		29A4AEF724148F15005A446E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -711,6 +720,7 @@
 				29C9561B2393042500373031 /* NShapeSets */,
 				29C956322393042800373031 /* NShapeSetsTests */,
 				29C9563D2393042800373031 /* NShapeSetsUITests */,
+				2993E6792714CF8E004EF99D /* WatchNShapeSets */,
 				29201EE923988F5F0016DF8C /* WatchNShapeSets WatchKit App */,
 				29201EF823988F600016DF8C /* WatchNShapeSets WatchKit Extension */,
 				2977AB1625BCCDE800EBF3B6 /* TVNShapeSets */,
@@ -1580,8 +1590,10 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "We need access to your heartrate to track calories burned during a workout.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We want permission to log a workout towards your Activity goals.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1602,8 +1614,10 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "We need access to your heartrate to track calories burned during a workout.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We want permission to log a workout towards your Activity goals.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1625,6 +1639,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
 				IBSC_MODULE = WatchNShapeSets_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchNShapeSets WatchKit App/Info.plist";
@@ -1653,6 +1668,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
 				IBSC_MODULE = WatchNShapeSets_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchNShapeSets WatchKit App/Info.plist";
@@ -1679,6 +1695,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "WatchNShapeSets WatchKit Extension/WatchNShapeSets WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchNShapeSets WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
 				ENABLE_PREVIEWS = YES;
@@ -1705,6 +1722,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "WatchNShapeSets WatchKit Extension/WatchNShapeSets WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchNShapeSets WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
 				ENABLE_PREVIEWS = YES;
@@ -1822,6 +1840,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = WatchNShapeSets/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1877,6 +1896,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = WatchNShapeSets/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
