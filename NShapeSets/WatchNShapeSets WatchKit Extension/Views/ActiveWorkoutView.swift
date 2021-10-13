@@ -13,8 +13,8 @@ import os
 struct ActiveWorkoutView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var workoutState: ScreenState = .active
-    @State private var showingDoneAlert = false
-    @State private var showingBackAlert = false
+    @State private var showingAlert = false
+    @State private var activeAlert: ActiveAlert = .done
     @ObservedObject var timer: TimerWrapper
     
     var workout: Workout
@@ -48,25 +48,26 @@ struct ActiveWorkoutView: View {
             self.timer.startTimeTracking()
             self.startWorkout()
         }
-        .alert(isPresented: $showingDoneAlert) {
-            self.endWorkout()
-            let totalTime = TimeHelper.getTimeFromSeconds(self.timer.totalTime)
-            return Alert(title: Text("Workout complete!"), message: Text("You completed all sets in \(totalTime)!"), dismissButton: .default(Text("OK"), action: {
-                self.timer.reset()
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
-                    self.goBack()
-                }
-            }))
-        }
-        .alert(isPresented: $showingBackAlert, content: {
-            return Alert(title: Text("All done?"), primaryButton: .destructive(Text("Done!"), action: {
+        .alert(isPresented: $showingAlert) {
+            if (activeAlert == .done) {
+                self.endWorkout()
+                let totalTime = TimeHelper.getTimeFromSeconds(self.timer.totalTime)
+                return Alert(title: Text("Workout complete!"), message: Text("You completed all sets in \(totalTime)!"), dismissButton: .default(Text("OK"), action: {
+                    self.timer.reset()
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
                         self.goBack()
                     }
-            }), secondaryButton: .cancel())
-        })
+                }))
+            } else {
+                return Alert(title: Text("All done?"), primaryButton: .destructive(Text("Done!"), action: {
+                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
+                            self.goBack()
+                        }
+                }), secondaryButton: .cancel())
+            }
+        }
         .onDisappear() {
-            if !self.showingDoneAlert {
+            if !self.showingAlert {
                 self.endWorkout()
                 self.timer.reset()
             }
@@ -75,7 +76,8 @@ struct ActiveWorkoutView: View {
         .toolbar(content: {
             ToolbarItem(id: "back", placement: .cancellationAction, showsByDefault: false) {
                 Button(action: {
-                    self.showingBackAlert = true
+                    self.activeAlert = .back
+                    self.showingAlert = true
                 }, label: {
                     Image(systemName: "chevron.left.circle.fill")
                 })
@@ -127,7 +129,8 @@ struct ActiveWorkoutView: View {
     func onRest() {
         os_log("Rest started", log: .ui)
         if timer.currentRound == timer.rounds {
-            showingDoneAlert = true
+            activeAlert = .done
+            showingAlert = true
         }
         else {
             workoutState = workoutState == .active ? .rest : .active
