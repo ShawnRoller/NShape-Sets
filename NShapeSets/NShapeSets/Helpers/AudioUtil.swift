@@ -13,11 +13,11 @@ import AVFoundation
 var audioPlayer: AVAudioPlayer?
     
 func playCountdownSound() {
-    AudioServicesPlayAlertSound(1007)
+    AudioServicesPlayAlertSound(1070)
 }
     
 func playDoneSound() {
-    AudioServicesPlayAlertSound(1008)
+    AudioServicesPlayAlertSound(1013)
 }
 
 func playSound(named file: String, ext: String) {

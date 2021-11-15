@@ -101,7 +101,7 @@ class TimerWrapper: ObservableObject {
             let content = UNMutableNotificationContent()
             content.title = "Rest complete!"
             content.subtitle = "You're on set \(currentRound + 1). Go!"
-            content.sound = UNNotificationSound.default
+            content.sound = UNNotificationSound.defaultCritical
             
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(self.remainingRest), repeats: false)
             self.notificationID = UUID().uuidString

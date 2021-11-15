@@ -53,6 +53,7 @@ struct ActiveWorkoutView: View {
                 os_log("Workout became active!", log: .ui)
                 self.setDefaultSettings()
                 self.timer.startTimeTracking()
+                self.timer.onRestTimeChange = self.countdown
             }
             .onDisappear() {
                 let totalSeconds = self.timer.totalTime
@@ -116,13 +117,11 @@ struct ActiveWorkoutView: View {
         }
     }
     
-    func playSound() {
-        os_log("Rest remaining: %d", log: .ui, timer.remainingRest)
-    }
-    
     func countdown() {
         if 1...3 ~= timer.remainingRest {
-            playSound()
+            playCountdownSound()
+        } else if timer.remainingRest <= 0 {
+            playDoneSound()
         }
     }
     
