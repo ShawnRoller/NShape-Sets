@@ -1554,7 +1554,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "We need access to your heartrate to track calories burned during a workout.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We want permission to log a workout towards your Activity goals.";
@@ -1578,7 +1578,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "We need access to your heartrate to track calories burned during a workout.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We want permission to log a workout towards your Activity goals.";
@@ -1603,7 +1603,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
 				IBSC_MODULE = WatchNShapeSets_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchNShapeSets WatchKit App/Info.plist";
@@ -1632,7 +1632,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
 				IBSC_MODULE = WatchNShapeSets_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchNShapeSets WatchKit App/Info.plist";
@@ -1659,7 +1659,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "WatchNShapeSets WatchKit Extension/WatchNShapeSets WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchNShapeSets WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
 				ENABLE_PREVIEWS = YES;
@@ -1686,7 +1686,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "WatchNShapeSets WatchKit Extension/WatchNShapeSets WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchNShapeSets WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
 				ENABLE_PREVIEWS = YES;
@@ -1878,7 +1878,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = NShapeSets/NShapeSets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"NShapeSets/Preview Content\"";
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
 				ENABLE_PREVIEWS = YES;
@@ -1901,7 +1901,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = NShapeSets/NShapeSets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"NShapeSets/Preview Content\"";
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
 				ENABLE_PREVIEWS = YES;
