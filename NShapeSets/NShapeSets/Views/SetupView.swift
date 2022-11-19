@@ -68,7 +68,7 @@ struct SetupView: View {
         self.rest = defaultWorkoutRest
         self.sets = defaultWorkoutSets
         
-        os_log("Got defaults - rest: %d, sets: %d", log: .ui, defaultWorkoutRest, defaultWorkoutSets)
+        os_log("Got defaults - rest: %d, sets: %d", log: .ui, Int(defaultWorkoutRest), Int(defaultWorkoutSets))
     }
     
     func renderStartButton(useModal: Bool) -> some View {
