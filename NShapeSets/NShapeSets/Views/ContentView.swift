@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var step: ScreenState
+    @ObservedObject var screenState: ScreenStateManager
     var healthManager: HealthManager?
     
     var body: some View {
@@ -20,7 +20,7 @@ struct ContentView: View {
                     .onTapGesture {
                         UIApplication.shared.endEditing()
                     }
-                SetupView(healthManager: self.healthManager)
+                SetupView(healthManager: self.healthManager, screenState: screenState)
             }
             .navigationBarHidden(true)
         }
@@ -29,14 +29,12 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var state = ScreenState.setup
-    
     static var previews: some View {
         Group {
-            ContentView(step: state)
+            ContentView(screenState: ScreenStateManager())
                 .environment(\.colorScheme, .light)
             
-            ContentView(step: state)
+            ContentView(screenState: ScreenStateManager())
                 .environment(\.colorScheme, .dark)
         }
     }

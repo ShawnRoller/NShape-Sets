@@ -46,3 +46,7 @@ struct Constants {
     static let appGroup = "group.com.offensively-bad.nshapesets"
     static let quickStartWidgetKind = "com.offensively-bad.nshapesets.quick-start"
 }
+
+struct DeepLink {
+    static let quickStartUrl = URL(string: "nshapesets://quickstart")
+}

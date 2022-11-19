@@ -253,6 +253,9 @@
 		29DE9EA824031A2000C6FE68 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE9EA724031A2000C6FE68 /* DetailView.swift */; };
 		29DE9EAA24031C7E00C6FE68 /* ActiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE9EA924031C7E00C6FE68 /* ActiveView.swift */; };
 		29DE9EAC24031C8900C6FE68 /* RestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE9EAB24031C8900C6FE68 /* RestView.swift */; };
+		29ECC6932929425000FED74A /* ScreenStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ECC6922929425000FED74A /* ScreenStateManager.swift */; };
+		29ECC6942929425000FED74A /* ScreenStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ECC6922929425000FED74A /* ScreenStateManager.swift */; };
+		29ECC6952929425000FED74A /* ScreenStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ECC6922929425000FED74A /* ScreenStateManager.swift */; };
 		29F51C9A23F88F12002E8498 /* AudioUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F51C9923F88F12002E8498 /* AudioUtil.swift */; };
 		29F51C9B23F88F12002E8498 /* AudioUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F51C9923F88F12002E8498 /* AudioUtil.swift */; };
 		29F51C9C23F88F12002E8498 /* AudioUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F51C9923F88F12002E8498 /* AudioUtil.swift */; };
@@ -458,6 +461,7 @@
 		29DE9EA724031A2000C6FE68 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		29DE9EA924031C7E00C6FE68 /* ActiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveView.swift; sourceTree = "<group>"; };
 		29DE9EAB24031C8900C6FE68 /* RestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestView.swift; sourceTree = "<group>"; };
+		29ECC6922929425000FED74A /* ScreenStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStateManager.swift; sourceTree = "<group>"; };
 		29F51C9923F88F12002E8498 /* AudioUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUtil.swift; sourceTree = "<group>"; };
 		29F51C9D240195FC002E8498 /* ActiveWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveWorkoutView.swift; sourceTree = "<group>"; };
 		29F51CA12403FE70002E8498 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
@@ -687,6 +691,7 @@
 				294BA21E244A534600C809DD /* HealthKitHelper.swift */,
 				290079D6245CCB5A003A54EB /* KeyboardHelper.swift */,
 				2993C6DF24899B5B00992E1B /* DefaultManager.swift */,
+				29ECC6922929425000FED74A /* ScreenStateManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1513,6 +1518,7 @@
 			files = (
 				295AFFBD239C21F8003E24C6 /* BackgroundView.swift in Sources */,
 				29FDE4832395B2EB0061EF5E /* HostingController.swift in Sources */,
+				29ECC6932929425000FED74A /* ScreenStateManager.swift in Sources */,
 				296528F823DF7C2100C203F8 /* ActiveView.swift in Sources */,
 				2993C6E024899B5B00992E1B /* DefaultManager.swift in Sources */,
 				29CDDC2823DCC6D3008BB4B8 /* ActiveWorkoutView.swift in Sources */,
@@ -1552,6 +1558,7 @@
 			files = (
 				29B77590242FB3C800EDD23D /* BackgroundView.swift in Sources */,
 				29FDE4842395B2EB0061EF5E /* HostingController.swift in Sources */,
+				29ECC6942929425000FED74A /* ScreenStateManager.swift in Sources */,
 				29BED77D24915D8600B44A3E /* OSLogExtensions.swift in Sources */,
 				2911C2B023A59AB500405306 /* TypefaceExtensions.swift in Sources */,
 				29B77584242FB3A500EDD23D /* AppDelegate.swift in Sources */,
@@ -1591,6 +1598,7 @@
 			files = (
 				29B77585242FB3A500EDD23D /* AppDelegate.swift in Sources */,
 				29F51C9C23F88F12002E8498 /* AudioUtil.swift in Sources */,
+				29ECC6952929425000FED74A /* ScreenStateManager.swift in Sources */,
 				29BED77E24915D8600B44A3E /* OSLogExtensions.swift in Sources */,
 				29CDDC3223DCCD86008BB4B8 /* InfoView.swift in Sources */,
 				294BBBF423A44CA00022AC8C /* Constants.swift in Sources */,

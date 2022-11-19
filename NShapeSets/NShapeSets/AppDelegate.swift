@@ -12,8 +12,6 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -40,6 +38,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        FirebaseApp.configure()
     }
 
-
 }
 
+// MARK: Handle opening app URLs
+extension AppDelegate {
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        if (url == DeepLink.quickStartUrl) {
+            print("url: \(url), options: \(options)")
+            return true
+        }
+        
+        return false
+    }
+}

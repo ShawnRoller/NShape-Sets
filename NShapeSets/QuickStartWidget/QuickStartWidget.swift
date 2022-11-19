@@ -64,6 +64,7 @@ struct QuickStartWidget: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider(defaultSets: getDefaultSets(), defaultRest: getDefaultRest())) { entry in
             QuickStartWidgetEntryView(entry: entry)
+                .widgetURL(DeepLink.quickStartUrl)
         }
         .configurationDisplayName("Quick Start")
         .description("Quickly starts a workout")
