@@ -14,8 +14,12 @@ let SETS = 16
 let REST = 90
 
 struct Provider: TimelineProvider {
-    var defaultSets: Int = SETS
-    var defaultRest: Int = REST
+    var defaultSets: Int {
+        QuickStartWidgetDefaultManager.getDefaultSets()
+    }
+    var defaultRest: Int {
+        QuickStartWidgetDefaultManager.getDefaultRest()
+    }
     
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), sets: defaultSets, rest: defaultRest)
@@ -62,20 +66,22 @@ struct QuickStartWidget: Widget {
     let kind: String = Constants.quickStartWidgetKind
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider(defaultSets: getDefaultSets(), defaultRest: getDefaultRest())) { entry in
+        StaticConfiguration(kind: kind, provider: Provider()) { entry in
             QuickStartWidgetEntryView(entry: entry)
                 .widgetURL(DeepLink.quickStartUrl)
         }
         .configurationDisplayName("Quick Start")
         .description("Quickly starts a workout")
     }
-    
-    func getDefaultSets() -> Int {
+}
+
+struct QuickStartWidgetDefaultManager {
+    static func getDefaultSets() -> Int {
         let sets = DefaultManager.getDefault(forKey: Defaults.workoutRounds) as? Int ?? SETS
         return sets
     }
     
-    func getDefaultRest() -> Int {
+    static func getDefaultRest() -> Int {
         let rest = DefaultManager.getDefault(forKey: Defaults.workoutRest) as? Int ?? REST
         return rest
     }
