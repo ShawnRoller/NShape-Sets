@@ -43,6 +43,6 @@ struct Defaults {
 }
 
 struct Constants {
-    static let appGroup = "group.com.offensively-bad.nshapesets"
+    static let appGroup = "group.com.offensively-bad.nshapesets"
     static let quickStartWidgetKind = "com.offensively-bad.nshapesets.quick-start"
 }
