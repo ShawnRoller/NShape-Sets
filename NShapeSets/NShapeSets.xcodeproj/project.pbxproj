@@ -253,6 +253,11 @@
 		29DE9EA824031A2000C6FE68 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE9EA724031A2000C6FE68 /* DetailView.swift */; };
 		29DE9EAA24031C7E00C6FE68 /* ActiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE9EA924031C7E00C6FE68 /* ActiveView.swift */; };
 		29DE9EAC24031C8900C6FE68 /* RestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE9EAB24031C8900C6FE68 /* RestView.swift */; };
+		29E577202929A3C00048A8C6 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AFFC1239C2552003E24C6 /* Palette.swift */; };
+		29E57721292AA65F0048A8C6 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AFFBC239C21F8003E24C6 /* BackgroundView.swift */; };
+		29E57723292AA6CF0048A8C6 /* InfoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E57722292AA6CF0048A8C6 /* InfoText.swift */; };
+		29E57724292AA7440048A8C6 /* TypefaceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypefaceExtensions.swift */; };
+		29E57725292AA7460048A8C6 /* TypefaceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypefaceExtensions.swift */; };
 		29ECC6932929425000FED74A /* ScreenStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ECC6922929425000FED74A /* ScreenStateManager.swift */; };
 		29ECC6942929425000FED74A /* ScreenStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ECC6922929425000FED74A /* ScreenStateManager.swift */; };
 		29ECC6952929425000FED74A /* ScreenStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ECC6922929425000FED74A /* ScreenStateManager.swift */; };
@@ -461,6 +466,7 @@
 		29DE9EA724031A2000C6FE68 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		29DE9EA924031C7E00C6FE68 /* ActiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveView.swift; sourceTree = "<group>"; };
 		29DE9EAB24031C8900C6FE68 /* RestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestView.swift; sourceTree = "<group>"; };
+		29E57722292AA6CF0048A8C6 /* InfoText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoText.swift; sourceTree = "<group>"; };
 		29ECC6922929425000FED74A /* ScreenStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStateManager.swift; sourceTree = "<group>"; };
 		29F51C9923F88F12002E8498 /* AudioUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUtil.swift; sourceTree = "<group>"; };
 		29F51C9D240195FC002E8498 /* ActiveWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveWorkoutView.swift; sourceTree = "<group>"; };
@@ -568,6 +574,7 @@
 		2911AA36291C8DA100842AE5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				29E57722292AA6CF0048A8C6 /* InfoText.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1449,10 +1456,14 @@
 			files = (
 				2911AA24291C8B1300842AE5 /* QuickStartWidgetBundle.swift in Sources */,
 				2911AA26291C8B1300842AE5 /* QuickStartWidgetLiveActivity.swift in Sources */,
+				29E57721292AA65F0048A8C6 /* BackgroundView.swift in Sources */,
 				2911AA28291C8B1300842AE5 /* QuickStartWidget.swift in Sources */,
 				2911AA2D291C8B1500842AE5 /* QuickStartWidget.intentdefinition in Sources */,
 				2911AA37291C928200842AE5 /* DefaultManager.swift in Sources */,
+				29E57724292AA7440048A8C6 /* TypefaceExtensions.swift in Sources */,
 				2911AA38291C929500842AE5 /* Constants.swift in Sources */,
+				29E577202929A3C00048A8C6 /* Palette.swift in Sources */,
+				29E57723292AA6CF0048A8C6 /* InfoText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1504,6 +1515,7 @@
 				295BF8DF25D2332100D08E8E /* ActiveWorkoutView.swift in Sources */,
 				2988C86025C0C52300F653CD /* CircleTimerView.swift in Sources */,
 				2977AB4925BCCE7500EBF3B6 /* BackgroundView.swift in Sources */,
+				29E57725292AA7460048A8C6 /* TypefaceExtensions.swift in Sources */,
 				296E60E425D86928001AEE9E /* Constants.swift in Sources */,
 				2977AB6025BCCEEB00EBF3B6 /* StateModels.swift in Sources */,
 				2977AB5825BCCEAE00EBF3B6 /* Palette.swift in Sources */,

@@ -52,12 +52,30 @@ struct SimpleEntry: TimelineEntry {
 
 struct QuickStartWidgetEntryView : View {
     var entry: Provider.Entry
-
+    
     var body: some View {
-        VStack {
-            Text("Sets: \(entry.sets)")
-            Text("Rest: \(entry.rest)")
-            Text("Go!")
+        ZStack() {
+            BackgroundView()
+            VStack {
+                HStack(alignment: .top) {
+                    Image("Banner-NShapeSets")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .rotationEffect(.degrees(-35))
+                        .offset(x: -10, y: -5)
+                        .frame(width: 70)
+                        .padding(.leading, 4)
+                    VStack(alignment: .trailing) {
+                        InfoText("\(entry.sets) sets")
+                        InfoText("\(entry.rest)s rest")
+                    }
+                }
+                Image("Button-Start")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .padding()
+            }
+            padding()
         }
     }
 }

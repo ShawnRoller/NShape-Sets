@@ -60,4 +60,7 @@ extension View {
         let size: CGFloat = smallText ? 12 : 17
         return self.modifier(ScaledFont(name: "Gotham-Book", size:size))
     }
+    func widgetInfoFont() -> some View {
+        return self.modifier(ScaledFont(name: "Gotham-Book", size: 18))
+    }
 }
