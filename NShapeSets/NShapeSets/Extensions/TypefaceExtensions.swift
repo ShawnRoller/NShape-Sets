@@ -61,6 +61,6 @@ extension View {
         return self.modifier(ScaledFont(name: "Gotham-Book", size:size))
     }
     func widgetInfoFont() -> some View {
-        return self.modifier(ScaledFont(name: "Gotham-Book", size: 18))
+        return self.modifier(ScaledFont(name: "Gotham-Book", size: 20))
     }
 }

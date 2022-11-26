@@ -57,26 +57,32 @@ struct QuickStartWidgetEntryView : View {
         ZStack() {
             BackgroundView()
             VStack {
-                HStack(alignment: .top) {
+                HStack {
                     Image("Banner-NShapeSets")
+                        .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .rotationEffect(.degrees(-35))
-                        .offset(x: -10, y: -5)
-                        .frame(width: 70)
-                        .padding(.leading, 4)
+                        .rotationEffect(.degrees(-30), anchor: .center)
                     VStack(alignment: .trailing) {
                         InfoText("\(entry.sets) sets")
                         InfoText("\(entry.rest)s rest")
                     }
+                    .fixedSize(horizontal: true, vertical: true)
+                    .clipped()
+                    .padding(.trailing)
                 }
+                .padding(.top)
+                Spacer()
                 Image("Button-Start")
+                    .renderingMode(.original)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .padding()
+                    .padding(.horizontal)
+                    .padding(.bottom)
             }
-            padding()
         }
+        .frame(maxHeight: .infinity, alignment: .center)
+        .clipped()
     }
 }
 
