@@ -54,15 +54,25 @@ struct QuickStartWidgetEntryView : View {
     var entry: Provider.Entry
     
     var body: some View {
-        ZStack() {
+        ZStack {
             BackgroundView()
+                .rotationEffect(.degrees(180))
             VStack {
                 HStack {
                     Image("Banner-NShapeSets")
-                        .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .rotationEffect(.degrees(-30), anchor: .center)
+                        .frame(maxWidth: 80)
+                    Spacer()
+                }
+                .padding(.vertical, 7)
+                Spacer()
+            }
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
                     VStack(alignment: .trailing) {
                         InfoText("\(entry.sets) sets")
                         InfoText("\(entry.rest)s rest")
@@ -78,8 +88,8 @@ struct QuickStartWidgetEntryView : View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .padding(.horizontal)
-                    .padding(.bottom)
             }
+            .padding(.bottom)
         }
         .frame(maxHeight: .infinity, alignment: .center)
         .clipped()
