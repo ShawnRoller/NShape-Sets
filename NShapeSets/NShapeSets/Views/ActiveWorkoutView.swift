@@ -89,8 +89,8 @@ struct ActiveWorkoutView: View {
     }
     
     func setDefaultSettings() {
-        let defaultWorkoutRest = self.workout.rest
-        let defaultWorkoutSets = self.workout.sets
+        let defaultWorkoutRest = Int(self.workout.rest)
+        let defaultWorkoutSets = Int(self.workout.sets)
         
         os_log("Setting defaults - rest: %d, sets: %d", log: .ui, defaultWorkoutRest, defaultWorkoutSets)
         

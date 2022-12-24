@@ -14,6 +14,17 @@
 		290079D7245CCB5A003A54EB /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290079D6245CCB5A003A54EB /* KeyboardHelper.swift */; };
 		290079D8245CCB5A003A54EB /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290079D6245CCB5A003A54EB /* KeyboardHelper.swift */; };
 		290079D9245CCB5A003A54EB /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290079D6245CCB5A003A54EB /* KeyboardHelper.swift */; };
+		2911AA1F291C8B1300842AE5 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2911AA1E291C8B1300842AE5 /* WidgetKit.framework */; };
+		2911AA21291C8B1300842AE5 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2911AA20291C8B1300842AE5 /* SwiftUI.framework */; };
+		2911AA24291C8B1300842AE5 /* QuickStartWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911AA23291C8B1300842AE5 /* QuickStartWidgetBundle.swift */; };
+		2911AA26291C8B1300842AE5 /* QuickStartWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911AA25291C8B1300842AE5 /* QuickStartWidgetLiveActivity.swift */; };
+		2911AA28291C8B1300842AE5 /* QuickStartWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911AA27291C8B1300842AE5 /* QuickStartWidget.swift */; };
+		2911AA2B291C8B1500842AE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2911AA2A291C8B1500842AE5 /* Assets.xcassets */; };
+		2911AA2D291C8B1500842AE5 /* QuickStartWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2911AA29291C8B1300842AE5 /* QuickStartWidget.intentdefinition */; };
+		2911AA2E291C8B1500842AE5 /* QuickStartWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2911AA29291C8B1300842AE5 /* QuickStartWidget.intentdefinition */; };
+		2911AA31291C8B1500842AE5 /* QuickStartWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2911AA1D291C8B1300842AE5 /* QuickStartWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2911AA37291C928200842AE5 /* DefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2993C6DF24899B5B00992E1B /* DefaultManager.swift */; };
+		2911AA38291C929500842AE5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294BBBF123A44CA00022AC8C /* Constants.swift */; };
 		2911C2AF23A59AB500405306 /* TypefaceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypefaceExtensions.swift */; };
 		2911C2B023A59AB500405306 /* TypefaceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypefaceExtensions.swift */; };
 		2911C2B123A59AB500405306 /* TypefaceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypefaceExtensions.swift */; };
@@ -242,6 +253,14 @@
 		29DE9EA824031A2000C6FE68 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE9EA724031A2000C6FE68 /* DetailView.swift */; };
 		29DE9EAA24031C7E00C6FE68 /* ActiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE9EA924031C7E00C6FE68 /* ActiveView.swift */; };
 		29DE9EAC24031C8900C6FE68 /* RestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE9EAB24031C8900C6FE68 /* RestView.swift */; };
+		29E577202929A3C00048A8C6 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AFFC1239C2552003E24C6 /* Palette.swift */; };
+		29E57721292AA65F0048A8C6 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AFFBC239C21F8003E24C6 /* BackgroundView.swift */; };
+		29E57723292AA6CF0048A8C6 /* InfoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E57722292AA6CF0048A8C6 /* InfoText.swift */; };
+		29E57724292AA7440048A8C6 /* TypefaceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypefaceExtensions.swift */; };
+		29E57725292AA7460048A8C6 /* TypefaceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911C2AE23A59AB500405306 /* TypefaceExtensions.swift */; };
+		29ECC6932929425000FED74A /* ScreenStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ECC6922929425000FED74A /* ScreenStateManager.swift */; };
+		29ECC6942929425000FED74A /* ScreenStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ECC6922929425000FED74A /* ScreenStateManager.swift */; };
+		29ECC6952929425000FED74A /* ScreenStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ECC6922929425000FED74A /* ScreenStateManager.swift */; };
 		29F51C9A23F88F12002E8498 /* AudioUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F51C9923F88F12002E8498 /* AudioUtil.swift */; };
 		29F51C9B23F88F12002E8498 /* AudioUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F51C9923F88F12002E8498 /* AudioUtil.swift */; };
 		29F51C9C23F88F12002E8498 /* AudioUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F51C9923F88F12002E8498 /* AudioUtil.swift */; };
@@ -258,6 +277,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2911AA2F291C8B1500842AE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29C956112393042500373031 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2911AA1C291C8B1300842AE5;
+			remoteInfo = QuickStartWidgetExtension;
+		};
 		29201EE723988F5F0016DF8C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29C956112393042500373031 /* Project object */;
@@ -289,6 +315,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		2911AA32291C8B1500842AE5 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2911AA31291C8B1500842AE5 /* QuickStartWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29201F0E23988F610016DF8C /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -321,6 +358,17 @@
 		21212B45E0250A7807EBB6A3 /* Pods_WatchNShapeSets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchNShapeSets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25A674B4B651FC8702DA39EE /* Pods-WatchNShapeSets WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchNShapeSets WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-WatchNShapeSets WatchKit Extension/Pods-WatchNShapeSets WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		290079D6245CCB5A003A54EB /* KeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHelper.swift; sourceTree = "<group>"; };
+		2911AA1D291C8B1300842AE5 /* QuickStartWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuickStartWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2911AA1E291C8B1300842AE5 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		2911AA20291C8B1300842AE5 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		2911AA23291C8B1300842AE5 /* QuickStartWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickStartWidgetBundle.swift; sourceTree = "<group>"; };
+		2911AA25291C8B1300842AE5 /* QuickStartWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickStartWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		2911AA27291C8B1300842AE5 /* QuickStartWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickStartWidget.swift; sourceTree = "<group>"; };
+		2911AA29291C8B1300842AE5 /* QuickStartWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = QuickStartWidget.intentdefinition; sourceTree = "<group>"; };
+		2911AA2A291C8B1500842AE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2911AA2C291C8B1500842AE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2911AA39291C94DC00842AE5 /* WatchNShapeSets WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchNShapeSets WatchKit App.entitlements"; sourceTree = "<group>"; };
+		2911AA3A291C94F700842AE5 /* QuickStartWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuickStartWidgetExtension.entitlements; sourceTree = "<group>"; };
 		2911C2AE23A59AB500405306 /* TypefaceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypefaceExtensions.swift; sourceTree = "<group>"; };
 		29201EE223988F5F0016DF8C /* WatchNShapeSets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchNShapeSets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29201EE523988F5F0016DF8C /* WatchNShapeSets WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchNShapeSets WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -418,6 +466,8 @@
 		29DE9EA724031A2000C6FE68 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		29DE9EA924031C7E00C6FE68 /* ActiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveView.swift; sourceTree = "<group>"; };
 		29DE9EAB24031C8900C6FE68 /* RestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestView.swift; sourceTree = "<group>"; };
+		29E57722292AA6CF0048A8C6 /* InfoText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoText.swift; sourceTree = "<group>"; };
+		29ECC6922929425000FED74A /* ScreenStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStateManager.swift; sourceTree = "<group>"; };
 		29F51C9923F88F12002E8498 /* AudioUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUtil.swift; sourceTree = "<group>"; };
 		29F51C9D240195FC002E8498 /* ActiveWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveWorkoutView.swift; sourceTree = "<group>"; };
 		29F51CA12403FE70002E8498 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
@@ -438,6 +488,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2911AA1A291C8B1300842AE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2911AA21291C8B1300842AE5 /* SwiftUI.framework in Frameworks */,
+				2911AA1F291C8B1300842AE5 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29201EF123988F600016DF8C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -498,6 +557,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2911AA22291C8B1300842AE5 /* QuickStartWidget */ = {
+			isa = PBXGroup;
+			children = (
+				2911AA36291C8DA100842AE5 /* Components */,
+				2911AA23291C8B1300842AE5 /* QuickStartWidgetBundle.swift */,
+				2911AA25291C8B1300842AE5 /* QuickStartWidgetLiveActivity.swift */,
+				2911AA27291C8B1300842AE5 /* QuickStartWidget.swift */,
+				2911AA29291C8B1300842AE5 /* QuickStartWidget.intentdefinition */,
+				2911AA2A291C8B1500842AE5 /* Assets.xcassets */,
+				2911AA2C291C8B1500842AE5 /* Info.plist */,
+			);
+			path = QuickStartWidget;
+			sourceTree = "<group>";
+		};
+		2911AA36291C8DA100842AE5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				29E57722292AA6CF0048A8C6 /* InfoText.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		2911C2AD23A59A9200405306 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -512,6 +593,7 @@
 		29201EE923988F5F0016DF8C /* WatchNShapeSets WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				2911AA39291C94DC00842AE5 /* WatchNShapeSets WatchKit App.entitlements */,
 				29201EEA23988F5F0016DF8C /* Interface.storyboard */,
 				29201EED23988F600016DF8C /* Assets.xcassets */,
 				29201EEF23988F600016DF8C /* Info.plist */,
@@ -616,6 +698,7 @@
 				294BA21E244A534600C809DD /* HealthKitHelper.swift */,
 				290079D6245CCB5A003A54EB /* KeyboardHelper.swift */,
 				2993C6DF24899B5B00992E1B /* DefaultManager.swift */,
+				29ECC6922929425000FED74A /* ScreenStateManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -693,6 +776,8 @@
 				21212B45E0250A7807EBB6A3 /* Pods_WatchNShapeSets.framework */,
 				6C6492901ADC6461CF8BF64B /* Pods_WatchNShapeSets_WatchKit_App.framework */,
 				7A7DABFC86D94BB4AD73005D /* Pods_WatchNShapeSets_WatchKit_Extension.framework */,
+				2911AA1E291C8B1300842AE5 /* WidgetKit.framework */,
+				2911AA20291C8B1300842AE5 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -717,6 +802,7 @@
 		29C956102393042500373031 = {
 			isa = PBXGroup;
 			children = (
+				2911AA3A291C94F700842AE5 /* QuickStartWidgetExtension.entitlements */,
 				29C9561B2393042500373031 /* NShapeSets */,
 				29C956322393042800373031 /* NShapeSetsTests */,
 				29C9563D2393042800373031 /* NShapeSetsUITests */,
@@ -724,6 +810,7 @@
 				29201EE923988F5F0016DF8C /* WatchNShapeSets WatchKit App */,
 				29201EF823988F600016DF8C /* WatchNShapeSets WatchKit Extension */,
 				2977AB1625BCCDE800EBF3B6 /* TVNShapeSets */,
+				2911AA22291C8B1300842AE5 /* QuickStartWidget */,
 				29C9561A2393042500373031 /* Products */,
 				29A4AEF724148F15005A446E /* Frameworks */,
 				8D57AF812DF136F104DBC3FA /* Pods */,
@@ -740,6 +827,7 @@
 				29201EE523988F5F0016DF8C /* WatchNShapeSets WatchKit App.app */,
 				29201EF423988F600016DF8C /* WatchNShapeSets WatchKit Extension.appex */,
 				2977AB1525BCCDE800EBF3B6 /* TVNShapeSets.app */,
+				2911AA1D291C8B1300842AE5 /* QuickStartWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -852,6 +940,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2911AA1C291C8B1300842AE5 /* QuickStartWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2911AA35291C8B1500842AE5 /* Build configuration list for PBXNativeTarget "QuickStartWidgetExtension" */;
+			buildPhases = (
+				2911AA19291C8B1300842AE5 /* Sources */,
+				2911AA1A291C8B1300842AE5 /* Frameworks */,
+				2911AA1B291C8B1300842AE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickStartWidgetExtension;
+			productName = QuickStartWidgetExtension;
+			productReference = 2911AA1D291C8B1300842AE5 /* QuickStartWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		29201EE123988F5F0016DF8C /* WatchNShapeSets */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29201F1623988F610016DF8C /* Build configuration list for PBXNativeTarget "WatchNShapeSets" */;
@@ -933,10 +1038,12 @@
 				29C956152393042500373031 /* Sources */,
 				29C956162393042500373031 /* Frameworks */,
 				29C956172393042500373031 /* Resources */,
+				2911AA32291C8B1500842AE5 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2911AA30291C8B1500842AE5 /* PBXTargetDependency */,
 			);
 			name = NShapeSets;
 			productName = NShapeSets;
@@ -987,10 +1094,13 @@
 		29C956112393042500373031 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1230;
+				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "offensively-bad";
 				TargetAttributes = {
+					2911AA1C291C8B1300842AE5 = {
+						CreatedOnToolsVersion = 14.1;
+					};
 					29201EE123988F5F0016DF8C = {
 						CreatedOnToolsVersion = 11.2.1;
 						LastSwiftMigration = 1130;
@@ -1038,11 +1148,20 @@
 				29201EE423988F5F0016DF8C /* WatchNShapeSets WatchKit App */,
 				29201EF323988F600016DF8C /* WatchNShapeSets WatchKit Extension */,
 				2977AB1425BCCDE800EBF3B6 /* TVNShapeSets */,
+				2911AA1C291C8B1300842AE5 /* QuickStartWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2911AA1B291C8B1300842AE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2911AA2B291C8B1500842AE5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29201EE023988F5F0016DF8C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1331,6 +1450,23 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2911AA19291C8B1300842AE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2911AA24291C8B1300842AE5 /* QuickStartWidgetBundle.swift in Sources */,
+				2911AA26291C8B1300842AE5 /* QuickStartWidgetLiveActivity.swift in Sources */,
+				29E57721292AA65F0048A8C6 /* BackgroundView.swift in Sources */,
+				2911AA28291C8B1300842AE5 /* QuickStartWidget.swift in Sources */,
+				2911AA2D291C8B1500842AE5 /* QuickStartWidget.intentdefinition in Sources */,
+				2911AA37291C928200842AE5 /* DefaultManager.swift in Sources */,
+				29E57724292AA7440048A8C6 /* TypefaceExtensions.swift in Sources */,
+				2911AA38291C929500842AE5 /* Constants.swift in Sources */,
+				29E577202929A3C00048A8C6 /* Palette.swift in Sources */,
+				29E57723292AA6CF0048A8C6 /* InfoText.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29201EF023988F600016DF8C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1379,6 +1515,7 @@
 				295BF8DF25D2332100D08E8E /* ActiveWorkoutView.swift in Sources */,
 				2988C86025C0C52300F653CD /* CircleTimerView.swift in Sources */,
 				2977AB4925BCCE7500EBF3B6 /* BackgroundView.swift in Sources */,
+				29E57725292AA7460048A8C6 /* TypefaceExtensions.swift in Sources */,
 				296E60E425D86928001AEE9E /* Constants.swift in Sources */,
 				2977AB6025BCCEEB00EBF3B6 /* StateModels.swift in Sources */,
 				2977AB5825BCCEAE00EBF3B6 /* Palette.swift in Sources */,
@@ -1393,6 +1530,7 @@
 			files = (
 				295AFFBD239C21F8003E24C6 /* BackgroundView.swift in Sources */,
 				29FDE4832395B2EB0061EF5E /* HostingController.swift in Sources */,
+				29ECC6932929425000FED74A /* ScreenStateManager.swift in Sources */,
 				296528F823DF7C2100C203F8 /* ActiveView.swift in Sources */,
 				2993C6E024899B5B00992E1B /* DefaultManager.swift in Sources */,
 				29CDDC2823DCC6D3008BB4B8 /* ActiveWorkoutView.swift in Sources */,
@@ -1402,6 +1540,7 @@
 				29CDDC3023DCCD86008BB4B8 /* InfoView.swift in Sources */,
 				294B33AC23D6436000D6BF14 /* SelectorView.swift in Sources */,
 				29FDE47D2395B28B0061EF5E /* SetupView.swift in Sources */,
+				2911AA2E291C8B1500842AE5 /* QuickStartWidget.intentdefinition in Sources */,
 				29C956212393042500373031 /* ContentView.swift in Sources */,
 				290079D7245CCB5A003A54EB /* KeyboardHelper.swift in Sources */,
 				297C8CA5241908D200D7583E /* Wrappers.swift in Sources */,
@@ -1431,6 +1570,7 @@
 			files = (
 				29B77590242FB3C800EDD23D /* BackgroundView.swift in Sources */,
 				29FDE4842395B2EB0061EF5E /* HostingController.swift in Sources */,
+				29ECC6942929425000FED74A /* ScreenStateManager.swift in Sources */,
 				29BED77D24915D8600B44A3E /* OSLogExtensions.swift in Sources */,
 				2911C2B023A59AB500405306 /* TypefaceExtensions.swift in Sources */,
 				29B77584242FB3A500EDD23D /* AppDelegate.swift in Sources */,
@@ -1470,6 +1610,7 @@
 			files = (
 				29B77585242FB3A500EDD23D /* AppDelegate.swift in Sources */,
 				29F51C9C23F88F12002E8498 /* AudioUtil.swift in Sources */,
+				29ECC6952929425000FED74A /* ScreenStateManager.swift in Sources */,
 				29BED77E24915D8600B44A3E /* OSLogExtensions.swift in Sources */,
 				29CDDC3223DCCD86008BB4B8 /* InfoView.swift in Sources */,
 				294BBBF423A44CA00022AC8C /* Constants.swift in Sources */,
@@ -1506,6 +1647,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2911AA30291C8B1500842AE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2911AA1C291C8B1300842AE5 /* QuickStartWidgetExtension */;
+			targetProxy = 2911AA2F291C8B1500842AE5 /* PBXContainerItemProxy */;
+		};
 		29201EE823988F5F0016DF8C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 29201EE423988F5F0016DF8C /* WatchNShapeSets WatchKit App */;
@@ -1548,6 +1694,68 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2911AA33291C8B1500842AE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = QuickStartWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = EWH85CQYYJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuickStartWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = QuickStartWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 offensively-bad. All rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.offensively-bad.NShapeSets.QuickStartWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2911AA34291C8B1500842AE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = QuickStartWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = EWH85CQYYJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuickStartWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = QuickStartWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 offensively-bad. All rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.offensively-bad.NShapeSets.QuickStartWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		29201F0C23988F610016DF8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 15B7303F40FDA251292415F9 /* Pods-WatchNShapeSets.debug.xcconfig */;
@@ -1602,6 +1810,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "WatchNShapeSets WatchKit App/WatchNShapeSets WatchKit App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
@@ -1631,6 +1840,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "WatchNShapeSets WatchKit App/WatchNShapeSets WatchKit App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
@@ -1875,6 +2085,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 009F334EE90741D685F4E121 /* Pods-NShapeSets.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = NShapeSets/NShapeSets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -1898,6 +2109,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 57B7EDCEDC23B4671A03F115 /* Pods-NShapeSets.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = NShapeSets/NShapeSets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -2008,6 +2220,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2911AA35291C8B1500842AE5 /* Build configuration list for PBXNativeTarget "QuickStartWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2911AA33291C8B1500842AE5 /* Debug */,
+				2911AA34291C8B1500842AE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		29201F1423988F610016DF8C /* Build configuration list for PBXNativeTarget "WatchNShapeSets WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum ScreenState {
-    case setup
-    case active
-    case rest
-    case complete
+enum ScreenState: String {
+    case setup = "setup"
+    case active = "active"
+    case rest = "rest"
+    case complete = "complete"
 }
 
 enum ActiveAlert {

@@ -12,7 +12,12 @@ import UserNotifications
 
 struct SetupView: View {
     var healthManager: HealthManager?
+    @ObservedObject var screenState: ScreenStateManager
     
+    private var isActiveWorkout: Binding<Bool> { Binding (
+        get: { self.screenState.state == .active },
+        set: { if !$0 { self.screenState.state = .setup }}
+    )}
     @State private var sets = 8.0
     @State private var rest = 5.0
     @State private var isWorkoutActive = false
@@ -21,8 +26,9 @@ struct SetupView: View {
     
     private var useModal = false
     
-    init(healthManager: HealthManager?) {
+    init(healthManager: HealthManager?, screenState: ScreenStateManager) {
         self.healthManager = healthManager
+        self.screenState = screenState
     }
     
     var body: some View {
@@ -36,6 +42,9 @@ struct SetupView: View {
                 SelectorView(value: $rest, title: "Rest", range: 1.0...300.0, step: 1.0, image: ImageAsset.rest)
                 getSpacer()
                 renderStartButton(useModal: useModal)
+                NavigationLink(destination: getWorkoutView(), isActive: self.isActiveWorkout) {
+                    EmptyView()
+                }
                 Spacer()
             }
             .animation(.spring())
@@ -68,7 +77,7 @@ struct SetupView: View {
         self.rest = defaultWorkoutRest
         self.sets = defaultWorkoutSets
         
-        os_log("Got defaults - rest: %d, sets: %d", log: .ui, defaultWorkoutRest, defaultWorkoutSets)
+        os_log("Got defaults - rest: %d, sets: %d", log: .ui, Int(defaultWorkoutRest), Int(defaultWorkoutSets))
     }
     
     func renderStartButton(useModal: Bool) -> some View {
@@ -81,11 +90,12 @@ struct SetupView: View {
                     .disabled(self.sets <= 0 || self.rest <= 0)
             }
             else {
-                NavigationLink(destination: getWorkoutView()) {
-                    Image(ImageAsset.buttonStart)
-                }
-                .buttonStyle(PlainButtonStyle())
-                .disabled(self.sets <= 0 || self.rest <= 0)
+                Image(ImageAsset.buttonStart)
+                    .onTapGesture {
+                        self.screenState.state = .active
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .disabled(self.sets <= 0 || self.rest <= 0)
             }
         }
         
@@ -120,10 +130,10 @@ struct SetupView: View {
 struct SetupView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            SetupView(healthManager: nil)
+            SetupView(healthManager: nil, screenState: ScreenStateManager())
                 .environment(\.colorScheme, .light)
-            
-            SetupView(healthManager: nil)
+
+            SetupView(healthManager: nil, screenState: ScreenStateManager())
                 .environment(\.colorScheme, .dark)
         }
     }
