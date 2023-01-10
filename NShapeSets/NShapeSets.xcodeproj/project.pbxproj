@@ -32,7 +32,6 @@
 		29201EE623988F5F0016DF8C /* WatchNShapeSets WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 29201EE523988F5F0016DF8C /* WatchNShapeSets WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		29201EEC23988F5F0016DF8C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29201EEA23988F5F0016DF8C /* Interface.storyboard */; };
 		29201EEE23988F600016DF8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29201EED23988F600016DF8C /* Assets.xcassets */; };
-		29201EF523988F600016DF8C /* WatchNShapeSets WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 29201EF423988F600016DF8C /* WatchNShapeSets WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		29201EFA23988F600016DF8C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29201EF923988F600016DF8C /* ContentView.swift */; };
 		29201EFC23988F600016DF8C /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29201EFB23988F600016DF8C /* HostingController.swift */; };
 		29201EFE23988F600016DF8C /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29201EFD23988F600016DF8C /* ExtensionDelegate.swift */; };
@@ -43,7 +42,6 @@
 		29201F0923988F610016DF8C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29201F0823988F610016DF8C /* Preview Assets.xcassets */; };
 		292DD4E123F9F0F1007166E0 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AFFC1239C2552003E24C6 /* Palette.swift */; };
 		292DD4E223F9F0F7007166E0 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AFFC1239C2552003E24C6 /* Palette.swift */; };
-		292DD4E323F9F1EE007166E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29C956222393042800373031 /* Assets.xcassets */; };
 		292DD4E423F9F1EF007166E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29C956222393042800373031 /* Assets.xcassets */; };
 		292DD4E523F9F1EF007166E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29C956222393042800373031 /* Assets.xcassets */; };
 		292DD4E623F9F1F0007166E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29C956222393042800373031 /* Assets.xcassets */; };
@@ -56,7 +54,6 @@
 		2940AF2624F00A40003A3EA4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2940AF2424F00A40003A3EA4 /* GoogleService-Info.plist */; };
 		2940AF2724F00A40003A3EA4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2940AF2424F00A40003A3EA4 /* GoogleService-Info.plist */; };
 		2940AF2824F00A40003A3EA4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2940AF2424F00A40003A3EA4 /* GoogleService-Info.plist */; };
-		2940AF2924F00A40003A3EA4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2940AF2424F00A40003A3EA4 /* GoogleService-Info.plist */; };
 		2940AF2A24F00A40003A3EA4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2940AF2424F00A40003A3EA4 /* GoogleService-Info.plist */; };
 		2943657024312F3900A7A476 /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B77580242FB10200EDD23D /* TimeHelper.swift */; };
 		294B33A923D642D600D6BF14 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294B33A823D642D600D6BF14 /* BannerView.swift */; };
@@ -73,83 +70,67 @@
 		294BBB9F23A44C6E0022AC8C /* Gotham-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB8F23A44C6D0022AC8C /* Gotham-Thin.otf */; };
 		294BBBA023A44C6E0022AC8C /* Gotham-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB8F23A44C6D0022AC8C /* Gotham-Thin.otf */; };
 		294BBBA123A44C6E0022AC8C /* Gotham-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB8F23A44C6D0022AC8C /* Gotham-Thin.otf */; };
-		294BBBA223A44C6E0022AC8C /* Gotham-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB8F23A44C6D0022AC8C /* Gotham-Thin.otf */; };
 		294BBBA323A44C6E0022AC8C /* Gotham-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB8F23A44C6D0022AC8C /* Gotham-Thin.otf */; };
 		294BBBA423A44C6E0022AC8C /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9023A44C6D0022AC8C /* Gotham-Bold.otf */; };
 		294BBBA523A44C6E0022AC8C /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9023A44C6D0022AC8C /* Gotham-Bold.otf */; };
 		294BBBA623A44C6E0022AC8C /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9023A44C6D0022AC8C /* Gotham-Bold.otf */; };
 		294BBBA723A44C6E0022AC8C /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9023A44C6D0022AC8C /* Gotham-Bold.otf */; };
-		294BBBA823A44C6E0022AC8C /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9023A44C6D0022AC8C /* Gotham-Bold.otf */; };
 		294BBBA923A44C6E0022AC8C /* Gotham-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9123A44C6D0022AC8C /* Gotham-Book.otf */; };
 		294BBBAA23A44C6E0022AC8C /* Gotham-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9123A44C6D0022AC8C /* Gotham-Book.otf */; };
 		294BBBAB23A44C6E0022AC8C /* Gotham-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9123A44C6D0022AC8C /* Gotham-Book.otf */; };
-		294BBBAC23A44C6E0022AC8C /* Gotham-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9123A44C6D0022AC8C /* Gotham-Book.otf */; };
 		294BBBAD23A44C6E0022AC8C /* Gotham-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9123A44C6D0022AC8C /* Gotham-Book.otf */; };
 		294BBBAE23A44C6E0022AC8C /* Gotham-UltraItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9223A44C6D0022AC8C /* Gotham-UltraItalic.otf */; };
 		294BBBAF23A44C6E0022AC8C /* Gotham-UltraItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9223A44C6D0022AC8C /* Gotham-UltraItalic.otf */; };
 		294BBBB023A44C6E0022AC8C /* Gotham-UltraItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9223A44C6D0022AC8C /* Gotham-UltraItalic.otf */; };
 		294BBBB123A44C6E0022AC8C /* Gotham-UltraItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9223A44C6D0022AC8C /* Gotham-UltraItalic.otf */; };
-		294BBBB223A44C6E0022AC8C /* Gotham-UltraItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9223A44C6D0022AC8C /* Gotham-UltraItalic.otf */; };
 		294BBBB323A44C6E0022AC8C /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9323A44C6D0022AC8C /* Gotham-Medium.otf */; };
 		294BBBB423A44C6E0022AC8C /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9323A44C6D0022AC8C /* Gotham-Medium.otf */; };
 		294BBBB523A44C6E0022AC8C /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9323A44C6D0022AC8C /* Gotham-Medium.otf */; };
 		294BBBB623A44C6E0022AC8C /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9323A44C6D0022AC8C /* Gotham-Medium.otf */; };
-		294BBBB723A44C6E0022AC8C /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9323A44C6D0022AC8C /* Gotham-Medium.otf */; };
 		294BBBB823A44C6E0022AC8C /* Gotham-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9423A44C6D0022AC8C /* Gotham-LightItalic.otf */; };
 		294BBBB923A44C6E0022AC8C /* Gotham-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9423A44C6D0022AC8C /* Gotham-LightItalic.otf */; };
 		294BBBBA23A44C6E0022AC8C /* Gotham-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9423A44C6D0022AC8C /* Gotham-LightItalic.otf */; };
 		294BBBBB23A44C6E0022AC8C /* Gotham-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9423A44C6D0022AC8C /* Gotham-LightItalic.otf */; };
-		294BBBBC23A44C6E0022AC8C /* Gotham-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9423A44C6D0022AC8C /* Gotham-LightItalic.otf */; };
 		294BBBBD23A44C6E0022AC8C /* Gotham-Ultra.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9523A44C6D0022AC8C /* Gotham-Ultra.otf */; };
 		294BBBBE23A44C6E0022AC8C /* Gotham-Ultra.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9523A44C6D0022AC8C /* Gotham-Ultra.otf */; };
 		294BBBBF23A44C6E0022AC8C /* Gotham-Ultra.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9523A44C6D0022AC8C /* Gotham-Ultra.otf */; };
 		294BBBC023A44C6E0022AC8C /* Gotham-Ultra.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9523A44C6D0022AC8C /* Gotham-Ultra.otf */; };
-		294BBBC123A44C6E0022AC8C /* Gotham-Ultra.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9523A44C6D0022AC8C /* Gotham-Ultra.otf */; };
 		294BBBC223A44C6E0022AC8C /* Gotham-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9623A44C6D0022AC8C /* Gotham-BoldItalic.otf */; };
 		294BBBC323A44C6E0022AC8C /* Gotham-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9623A44C6D0022AC8C /* Gotham-BoldItalic.otf */; };
 		294BBBC423A44C6E0022AC8C /* Gotham-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9623A44C6D0022AC8C /* Gotham-BoldItalic.otf */; };
-		294BBBC523A44C6E0022AC8C /* Gotham-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9623A44C6D0022AC8C /* Gotham-BoldItalic.otf */; };
 		294BBBC623A44C6E0022AC8C /* Gotham-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9623A44C6D0022AC8C /* Gotham-BoldItalic.otf */; };
 		294BBBC723A44C6E0022AC8C /* Gotham-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9723A44C6E0022AC8C /* Gotham-MediumItalic.otf */; };
 		294BBBC823A44C6E0022AC8C /* Gotham-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9723A44C6E0022AC8C /* Gotham-MediumItalic.otf */; };
 		294BBBC923A44C6E0022AC8C /* Gotham-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9723A44C6E0022AC8C /* Gotham-MediumItalic.otf */; };
-		294BBBCA23A44C6E0022AC8C /* Gotham-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9723A44C6E0022AC8C /* Gotham-MediumItalic.otf */; };
 		294BBBCB23A44C6E0022AC8C /* Gotham-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9723A44C6E0022AC8C /* Gotham-MediumItalic.otf */; };
 		294BBBCC23A44C6E0022AC8C /* Gotham-XLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9823A44C6E0022AC8C /* Gotham-XLight.otf */; };
 		294BBBCD23A44C6E0022AC8C /* Gotham-XLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9823A44C6E0022AC8C /* Gotham-XLight.otf */; };
 		294BBBCE23A44C6E0022AC8C /* Gotham-XLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9823A44C6E0022AC8C /* Gotham-XLight.otf */; };
-		294BBBCF23A44C6E0022AC8C /* Gotham-XLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9823A44C6E0022AC8C /* Gotham-XLight.otf */; };
 		294BBBD023A44C6E0022AC8C /* Gotham-XLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9823A44C6E0022AC8C /* Gotham-XLight.otf */; };
 		294BBBD123A44C6E0022AC8C /* Gotham-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9923A44C6E0022AC8C /* Gotham-BookItalic.otf */; };
 		294BBBD223A44C6E0022AC8C /* Gotham-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9923A44C6E0022AC8C /* Gotham-BookItalic.otf */; };
 		294BBBD323A44C6E0022AC8C /* Gotham-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9923A44C6E0022AC8C /* Gotham-BookItalic.otf */; };
 		294BBBD423A44C6E0022AC8C /* Gotham-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9923A44C6E0022AC8C /* Gotham-BookItalic.otf */; };
-		294BBBD523A44C6E0022AC8C /* Gotham-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9923A44C6E0022AC8C /* Gotham-BookItalic.otf */; };
 		294BBBD623A44C6E0022AC8C /* Gotham-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9A23A44C6E0022AC8C /* Gotham-Black.otf */; };
 		294BBBD723A44C6E0022AC8C /* Gotham-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9A23A44C6E0022AC8C /* Gotham-Black.otf */; };
 		294BBBD823A44C6E0022AC8C /* Gotham-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9A23A44C6E0022AC8C /* Gotham-Black.otf */; };
 		294BBBD923A44C6E0022AC8C /* Gotham-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9A23A44C6E0022AC8C /* Gotham-Black.otf */; };
-		294BBBDA23A44C6E0022AC8C /* Gotham-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9A23A44C6E0022AC8C /* Gotham-Black.otf */; };
 		294BBBDB23A44C6E0022AC8C /* Gotham-XLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9B23A44C6E0022AC8C /* Gotham-XLightItalic.otf */; };
 		294BBBDC23A44C6E0022AC8C /* Gotham-XLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9B23A44C6E0022AC8C /* Gotham-XLightItalic.otf */; };
 		294BBBDD23A44C6E0022AC8C /* Gotham-XLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9B23A44C6E0022AC8C /* Gotham-XLightItalic.otf */; };
 		294BBBDE23A44C6E0022AC8C /* Gotham-XLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9B23A44C6E0022AC8C /* Gotham-XLightItalic.otf */; };
-		294BBBDF23A44C6E0022AC8C /* Gotham-XLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9B23A44C6E0022AC8C /* Gotham-XLightItalic.otf */; };
 		294BBBE023A44C6E0022AC8C /* Gotham-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9C23A44C6E0022AC8C /* Gotham-ThinItalic.otf */; };
 		294BBBE123A44C6E0022AC8C /* Gotham-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9C23A44C6E0022AC8C /* Gotham-ThinItalic.otf */; };
 		294BBBE223A44C6E0022AC8C /* Gotham-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9C23A44C6E0022AC8C /* Gotham-ThinItalic.otf */; };
 		294BBBE323A44C6E0022AC8C /* Gotham-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9C23A44C6E0022AC8C /* Gotham-ThinItalic.otf */; };
-		294BBBE423A44C6E0022AC8C /* Gotham-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9C23A44C6E0022AC8C /* Gotham-ThinItalic.otf */; };
 		294BBBE523A44C6E0022AC8C /* Gotham-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9D23A44C6E0022AC8C /* Gotham-BlackItalic.otf */; };
 		294BBBE623A44C6E0022AC8C /* Gotham-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9D23A44C6E0022AC8C /* Gotham-BlackItalic.otf */; };
 		294BBBE723A44C6E0022AC8C /* Gotham-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9D23A44C6E0022AC8C /* Gotham-BlackItalic.otf */; };
-		294BBBE823A44C6E0022AC8C /* Gotham-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9D23A44C6E0022AC8C /* Gotham-BlackItalic.otf */; };
 		294BBBE923A44C6E0022AC8C /* Gotham-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9D23A44C6E0022AC8C /* Gotham-BlackItalic.otf */; };
 		294BBBEA23A44C6E0022AC8C /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9E23A44C6E0022AC8C /* Gotham-Light.otf */; };
 		294BBBEB23A44C6E0022AC8C /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9E23A44C6E0022AC8C /* Gotham-Light.otf */; };
 		294BBBEC23A44C6E0022AC8C /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9E23A44C6E0022AC8C /* Gotham-Light.otf */; };
 		294BBBED23A44C6E0022AC8C /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9E23A44C6E0022AC8C /* Gotham-Light.otf */; };
-		294BBBEE23A44C6E0022AC8C /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294BBB9E23A44C6E0022AC8C /* Gotham-Light.otf */; };
 		294BBBF223A44CA00022AC8C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294BBBF123A44CA00022AC8C /* Constants.swift */; };
 		294BBBF323A44CA00022AC8C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294BBBF123A44CA00022AC8C /* Constants.swift */; };
 		294BBBF423A44CA00022AC8C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294BBBF123A44CA00022AC8C /* Constants.swift */; };
@@ -291,13 +272,6 @@
 			remoteGlobalIDString = 29201EE423988F5F0016DF8C;
 			remoteInfo = "WatchNShapeSets WatchKit App";
 		};
-		29201EF623988F600016DF8C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29C956112393042500373031 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 29201EF323988F600016DF8C;
-			remoteInfo = "WatchNShapeSets WatchKit Extension";
-		};
 		29C956302393042800373031 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29C956112393042500373031 /* Project object */;
@@ -337,17 +311,6 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		29201F1123988F610016DF8C /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				29201EF523988F600016DF8C /* WatchNShapeSets WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -375,7 +338,6 @@
 		29201EEB23988F5F0016DF8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		29201EED23988F600016DF8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29201EEF23988F600016DF8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		29201EF423988F600016DF8C /* WatchNShapeSets WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchNShapeSets WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29201EF923988F600016DF8C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		29201EFB23988F600016DF8C /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		29201EFD23988F600016DF8C /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
@@ -497,15 +459,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		29201EF123988F600016DF8C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				29A4AEFC24148F67005A446E /* HealthKit.framework in Frameworks */,
-				09B20A9160B36ACF19495046 /* Pods_WatchNShapeSets_WatchKit_Extension.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2977AB1225BCCDE800EBF3B6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -543,6 +496,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CC4459D130FB6A57BEE9378 /* Pods_WatchNShapeSets_WatchKit_App.framework in Frameworks */,
+				09B20A9160B36ACF19495046 /* Pods_WatchNShapeSets_WatchKit_Extension.framework in Frameworks */,
+				29A4AEFC24148F67005A446E /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -825,7 +780,6 @@
 				29C9563A2393042800373031 /* NShapeSetsUITests.xctest */,
 				29201EE223988F5F0016DF8C /* WatchNShapeSets.app */,
 				29201EE523988F5F0016DF8C /* WatchNShapeSets WatchKit App.app */,
-				29201EF423988F600016DF8C /* WatchNShapeSets WatchKit Extension.appex */,
 				2977AB1525BCCDE800EBF3B6 /* TVNShapeSets.app */,
 				2911AA1D291C8B1300842AE5 /* QuickStartWidgetExtension.appex */,
 			);
@@ -982,36 +936,18 @@
 			buildPhases = (
 				E5B355592B9CE0CC3B23C1D6 /* [CP] Check Pods Manifest.lock */,
 				29201EE323988F5F0016DF8C /* Resources */,
-				29201F1123988F610016DF8C /* Embed App Extensions */,
 				C5A847844BCB3989BAA367EB /* Frameworks */,
+				F6DD270E5F3BE22733460210 /* [CP] Check Pods Manifest.lock */,
+				29201EF023988F600016DF8C /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				29201EF723988F600016DF8C /* PBXTargetDependency */,
 			);
 			name = "WatchNShapeSets WatchKit App";
 			productName = "WatchNShapeSets WatchKit App";
 			productReference = 29201EE523988F5F0016DF8C /* WatchNShapeSets WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		29201EF323988F600016DF8C /* WatchNShapeSets WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 29201F1423988F610016DF8C /* Build configuration list for PBXNativeTarget "WatchNShapeSets WatchKit Extension" */;
-			buildPhases = (
-				F6DD270E5F3BE22733460210 /* [CP] Check Pods Manifest.lock */,
-				29201EF023988F600016DF8C /* Sources */,
-				29201EF123988F600016DF8C /* Frameworks */,
-				29201EF223988F600016DF8C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "WatchNShapeSets WatchKit Extension";
-			productName = "WatchNShapeSets WatchKit Extension";
-			productReference = 29201EF423988F600016DF8C /* WatchNShapeSets WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
+			productType = "com.apple.product-type.application";
 		};
 		2977AB1425BCCDE800EBF3B6 /* TVNShapeSets */ = {
 			isa = PBXNativeTarget;
@@ -1095,7 +1031,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1420;
 				ORGANIZATIONNAME = "offensively-bad";
 				TargetAttributes = {
 					2911AA1C291C8B1300842AE5 = {
@@ -1108,9 +1044,6 @@
 					29201EE423988F5F0016DF8C = {
 						CreatedOnToolsVersion = 11.2.1;
 						LastSwiftMigration = 1120;
-					};
-					29201EF323988F600016DF8C = {
-						CreatedOnToolsVersion = 11.2.1;
 					};
 					2977AB1425BCCDE800EBF3B6 = {
 						CreatedOnToolsVersion = 12.3;
@@ -1146,7 +1079,6 @@
 				29C956392393042800373031 /* NShapeSetsUITests */,
 				29201EE123988F5F0016DF8C /* WatchNShapeSets */,
 				29201EE423988F5F0016DF8C /* WatchNShapeSets WatchKit App */,
-				29201EF323988F600016DF8C /* WatchNShapeSets WatchKit Extension */,
 				2977AB1425BCCDE800EBF3B6 /* TVNShapeSets */,
 				2911AA1C291C8B1300842AE5 /* QuickStartWidgetExtension */,
 			);
@@ -1192,52 +1124,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				294BBBBB23A44C6E0022AC8C /* Gotham-LightItalic.otf in Resources */,
+				294BBBD023A44C6E0022AC8C /* Gotham-XLight.otf in Resources */,
 				294BBBD923A44C6E0022AC8C /* Gotham-Black.otf in Resources */,
 				294BBBED23A44C6E0022AC8C /* Gotham-Light.otf in Resources */,
 				292DD4E423F9F1EF007166E0 /* Assets.xcassets in Resources */,
 				294BBBE323A44C6E0022AC8C /* Gotham-ThinItalic.otf in Resources */,
 				294BBBDE23A44C6E0022AC8C /* Gotham-XLightItalic.otf in Resources */,
 				294BBBB123A44C6E0022AC8C /* Gotham-UltraItalic.otf in Resources */,
+				294BBBA323A44C6E0022AC8C /* Gotham-Thin.otf in Resources */,
 				294BBBA723A44C6E0022AC8C /* Gotham-Bold.otf in Resources */,
-				294BBBA223A44C6E0022AC8C /* Gotham-Thin.otf in Resources */,
+				294BBBC623A44C6E0022AC8C /* Gotham-BoldItalic.otf in Resources */,
+				2940AF2A24F00A40003A3EA4 /* GoogleService-Info.plist in Resources */,
+				29201F0623988F610016DF8C /* Assets.xcassets in Resources */,
+				294BBBAD23A44C6E0022AC8C /* Gotham-Book.otf in Resources */,
+				294BBBCB23A44C6E0022AC8C /* Gotham-MediumItalic.otf in Resources */,
 				294BBBB623A44C6E0022AC8C /* Gotham-Medium.otf in Resources */,
-				294BBBE823A44C6E0022AC8C /* Gotham-BlackItalic.otf in Resources */,
+				294BBBE923A44C6E0022AC8C /* Gotham-BlackItalic.otf in Resources */,
 				294BBBD423A44C6E0022AC8C /* Gotham-BookItalic.otf in Resources */,
 				294BBBC023A44C6E0022AC8C /* Gotham-Ultra.otf in Resources */,
-				294BBBCA23A44C6E0022AC8C /* Gotham-MediumItalic.otf in Resources */,
-				294BBBAC23A44C6E0022AC8C /* Gotham-Book.otf in Resources */,
 				29201EEE23988F600016DF8C /* Assets.xcassets in Resources */,
-				294BBBCF23A44C6E0022AC8C /* Gotham-XLight.otf in Resources */,
-				2940AF2924F00A40003A3EA4 /* GoogleService-Info.plist in Resources */,
-				294BBBC523A44C6E0022AC8C /* Gotham-BoldItalic.otf in Resources */,
-				29201EEC23988F5F0016DF8C /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		29201EF223988F600016DF8C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				294BBBBC23A44C6E0022AC8C /* Gotham-LightItalic.otf in Resources */,
-				294BBBDA23A44C6E0022AC8C /* Gotham-Black.otf in Resources */,
-				294BBBEE23A44C6E0022AC8C /* Gotham-Light.otf in Resources */,
-				292DD4E323F9F1EE007166E0 /* Assets.xcassets in Resources */,
-				294BBBE423A44C6E0022AC8C /* Gotham-ThinItalic.otf in Resources */,
-				294BBBDF23A44C6E0022AC8C /* Gotham-XLightItalic.otf in Resources */,
-				294BBBB223A44C6E0022AC8C /* Gotham-UltraItalic.otf in Resources */,
-				294BBBA823A44C6E0022AC8C /* Gotham-Bold.otf in Resources */,
-				294BBBA323A44C6E0022AC8C /* Gotham-Thin.otf in Resources */,
-				294BBBB723A44C6E0022AC8C /* Gotham-Medium.otf in Resources */,
-				294BBBE923A44C6E0022AC8C /* Gotham-BlackItalic.otf in Resources */,
-				294BBBD523A44C6E0022AC8C /* Gotham-BookItalic.otf in Resources */,
-				294BBBC123A44C6E0022AC8C /* Gotham-Ultra.otf in Resources */,
-				294BBBCB23A44C6E0022AC8C /* Gotham-MediumItalic.otf in Resources */,
-				294BBBAD23A44C6E0022AC8C /* Gotham-Book.otf in Resources */,
 				29201F0923988F610016DF8C /* Preview Assets.xcassets in Resources */,
-				294BBBD023A44C6E0022AC8C /* Gotham-XLight.otf in Resources */,
-				2940AF2A24F00A40003A3EA4 /* GoogleService-Info.plist in Resources */,
-				294BBBC623A44C6E0022AC8C /* Gotham-BoldItalic.otf in Resources */,
-				29201F0623988F610016DF8C /* Assets.xcassets in Resources */,
+				29201EEC23988F5F0016DF8C /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1657,11 +1564,6 @@
 			target = 29201EE423988F5F0016DF8C /* WatchNShapeSets WatchKit App */;
 			targetProxy = 29201EE723988F5F0016DF8C /* PBXContainerItemProxy */;
 		};
-		29201EF723988F600016DF8C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 29201EF323988F600016DF8C /* WatchNShapeSets WatchKit Extension */;
-			targetProxy = 29201EF623988F600016DF8C /* PBXContainerItemProxy */;
-		};
 		29C956312393042800373031 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 29C956182393042500373031 /* NShapeSets */;
@@ -1809,17 +1711,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "WatchNShapeSets WatchKit App/WatchNShapeSets WatchKit App.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "WatchNShapeSets WatchKit Extension/WatchNShapeSets WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
-				IBSC_MODULE = WatchNShapeSets_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchNShapeSets WatchKit App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.offensively-bad.WatchNShapeSets.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1839,77 +1740,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "WatchNShapeSets WatchKit App/WatchNShapeSets WatchKit App.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "WatchNShapeSets WatchKit Extension/WatchNShapeSets WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
-				IBSC_MODULE = WatchNShapeSets_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchNShapeSets WatchKit App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.offensively-bad.WatchNShapeSets.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "NShapeSets/Theming/WatchNShapeSets WatchKit App-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
-			};
-			name = Release;
-		};
-		29201F1223988F610016DF8C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25A674B4B651FC8702DA39EE /* Pods-WatchNShapeSets WatchKit Extension.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "WatchNShapeSets WatchKit Extension/WatchNShapeSets WatchKit Extension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
-				DEVELOPMENT_ASSET_PATHS = "\"WatchNShapeSets WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = EWH85CQYYJ;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "WatchNShapeSets WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.offensively-bad.WatchNShapeSets.watchkitapp.watchkitextension";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
-			};
-			name = Debug;
-		};
-		29201F1323988F610016DF8C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 908C089073BF9B995F3767D6 /* Pods-WatchNShapeSets WatchKit Extension.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "WatchNShapeSets WatchKit Extension/WatchNShapeSets WatchKit Extension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
-				DEVELOPMENT_ASSET_PATHS = "\"WatchNShapeSets WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = EWH85CQYYJ;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "WatchNShapeSets WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.offensively-bad.WatchNShapeSets.watchkitapp.watchkitextension";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 7.0;
@@ -1990,6 +1836,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2052,6 +1899,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2225,15 +2073,6 @@
 			buildConfigurations = (
 				2911AA33291C8B1500842AE5 /* Debug */,
 				2911AA34291C8B1500842AE5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		29201F1423988F610016DF8C /* Build configuration list for PBXNativeTarget "WatchNShapeSets WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				29201F1223988F610016DF8C /* Debug */,
-				29201F1323988F610016DF8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

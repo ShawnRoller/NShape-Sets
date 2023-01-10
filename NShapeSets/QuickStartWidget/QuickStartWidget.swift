@@ -106,6 +106,7 @@ struct QuickStartWidget: Widget {
         }
         .configurationDisplayName("Quick Start")
         .description("Quickly starts a workout")
+        .supportedFamilies([.systemSmall])
     }
 }
 

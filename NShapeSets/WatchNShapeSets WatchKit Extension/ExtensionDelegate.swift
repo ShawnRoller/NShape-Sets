@@ -8,7 +8,8 @@
 
 import WatchKit
 
-class ExtensionDelegate: NSObject, WKExtensionDelegate, WKExtendedRuntimeSessionDelegate {
+@main
+class ExtensionDelegate: NSObject, WKApplicationDelegate, WKExtendedRuntimeSessionDelegate {
     
     let session = WKExtendedRuntimeSession()
     
